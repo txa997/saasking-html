@@ -1,0 +1,19 @@
+/* 
+    custom-container-start
+*/
+
+
+@media (min-width: 1400px) {
+    .container{
+        &.sk-container-1 {
+            max-width: 1344px;
+        }
+    }
+}
+
+
+
+
+/* 
+    custom-container-end
+*/

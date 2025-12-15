@@ -1,0 +1,45 @@
+/*
+    13. back-to-top
+*/
+
+/* 
+    start-back-to-top
+*/
+
+.wa-back-to-top {
+    position: fixed;
+    right: 1.5%;
+    bottom: -12.5%;
+    z-index: 4;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--pn-clr-pr-1);
+    background-color: #fff;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: var(--pn-clr-pr-1);
+    cursor: pointer;
+
+    @media #{$xs} {
+        right: 3%;
+    }
+
+    &:hover {
+        background: var(--pn-clr-sd-1);
+        color: #fff;
+        border-color: transparent;
+    }
+      
+    &:is(.active) {
+        bottom: 2.5%;
+    }
+
+}
+
+
+/* 
+    start-back-to-end
+*/

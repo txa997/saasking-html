@@ -1,0 +1,67 @@
+/* 
+    partner-1-start
+*/
+.sk-partner-1 {
+    &-title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        opacity: 80%;
+        margin-bottom: 40px;
+
+    }
+
+    &-wrap {
+        &::after {
+            content: "";
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(90deg, #110F20, transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+
+            @media #{$xs} {
+                width: 100px;
+            }
+        }
+        &::before {
+            content: "";
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(-90deg, #110F20, transparent);
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            pointer-events: none;
+            
+            @media #{$xs} {
+                width: 100px;
+            }
+        }
+    }
+
+    &-logo {
+        display: flex;
+        align-items: center;
+        gap: 120px;
+        margin-right: 120px;
+
+        .single-logo {
+            flex: 0 0 auto;
+            transition: var(--sk-cube-1);
+            &:hover {
+                filter: invert(63%) sepia(46%) saturate(600%) hue-rotate(343deg);
+            }
+        }
+    }
+    
+}
+
+
+/* 
+    partner-1-end
+*/

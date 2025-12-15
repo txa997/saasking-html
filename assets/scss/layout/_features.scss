@@ -1,0 +1,495 @@
+/* 
+    features-1-start
+*/
+.sk-features-1 {
+    &-sec-title {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        .sec-disc {
+            margin-top: 22px;
+        }
+    }
+
+    &-wrap {
+        max-width: 1240px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .row-1 {
+            display: grid;
+            grid-template-columns: 1fr 1.44fr;
+            gap: 20px;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+        .row-2 {
+            display: grid;
+            grid-template-columns: 1.94fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+    }
+    
+    &-item {
+        &-1 {
+            border-radius: 14px;
+            background: rgba(17, 15, 32, 0.32);
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+            padding: 32px 32px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                width: 243px;
+                height: 243px;
+                background: #8532F9;
+                opacity: 0.4;
+                filter: blur(57px);
+                position: absolute;
+                top: -120px;
+                left: -10px;
+                z-index: -3;
+            }
+
+            .title {
+                font-size: 24px;
+                margin-bottom: 9px;
+            }
+
+            .disc {
+                margin-bottom: 30px;
+                letter-spacing: -0.02em;
+            }
+
+            .bg-glow {
+                position: absolute;
+                bottom: -40px;
+                right: -40px;
+                z-index: -1;
+            }
+            .bg-glow-2 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: -2;
+            }
+
+            .bg-glow-3 {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: -3;
+            }
+        }
+        
+        &-2 {
+            border-radius: 14px;
+            background: rgba(17, 15, 32, 0.32);
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+            padding: 32px 32px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            height: 473px;
+
+
+            .title {
+                font-size: 24px;
+                margin-bottom: 9px;
+            }
+
+            .disc {
+                margin-bottom: 30px;
+            }
+
+            .main-img {
+                position: absolute;
+                top: 48%;
+                left: 72px;
+                width: 100%;
+                transform: rotate(-8deg);
+                transform-origin: top left;
+                z-index: -1;
+
+                img {
+                    width: 100%;
+                }
+
+                &::after {
+                    content: "";
+                    background: rgba(255, 255, 255, 0.02);
+                    backdrop-filter: blur(2px);
+                    border-radius: 16px;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: -10px;
+                    top: -10px;
+                    z-index: -1;
+                }
+
+                &::before {
+                    content: "";
+                    background: rgba(255, 255, 255, 0.03);
+                    backdrop-filter: blur(2px);
+                    border-radius: 16px;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: -20px;
+                    top: -20px;
+                    z-index: -2;
+                }
+            }
+
+
+            .dot-svg {
+                position: absolute;
+                top: 17%;
+                left: 0;
+                z-index: -1;
+            }
+
+
+            .favicon-wrap {
+                position: absolute;
+                top: 170px;
+                left: 32px;
+                width: 123px;
+                height: 123px;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(73, 71, 85, 0.04) 100%);
+                backdrop-filter: blur(4px);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                z-index: 1;
+
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 50%; 
+                    padding: 1px;
+                    background: linear-gradient(0deg, #110F20 0%, rgb(255 255 255 / 30%) 100%);
+                    z-index: -1; 
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask-composite: exclude;
+                    animation: rotateGradient 3s linear infinite;
+                }
+  
+            }
+
+            .favicon-wrap-2 {
+                width: 93.81px;
+                height: 93.81px;
+                background: linear-gradient(180deg, #380C72 0%, #1B1929 89.72%);
+                backdrop-filter: blur(4px);
+                border-radius: 50%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 50%; 
+                    padding: 1px;
+                    background: linear-gradient(0deg, #110F20 0%, rgb(255 255 255 / 50%) 100%);
+                    z-index: -1; 
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask-composite: exclude;
+                    animation: rotateGradient 3s linear infinite;
+                }
+            }
+
+            .favicon-logo {
+                width: 64.63px;
+                height: 64.63px;
+                background: #FA9145;
+                box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.58);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin-top: 10px;
+                }
+            }
+
+
+            .bg-glow-1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -2;
+            }
+
+            .bg-glow-2 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: -2;
+            }
+
+            .bg-glow-3 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -2;
+            }
+        }
+
+        &-3 {
+            border-radius: 14px;
+            background: #110F20;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+            padding: 32px 32px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+
+            .title {
+                font-size: 24px;
+                margin-bottom: 9px;
+            }
+
+
+
+            .bg-glow-1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: -2;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .bg-glow-2 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+            }
+
+            &-wrap {
+                display: grid;
+                grid-template-columns: 255px 70px 1fr;
+                align-items: center;
+                margin-bottom: 24px;
+            }
+            
+            &-img {
+                &-1 {
+                    background: rgba(30, 35, 58, 0.52);
+                    box-shadow: inset 0px 0px 14px rgba(255, 255, 255, 0.26);
+                    backdrop-filter: blur(3px);
+                    border-radius: 12px;
+                    padding: 24px 24px;
+                    position: relative;
+                    z-index: 1;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 148px;
+                        height: 148px;
+                        background: var(--sk-clr-pr-1);
+                        opacity: 0.6;
+                        filter: blur(62px);
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50% , -50%);
+                        z-index: -1;
+                    }
+                }
+            }
+
+
+            &-favicon {
+                position: relative;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon-elm {
+                    width: 58px;
+                    height: 58px;
+                    background: #FFFFFF;
+                    box-shadow: inset 0px 0px 14px #863AEB;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+
+                    img {
+                        margin-top: 4px;
+                    }
+                }
+            }
+            
+        }
+
+        &-4 {
+            border-radius: 14px;
+            background: #110F20;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+            padding: 32px 32px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+
+            .title {
+                font-size: 24px;
+                margin-bottom: 9px;
+            }
+
+
+            &-wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 27px;
+                padding-bottom: 52px;
+                position: relative;
+                z-index: 1;
+
+
+                .img-items {
+                    display: grid;
+                    gap: 14px;
+
+                    &-single {
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 50%;
+                        outline: 3px solid #714A48;
+                    }
+                }
+
+
+
+                
+                .favicon-wrap {
+                    width: 100px;
+                    height: 100px;
+                    background: rgba(5, 2, 33, 0.12);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    z-index: 1;
+                    position: relative;
+                    z-index: 1;
+
+                    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: 50%; 
+                        padding: 1px;
+                        background: linear-gradient(0deg, var(--sk-clr-sd-1) 0%, rgba(255, 255, 255, 0) 100%);
+                        z-index: -1; 
+                        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                        mask-composite: exclude;
+                        animation: rotateGradient 3s linear infinite;
+                    }
+    
+                }
+
+                .favicon-wrap-2 {
+                    width: 82.81px;
+                    height: 82.81px;
+                    background: linear-gradient(180deg, #380C72 0%, #1B1929 89.72%);
+                    backdrop-filter: blur(4px);
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 1;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: 50%; 
+                        padding: 1px;
+                        background: linear-gradient(0deg, #110F20 0%, rgb(255 255 255 / 50%) 100%);
+                        z-index: -1; 
+                        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                        mask-composite: exclude;
+                        animation: rotateGradient 3s linear infinite;
+                    }
+                }
+
+                .favicon-logo {
+                    width: 71px;
+                    height: 71px;
+                    background: linear-gradient(92.62deg, #EA9354 0.03%, #8D40D7 54.05%, #863AEB 99.97%);
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25), inset 0px 0px 6px rgba(0, 0, 0, 0.58);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        margin-top: 10px;
+                    }
+                }
+
+            }
+
+            &-line-svg {
+                position: absolute;
+                left: 12%;
+                z-index: -1;
+            }
+
+            &-line-svg-2 {
+                position: absolute;
+                right: 12%;
+                z-index: -1;
+                transform: scaleX(-1);
+            }
+        }
+    }
+}
+/* 
+    features-1-end
+*/
