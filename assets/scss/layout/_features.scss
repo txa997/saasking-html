@@ -89,7 +89,7 @@
         
         &-2 {
             border-radius: 14px;
-            background: rgba(17, 15, 32, 0.32);
+            background: #110F20;
             border: 2px solid rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(4px);
             padding: 32px 32px;
@@ -487,7 +487,41 @@
                 z-index: -1;
                 transform: scaleX(-1);
             }
+
+
+            &-glow {
+                position: absolute;
+                top: 0;
+                text-align: center;
+                z-index: -3;
+                left: 0;
+                width: 100%;
+
+                img {
+                    margin-left: 27px;
+                }
+            }
+
+
+            &-dot-svg {
+                position: absolute;
+                top: 0;
+                left: 46%;
+                transform: translateX(-50%);
+                z-index: -1;
+                width: 100%;
+            }
+            
         }
+    }
+
+    &-bg-clr {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: -1;
     }
 }
 /* 

@@ -1,0 +1,345 @@
+$flaticon_saasking-font: "flaticon_saasking";
+
+@font-face {
+    font-family: $flaticon_saasking-font;
+    src: url("./flaticon_saasking.woff2?ba7fcc5674dd9a9eeb61f899216585ef") format("woff2"),
+url("./flaticon_saasking.woff?ba7fcc5674dd9a9eeb61f899216585ef") format("woff"),
+url("./flaticon_saasking.eot?ba7fcc5674dd9a9eeb61f899216585ef#iefix") format("embedded-opentype"),
+url("./flaticon_saasking.ttf?ba7fcc5674dd9a9eeb61f899216585ef") format("truetype"),
+url("./flaticon_saasking.svg?ba7fcc5674dd9a9eeb61f899216585ef#flaticon_saasking") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_saasking !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_saasking-map: (
+    "dots": "\f101",
+    "partnership": "\f102",
+    "respect": "\f103",
+    "support": "\f104",
+    "ai-chip": "\f105",
+    "ai-chip-1": "\f106",
+    "ai-technology": "\f107",
+    "crosshair": "\f108",
+    "time-tracking": "\f109",
+    "insurance": "\f10a",
+    "workflow": "\f10b",
+    "suitcase": "\f10c",
+    "github": "\f10d",
+    "atlassian": "\f10e",
+    "chatgpt": "\f10f",
+    "confluence": "\f110",
+    "spotify": "\f111",
+    "tripadvisor": "\f112",
+    "atlassian-1": "\f113",
+    "text": "\f114",
+    "facebook": "\f115",
+    "instagram": "\f116",
+    "tik-tok": "\f117",
+    "linkedin": "\f118",
+    "arrow-down": "\f119",
+    "down": "\f11a",
+    "star": "\f11b",
+    "sparkler": "\f11c",
+    "signature": "\f11d",
+    "ai": "\f11e",
+    "magic-wand": "\f11f",
+    "down-1": "\f120",
+    "right-down": "\f121",
+    "right-up": "\f122",
+    "mic": "\f123",
+    "setup": "\f124",
+    "attachment": "\f125",
+    "open-book": "\f126",
+    "blog": "\f127",
+    "strategy": "\f128",
+    "add": "\f129",
+    "layers": "\f12a",
+    "layout": "\f12b",
+    "design": "\f12c",
+    "log-out": "\f12d",
+    "chatbot": "\f12e",
+    "abstract-shape": "\f12f",
+    "play": "\f130",
+    "google": "\f131",
+    "adwords": "\f132",
+    "translate": "\f133",
+    "rocket": "\f134",
+    "bell": "\f135",
+    "refresh": "\f136",
+    "customer-service": "\f137",
+    "feature": "\f138",
+    "settings": "\f139",
+    "blockchain": "\f13a",
+    "bitcoin": "\f13b",
+    "cryptocurrency": "\f13c",
+    "bitcoin-1": "\f13d",
+    "coins": "\f13e",
+    "data-structure": "\f13f",
+    "wallet-passes-app": "\f140",
+    "planning": "\f141",
+    "process": "\f142",
+    "world-wide-web": "\f143",
+    "geometry": "\f144",
+    "tetrahedron": "\f145",
+    "ovals": "\f146",
+    "rebound": "\f147",
+    "currency": "\f148",
+    "investor": "\f149",
+    "star-1": "\f14a",
+    "heart": "\f14b",
+    "faq": "\f14c",
+    "faq-1": "\f14d",
+    "request": "\f14e",
+    "send": "\f14f",
+    "message": "\f150",
+);
+
+.flaticon-dots:before {
+    content: map-get($flaticon_saasking-map, "dots");
+}
+.flaticon-partnership:before {
+    content: map-get($flaticon_saasking-map, "partnership");
+}
+.flaticon-respect:before {
+    content: map-get($flaticon_saasking-map, "respect");
+}
+.flaticon-support:before {
+    content: map-get($flaticon_saasking-map, "support");
+}
+.flaticon-ai-chip:before {
+    content: map-get($flaticon_saasking-map, "ai-chip");
+}
+.flaticon-ai-chip-1:before {
+    content: map-get($flaticon_saasking-map, "ai-chip-1");
+}
+.flaticon-ai-technology:before {
+    content: map-get($flaticon_saasking-map, "ai-technology");
+}
+.flaticon-crosshair:before {
+    content: map-get($flaticon_saasking-map, "crosshair");
+}
+.flaticon-time-tracking:before {
+    content: map-get($flaticon_saasking-map, "time-tracking");
+}
+.flaticon-insurance:before {
+    content: map-get($flaticon_saasking-map, "insurance");
+}
+.flaticon-workflow:before {
+    content: map-get($flaticon_saasking-map, "workflow");
+}
+.flaticon-suitcase:before {
+    content: map-get($flaticon_saasking-map, "suitcase");
+}
+.flaticon-github:before {
+    content: map-get($flaticon_saasking-map, "github");
+}
+.flaticon-atlassian:before {
+    content: map-get($flaticon_saasking-map, "atlassian");
+}
+.flaticon-chatgpt:before {
+    content: map-get($flaticon_saasking-map, "chatgpt");
+}
+.flaticon-confluence:before {
+    content: map-get($flaticon_saasking-map, "confluence");
+}
+.flaticon-spotify:before {
+    content: map-get($flaticon_saasking-map, "spotify");
+}
+.flaticon-tripadvisor:before {
+    content: map-get($flaticon_saasking-map, "tripadvisor");
+}
+.flaticon-atlassian-1:before {
+    content: map-get($flaticon_saasking-map, "atlassian-1");
+}
+.flaticon-text:before {
+    content: map-get($flaticon_saasking-map, "text");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon_saasking-map, "facebook");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon_saasking-map, "instagram");
+}
+.flaticon-tik-tok:before {
+    content: map-get($flaticon_saasking-map, "tik-tok");
+}
+.flaticon-linkedin:before {
+    content: map-get($flaticon_saasking-map, "linkedin");
+}
+.flaticon-arrow-down:before {
+    content: map-get($flaticon_saasking-map, "arrow-down");
+}
+.flaticon-down:before {
+    content: map-get($flaticon_saasking-map, "down");
+}
+.flaticon-star:before {
+    content: map-get($flaticon_saasking-map, "star");
+}
+.flaticon-sparkler:before {
+    content: map-get($flaticon_saasking-map, "sparkler");
+}
+.flaticon-signature:before {
+    content: map-get($flaticon_saasking-map, "signature");
+}
+.flaticon-ai:before {
+    content: map-get($flaticon_saasking-map, "ai");
+}
+.flaticon-magic-wand:before {
+    content: map-get($flaticon_saasking-map, "magic-wand");
+}
+.flaticon-down-1:before {
+    content: map-get($flaticon_saasking-map, "down-1");
+}
+.flaticon-right-down:before {
+    content: map-get($flaticon_saasking-map, "right-down");
+}
+.flaticon-right-up:before {
+    content: map-get($flaticon_saasking-map, "right-up");
+}
+.flaticon-mic:before {
+    content: map-get($flaticon_saasking-map, "mic");
+}
+.flaticon-setup:before {
+    content: map-get($flaticon_saasking-map, "setup");
+}
+.flaticon-attachment:before {
+    content: map-get($flaticon_saasking-map, "attachment");
+}
+.flaticon-open-book:before {
+    content: map-get($flaticon_saasking-map, "open-book");
+}
+.flaticon-blog:before {
+    content: map-get($flaticon_saasking-map, "blog");
+}
+.flaticon-strategy:before {
+    content: map-get($flaticon_saasking-map, "strategy");
+}
+.flaticon-add:before {
+    content: map-get($flaticon_saasking-map, "add");
+}
+.flaticon-layers:before {
+    content: map-get($flaticon_saasking-map, "layers");
+}
+.flaticon-layout:before {
+    content: map-get($flaticon_saasking-map, "layout");
+}
+.flaticon-design:before {
+    content: map-get($flaticon_saasking-map, "design");
+}
+.flaticon-log-out:before {
+    content: map-get($flaticon_saasking-map, "log-out");
+}
+.flaticon-chatbot:before {
+    content: map-get($flaticon_saasking-map, "chatbot");
+}
+.flaticon-abstract-shape:before {
+    content: map-get($flaticon_saasking-map, "abstract-shape");
+}
+.flaticon-play:before {
+    content: map-get($flaticon_saasking-map, "play");
+}
+.flaticon-google:before {
+    content: map-get($flaticon_saasking-map, "google");
+}
+.flaticon-adwords:before {
+    content: map-get($flaticon_saasking-map, "adwords");
+}
+.flaticon-translate:before {
+    content: map-get($flaticon_saasking-map, "translate");
+}
+.flaticon-rocket:before {
+    content: map-get($flaticon_saasking-map, "rocket");
+}
+.flaticon-bell:before {
+    content: map-get($flaticon_saasking-map, "bell");
+}
+.flaticon-refresh:before {
+    content: map-get($flaticon_saasking-map, "refresh");
+}
+.flaticon-customer-service:before {
+    content: map-get($flaticon_saasking-map, "customer-service");
+}
+.flaticon-feature:before {
+    content: map-get($flaticon_saasking-map, "feature");
+}
+.flaticon-settings:before {
+    content: map-get($flaticon_saasking-map, "settings");
+}
+.flaticon-blockchain:before {
+    content: map-get($flaticon_saasking-map, "blockchain");
+}
+.flaticon-bitcoin:before {
+    content: map-get($flaticon_saasking-map, "bitcoin");
+}
+.flaticon-cryptocurrency:before {
+    content: map-get($flaticon_saasking-map, "cryptocurrency");
+}
+.flaticon-bitcoin-1:before {
+    content: map-get($flaticon_saasking-map, "bitcoin-1");
+}
+.flaticon-coins:before {
+    content: map-get($flaticon_saasking-map, "coins");
+}
+.flaticon-data-structure:before {
+    content: map-get($flaticon_saasking-map, "data-structure");
+}
+.flaticon-wallet-passes-app:before {
+    content: map-get($flaticon_saasking-map, "wallet-passes-app");
+}
+.flaticon-planning:before {
+    content: map-get($flaticon_saasking-map, "planning");
+}
+.flaticon-process:before {
+    content: map-get($flaticon_saasking-map, "process");
+}
+.flaticon-world-wide-web:before {
+    content: map-get($flaticon_saasking-map, "world-wide-web");
+}
+.flaticon-geometry:before {
+    content: map-get($flaticon_saasking-map, "geometry");
+}
+.flaticon-tetrahedron:before {
+    content: map-get($flaticon_saasking-map, "tetrahedron");
+}
+.flaticon-ovals:before {
+    content: map-get($flaticon_saasking-map, "ovals");
+}
+.flaticon-rebound:before {
+    content: map-get($flaticon_saasking-map, "rebound");
+}
+.flaticon-currency:before {
+    content: map-get($flaticon_saasking-map, "currency");
+}
+.flaticon-investor:before {
+    content: map-get($flaticon_saasking-map, "investor");
+}
+.flaticon-star-1:before {
+    content: map-get($flaticon_saasking-map, "star-1");
+}
+.flaticon-heart:before {
+    content: map-get($flaticon_saasking-map, "heart");
+}
+.flaticon-faq:before {
+    content: map-get($flaticon_saasking-map, "faq");
+}
+.flaticon-faq-1:before {
+    content: map-get($flaticon_saasking-map, "faq-1");
+}
+.flaticon-request:before {
+    content: map-get($flaticon_saasking-map, "request");
+}
+.flaticon-send:before {
+    content: map-get($flaticon_saasking-map, "send");
+}
+.flaticon-message:before {
+    content: map-get($flaticon_saasking-map, "message");
+}
