@@ -2491,6 +2491,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: translateX(-50%);
   z-index: -1;
   pointer-events: none;
+  overflow: visible;
 }
 .sk-hero-1-bottom-glow-1 {
   text-align: center;
@@ -2500,6 +2501,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   z-index: -2;
   pointer-events: none;
+  animation: sk-hero-1-bottom-glow-1 1s linear infinite;
 }
 .sk-hero-1-bottom-glow-2 {
   text-align: center;
@@ -2511,6 +2513,17 @@ input:focus::placeholder, textarea:focus::placeholder {
   pointer-events: none;
 }
 
+@keyframes sk-hero-1-bottom-glow-1 {
+  0% {
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.92;
+  }
+}
 /* 
     hero-1-end
 */

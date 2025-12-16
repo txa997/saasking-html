@@ -236,23 +236,7 @@ function afterPageLoad() {
 		});
 	});
 
-	/* 
-		wa_img_ani_1
-	*/
-	const wa_img_ani_1 = gsap.utils.toArray('.wa_img_ani_1');
-	wa_img_ani_1.forEach(waAddClassItem2 => {
-		gsap.to(waAddClassItem2, {
-			scrollTrigger: {
-				trigger: waAddClassItem2,
-				start: "top 100%",
-				end: "bottom bottom",
-				toggleActions: "play none none reverse",
-				toggleClass: "active",
-				once: true,
-				markers: false,
-			}
-		});
-	});
+
 
 	/* 
 		wow-activation
@@ -326,25 +310,87 @@ gsap.utils.toArray(".wa_zoomOut_img").forEach(wa_zoomOut_img => {
 	);
 });
 
+
+
+
+
+
+
+
+gsap.fromTo(".sk-hero-1-bottom-dot path",
+    {
+        y: 100,
+        opacity: 0
+    },
+    {
+        y: -100,
+        opacity: 0,
+        duration: 5,
+        ease: "power1.inOut",
+        stagger: {
+            each: 0.09,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // gsap.set(".move-line21 , .move-line22, .move-line23, .move-line24", { opacity: 0 });
 let srH2svg2 = gsap.timeline({
-	repeat: -1,
-	ease: "none",
+
+
 
 });
 
-srH2svg2.to(".move-line21", {
+gsap.to(".move-line21", {
 	duration: 10,
+	repeat: -1,
+	ease: "none",
+
 	motionPath: {
 		path: ".main-line21",
 		align: ".main-line21",
 		autoRotate: true,
 		alignOrigin: [0.5, 0.5],
-		start: 1,
-		end: 0,
+		start: 0,
+		end: 1,
+
 	},
-	onStart: () => gsap.to(".move-line21", { opacity: 1, duration: 0.3 }),
-	onComplete: () => gsap.to(".move-line21", { opacity: 0, duration: 0.3 }),
+
 });
 
 /* 

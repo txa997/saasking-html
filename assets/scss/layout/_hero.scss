@@ -110,6 +110,7 @@
             transform: translateX(-50%);
             z-index: -1;
             pointer-events: none;
+            overflow: visible;
         }
         &-glow-1 {
             text-align: center;
@@ -119,6 +120,7 @@
             width: 100%;
             z-index: -2;
             pointer-events: none;
+            animation: sk-hero-1-bottom-glow-1 1s linear infinite;
         }
         &-glow-2 {
             text-align: center;
@@ -131,6 +133,19 @@
         }
     }
     
+}
+
+
+@keyframes sk-hero-1-bottom-glow-1 {
+    0% {
+        opacity: .92;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .92;
+    }
 }
 /* 
     hero-1-end
