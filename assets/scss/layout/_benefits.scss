@@ -2,6 +2,28 @@
     benefits-1-start
 */
 .sk-benefits-1 {
+    &-area {
+        position: relative;
+        z-index: 2;
+    }
+
+    &-bg-shape-1 {
+        width: 24%;
+        position: absolute;
+        top: -44%;
+        left: 0;
+        z-index: -2;
+    }
+    
+    &-bg-shape-2 {
+        text-align: right;
+        width: 27%;
+        position: absolute;
+        right: 0;
+        top: -44%;
+        z-index: -2;
+    }
+
     &-sec-title {
         max-width: 710px;
         margin-left: auto;
@@ -84,7 +106,7 @@
     &-card {
         border: 1px solid rgb(255 255 255 / 16%);
         border-radius: 20px;
-        background: #110F20;
+        background: var(--sk-clr-black-2);
         padding: 40px 40px;
         overflow: hidden;
         position: relative;
@@ -98,7 +120,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(180deg, #272B3A 0%, #110F20 100%);
+            background: linear-gradient(180deg, #272B3A 0%, var(--sk-clr-black-2) 100%);
             border-radius: 50%;
             border: 1px solid rgb(255 255 255 / 12%);
             margin-bottom: 41px;
@@ -109,7 +131,7 @@
         .icon-elm {
             width: 58px;
             height: 58px;
-            background: #110F20;
+            background: var(--sk-clr-black-2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -169,6 +191,9 @@
             top: 0;
             left: 0;
             z-index: -1;
+            transform: translate(-40px, -40px);
+            opacity: 0;
+            transition: var(--sk-cube-1);
         }
 
         .bg-shape-2 {
@@ -176,6 +201,21 @@
             bottom: 0;
             right: 0;
             z-index: -1;
+            transform: translate(40px, 40px);
+            opacity: 0;
+            transition: var(--sk-cube-1);
+        }
+
+        &:hover {
+            .bg-shape-1 {
+                opacity: 1;
+                transform: translate(0px, 0px);
+            }
+            .bg-shape-2 {
+                opacity: 1;
+                transform: translate(0px, 0px);
+                transition-delay: .1s;
+            }
         }
     }
     

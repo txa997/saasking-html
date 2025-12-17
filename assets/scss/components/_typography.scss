@@ -63,7 +63,7 @@
         left: 1px;
         width: calc(100% - 2px);
         height: calc(100% - 2px);
-        background: #110F20;
+        background: var(--sk-clr-black-2);
         z-index: -1;
         border-radius: 100px;
     }
