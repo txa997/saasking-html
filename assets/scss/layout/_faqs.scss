@@ -1,0 +1,171 @@
+/* 
+    faqs-start
+*/
+
+.sk-accordion-1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #24293D;
+    &-item {
+        width: 100%;
+        transition: 0.3s;
+        padding: 29px 40px;
+        background-color: transparent;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: var(--sk-cube-1);
+
+        &::after {
+            content: "";
+            width: 181px;
+            height: 181px;
+            background: var(--sk-clr-pr-1);
+            filter: blur(82px);
+            border-radius: 50%;
+            position: absolute;
+            right: -90px;
+            bottom: -100px;
+            z-index: -1;
+            transition: var(--sk-cube-1);
+            opacity: 0;
+        }
+
+        &::before {
+            content: "";
+            width: 181px;
+            height: 181px;
+            background: #FFFFFF;
+            opacity: 0.6;
+            filter: blur(82px);
+            border-radius: 50%;
+            position: absolute;
+            top: -129px;
+            left: -50px;
+            z-index: -1;
+            transition: var(--sk-cube-1);
+            opacity: 0;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #24293D;
+        }
+
+        .item-title {
+            font-size: 20px;
+            font-weight: 500;
+            background: transparent;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            text-align: left;
+            transition: var(--sk-cube-1);
+
+
+            .icon {
+                transition: var(--sk-cube-1);
+            }
+            
+    
+            &:is(:not(.collapsed)) {
+                .icon {
+                    transform: rotate(-180deg);
+                }
+
+            }
+
+            &:is(.collapsed) {
+
+            }
+
+
+            &:hover {
+                color: var(--sk-clr-sd-1);
+            }
+
+
+        }
+        
+        .item-disc {
+            padding-right: 60px;
+            margin-top: 20px;
+        }
+
+
+        &:is(.active) {
+            background-color: #24293D;
+            .item-title {
+                color: var(--sk-clr-sd-1);
+            }
+
+            &::after {
+                opacity: 1;
+                transition-delay: .1s;
+            }
+
+            &::before {
+                opacity: 1;
+                transition-delay: .2s;
+            }
+        }
+
+    }
+    
+}
+
+
+
+.sk-faqs-1 {
+    &-sec-title {
+        max-width: 725px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sec-disc {
+            margin-top: 27px;
+        }
+    }
+
+    &-wrap {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    &-animation {
+        text-align: center;
+        height: 462px;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+
+        &-clr-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -2;
+        }
+
+        &-dot-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            overflow: visible;
+        }
+    }
+}
+
+
+/* 
+    faqs-end
+*/

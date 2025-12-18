@@ -315,7 +315,9 @@ gsap.utils.toArray(".wa_zoomOut_img").forEach(wa_zoomOut_img => {
 
 
 
-
+/* 
+	hero-1-dot-animation
+*/
 
 gsap.fromTo(".sk-hero-1-bottom-dot path",
     {
@@ -324,6 +326,58 @@ gsap.fromTo(".sk-hero-1-bottom-dot path",
     },
     {
         y: -100,
+        opacity: 0,
+        duration: 5,
+        ease: "power1.inOut",
+        stagger: {
+            each: 0.09,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+
+/* 
+	testimonial-1-dot-animation
+*/
+
+gsap.fromTo(".sk-testimonial-1-animation-dot-svg path",
+    {
+        y: 50,
+        opacity: 0
+    },
+    {
+        y: -100,
+        opacity: 0,
+        duration: 5,
+        ease: "power1.inOut",
+        stagger: {
+            each: 0.09,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+
+
+
+/* 
+	faqs-1-dot-animation
+*/
+
+gsap.fromTo(".sk-faqs-1-animation-dot-svg path",
+    {
+        y: -50,
+        opacity: 0
+    },
+    {
+        y: 100,
         opacity: 0,
         duration: 5,
         ease: "power1.inOut",
