@@ -59,6 +59,11 @@
             .title {
                 font-size: 24px;
                 margin-bottom: 9px;
+                transition: .4s var(--sk-cube-2);
+
+                &:hover {
+                    transform: translateX(13px);
+                }
             }
 
             .disc {

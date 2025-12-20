@@ -13,8 +13,8 @@
 	lenis-smooth-scroll-activation
 */
 const lenis = new Lenis({
-	duration: .3,
-	easing: (t) => 1 - Math.pow(1 - t, 4),
+	duration: 1.2, 
+	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
 	direction: 'vertical', 
 	smooth: true, 
 	smoothTouch: false, 
@@ -195,6 +195,60 @@ function afterPreloader() {
 	*/
 	if (getComputedStyle(document.body).direction !== "rtl") {
 
+		
+		document.querySelectorAll(".wa_title_spilt_1").forEach((atEl) => {
+			const atSplit = new SplitText(atEl, {
+				type: "words,chars",
+				wordsClass: "word",
+				charsClass: "char"
+			});
+
+			let atDuration = parseFloat(atEl.getAttribute("data-speed")) || .7;
+			let atDelay = parseFloat(atEl.getAttribute("data-delay")) || 0;
+
+			if (window.innerWidth <= 768) {
+				atDuration = atDuration * 0.3; 
+			}
+
+			gsap.set(atSplit.words, {
+				willChange: "transform",
+				perspective: 1000,
+				transformStyle: "preserve-3d"
+			});
+
+			gsap.set(atSplit.chars, {
+				willChange: "transform",
+				opacity: 0,
+				rotateX: -80,
+				transformOrigin: "center center -10px"
+			});
+
+			gsap.set(atEl, {
+				perspective: 1000,
+				transformStyle: "preserve-3d"
+			});
+
+			gsap.to(atSplit.chars, {
+				scrollTrigger: {
+					trigger: atEl,
+					start: "top 80%",
+					toggleActions: 'play none none reverse',
+				},
+				opacity: 1,
+				rotateX: 0,
+				duration: atDuration,
+				delay: atDelay,
+				ease: "ease1",
+				stagger: {
+					each: 0.05,
+					from: "center",
+					grid: "auto",
+				},
+			});
+		});
+
+
+
 
 	}	
 
@@ -207,8 +261,6 @@ function afterPreloader() {
 }
 
 
-
-  
 
 
 
