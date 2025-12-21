@@ -328,7 +328,7 @@
             border-radius: 40px;
             position: relative;
             z-index: 1;
-
+            cursor: pointer;
             &::after {
                 content: "";
                 width: 32px;
@@ -339,6 +339,13 @@
                 top: 6px;
                 left: 7px;
                 border-radius: 50%;
+                transition: var(--sk-cube-1);
+            }
+
+            &:is(.active) {
+                &::after {
+                    left: 35px;
+                }
             }
         }
 
@@ -413,6 +420,11 @@
 
         .item-link  {
             opacity: 1;
+            transition: var(--sk-cube-1);
+
+            &:hover {
+                color: var(--sk-clr-sd-1);
+            }
         }
     }
 
@@ -512,6 +524,11 @@
                 top: 0;
                 z-index: -1;
                 mix-blend-mode: luminosity;
+
+                img {
+                    transform-origin: right top;
+                    animation: skPriceCardShape 10s ease-in-out infinite;
+                }
             }
 
             &::after {
@@ -562,9 +579,8 @@
             }
 
             &:hover {
-                .bg-clr {
-                    opacity: 1;
-                }
+                background: var(--sk-clr-sd-1);
+
             }
         }
     }
@@ -605,6 +621,18 @@
     
     
     
+}
+
+@keyframes skPriceCardShape {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
 }
 /* 
     price-1-end

@@ -36,6 +36,8 @@
 // 		});
 // 	}
 // });
+
+
 gsap.config({
 	nullTargetWarn: false,
 });
@@ -161,8 +163,8 @@ $(document).on('keydown', function(event) {
 window.addEventListener('load', function(){
 
 
-	if (document.querySelectorAll("#pn-loader-wrapper").length) {
-		const loader = document.querySelector("#pn-loader-wrapper");
+	if (document.querySelectorAll(".sk-loader").length) {
+		const loader = document.querySelector(".sk-loader");
 		
 		setTimeout(() => {
 			loader.classList.add("loaded");
@@ -248,6 +250,56 @@ function afterPreloader() {
 			});
 		});
 
+
+		document.querySelectorAll(".wa_split_2").forEach((atEl) => {
+			const atSplit = new SplitText(atEl, {
+				type: "words,chars",
+				wordsClass: "word",
+				charsClass: "char"
+			});
+
+			let atDuration = parseFloat(atEl.getAttribute("data-speed")) || 1;
+			let atDelay = parseFloat(atEl.getAttribute("data-delay")) || 0;
+
+			if (window.innerWidth <= 768) {
+				atDuration = atDuration * 0.3; 
+			}
+
+			gsap.set(atSplit.words, {
+				willChange: "transform",
+				perspective: 1000,
+				transformStyle: "preserve-3d"
+			});
+
+			gsap.set(atSplit.chars, {
+				willChange: "transform",
+				opacity: 0,
+				yPercent: 100,
+				transformOrigin: "center center -10px"
+			});
+
+			gsap.set(atEl, {
+				perspective: 1000,
+				transformStyle: "preserve-3d"
+			});
+
+			gsap.to(atSplit.chars, {
+				scrollTrigger: {
+					trigger: atEl,
+					start: "top 80%",
+				},
+				opacity: 1,
+				yPercent: 0,
+				duration: atDuration,
+				delay: atDelay,
+				ease: "power3.out",
+				stagger: {
+					each: 0.05,
+					from: "center",
+					grid: "auto",
+				},
+			});
+		});
 
 
 
@@ -751,17 +803,375 @@ if($(".sk-features-1-item-4-line-svg").length) {
 
 
 // process-1-line-svg
-gsap.to(".svg-line", {
-	duration: 10,
-	motionPath: {
-		path: ".svg-path",
-		align: ".svg-path",
-		autoRotate: true,
-		alignOrigin: [0.5, 0.5],
-		start: 1,
-		end: 0,
-	},
-});
+if($(".sk-process-1-line-svg").length) {
+
+	gsap.set(".svg-line-1 , .svg-line-1-2", { opacity: 0 });
+	let skProcess1svgLine1 = gsap.timeline({
+		repeat: -1,
+		ease: "sine.inOut",
+	});
+
+	skProcess1svgLine1.to(".svg-line-1", {
+		duration: 5,
+		motionPath: {
+			path: ".svg-path-1",
+			align: ".svg-path-1",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+		onStart: () => gsap.to(".svg-line-1", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".svg-line-1", { opacity: 0, duration: 0.3 }),
+	});
+
+	skProcess1svgLine1.fromTo(".glow-1 circle", {
+		scale: 0,
+		transformOrigin: "center",
+		fill: "#FA9145",
+		duration: .5,
+	},{
+		scale: 1,
+		transformOrigin: "center",
+
+	},"<85%");
+
+	skProcess1svgLine1.to(".circle-1", {
+		fill: "#FA9145",
+		duration: .5,
+	},"<");
+	skProcess1svgLine1.to(".glow-1 circle", {
+		scale: 0,
+		duration: 5,
+	});
+	skProcess1svgLine1.to(".svg-line-1-2", {
+		duration: 5,
+		motionPath: {
+			path: ".svg-path-1",
+			align: ".svg-path-1",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+		onStart: () => gsap.to(".svg-line-1-2", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".svg-line-1-2", { opacity: 0, duration: 0.3 }),
+	},"<");
+
+	skProcess1svgLine1.fromTo(".glow-1 circle", {
+		scale: 0,
+		transformOrigin: "center",
+		fill: "#8532F9",
+		duration: .5,
+	},{
+		scale: 1,
+		transformOrigin: "center",
+	},"<85%");
+
+	skProcess1svgLine1.to(".circle-1", {
+		fill: "#8532F9",
+		duration: .5,
+	},"<");
+	skProcess1svgLine1.to(".glow-1 circle", {
+		scale: 0,
+		duration: 2,
+	});
+
+
+	
+	gsap.set(".svg-line-2 , .svg-line-2-2", { opacity: 0 });
+	let skProcess1svgLine2 = gsap.timeline({
+		repeat: -1,
+		ease: "sine.inOut",
+	});
+
+	skProcess1svgLine2.to(".svg-line-2", {
+		duration: 5,
+		motionPath: {
+			path: ".svg-path-2",
+			align: ".svg-path-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+		onStart: () => gsap.to(".svg-line-2", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".svg-line-2", { opacity: 0, duration: 0.3 }),
+	});
+
+	skProcess1svgLine2.fromTo(".glow-2 circle", {
+		scale: 0,
+		transformOrigin: "center",
+		fill: "#FA9145",
+		duration: .5,
+	},{
+		scale: 1,
+		transformOrigin: "center",
+	},"<85%");
+	skProcess1svgLine2.to(".circle-2", {
+		fill: "#FA9145",
+		duration: .5,
+	},"<");
+
+	skProcess1svgLine2.to(".glow-2 circle", {
+		scale: 0,
+		duration: 5,
+	});
+	skProcess1svgLine2.to(".svg-line-2-2", {
+		duration: 5,
+		motionPath: {
+			path: ".svg-path-2",
+			align: ".svg-path-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+		onStart: () => gsap.to(".svg-line-2-2", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".svg-line-2-2", { opacity: 0, duration: 0.3 }),
+	},"<");
+
+	skProcess1svgLine2.fromTo(".glow-2 circle", {
+		scale: 0,
+		transformOrigin: "center",
+		fill: "#8532F9",
+		duration: .5,
+	},{
+		scale: 1,
+		transformOrigin: "center",
+	},"<85%");
+
+	skProcess1svgLine2.to(".circle-2", {
+		fill: "#8532F9",
+		duration: .5,
+	},"<");
+	skProcess1svgLine2.to(".glow-2 circle", {
+		scale: 0,
+		duration: 2,
+	});
+
+}
+// process-1-line-svg-2
+if($(".sk-process-1-line-svg-2").length) {
+
+	gsap.set(".svg-line-1-2 , .svg-line-1-2-2", { opacity: 0 });
+	let skProcess1svgLine1 = gsap.timeline({
+		repeat: -1,
+		ease: "sine.inOut",
+	});
+
+	skProcess1svgLine1.to(".svg-line-1-2", {
+		duration: 5,
+		motionPath: {
+			path: ".svg-path-1-2",
+			align: ".svg-path-1-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+		onStart: () => gsap.to(".svg-line-1-2", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".svg-line-1-2", { opacity: 0, duration: 0.3 }),
+	});
+
+	skProcess1svgLine1.fromTo(".glow-1-2 circle", {
+		scale: 0,
+		transformOrigin: "center",
+		fill: "#FA9145",
+		duration: .5,
+	},{
+		scale: 1,
+		transformOrigin: "center",
+
+	},"<85%");
+
+	skProcess1svgLine1.to(".circle-1-2", {
+		fill: "#FA9145",
+		duration: .5,
+	},"<");
+	skProcess1svgLine1.to(".glow-1-2 circle", {
+		scale: 0,
+		duration: 5,
+	});
+	skProcess1svgLine1.to(".svg-line-1-2-2", {
+		duration: 5,
+		motionPath: {
+			path: ".svg-path-1-2",
+			align: ".svg-path-1-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+		onStart: () => gsap.to(".svg-line-1-2-2", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".svg-line-1-2-2", { opacity: 0, duration: 0.3 }),
+	},"<");
+
+	skProcess1svgLine1.fromTo(".glow-1-2 circle", {
+		scale: 0,
+		transformOrigin: "center",
+		fill: "#8532F9",
+		duration: .5,
+	},{
+		scale: 1,
+		transformOrigin: "center",
+	},"<85%");
+
+	skProcess1svgLine1.to(".circle-1-2", {
+		fill: "#8532F9",
+		duration: .5,
+	},"<");
+	skProcess1svgLine1.to(".glow-1-2 circle", {
+		scale: 0,
+		duration: 2,
+	});
+
+
+	
+	gsap.set(".svg-line-2-2 , .svg-line-2-2-2", { opacity: 0 });
+	let skProcess1svgLine2 = gsap.timeline({
+		repeat: -1,
+		ease: "sine.inOut",
+	});
+
+	skProcess1svgLine2.to(".svg-line-2-2", {
+		duration: 5,
+		motionPath: {
+			path: ".svg-path-2-2",
+			align: ".svg-path-2-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+		onStart: () => gsap.to(".svg-line-2-2", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".svg-line-2-2", { opacity: 0, duration: 0.3 }),
+	});
+
+	skProcess1svgLine2.fromTo(".glow-2-2 circle", {
+		scale: 0,
+		transformOrigin: "center",
+		fill: "#FA9145",
+		duration: .5,
+	},{
+		scale: 1,
+		transformOrigin: "center",
+	},"<85%");
+	skProcess1svgLine2.to(".circle-2-2", {
+		fill: "#FA9145",
+		duration: .5,
+	},"<");
+
+	skProcess1svgLine2.to(".glow-2-2 circle", {
+		scale: 0,
+		duration: 5,
+	});
+	skProcess1svgLine2.to(".svg-line-2-2-2", {
+		duration: 5,
+		motionPath: {
+			path: ".svg-path-2-2",
+			align: ".svg-path-2-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+		onStart: () => gsap.to(".svg-line-2-2-2", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".svg-line-2-2-2", { opacity: 0, duration: 0.3 }),
+	},"<");
+
+	skProcess1svgLine2.fromTo(".glow-2-2 circle", {
+		scale: 0,
+		transformOrigin: "center",
+		fill: "#8532F9",
+		duration: .5,
+	},{
+		scale: 1,
+		transformOrigin: "center",
+	},"<85%");
+
+	skProcess1svgLine2.to(".circle-2-2", {
+		fill: "#8532F9",
+		duration: .5,
+	},"<");
+	skProcess1svgLine2.to(".glow-2-2 circle", {
+		scale: 0,
+		duration: 2,
+	});
+
+}
+
+
+
+
+
+
+
+
+
+
+if ($(".sk-price-1-right").length) {
+
+	const YEARLY_PERCENT = 1200; // set yearly base price
+  
+	$(".sk-price-1-right").each(function () {
+  
+	  const $wrap = $(this);
+	  const $priceEl = $wrap.find(".price");
+	  const $periodEl = $wrap.find(".monthly");
+	  const $toggle = $wrap.find(".sk-price-1-yearly-toggle");
+	  const $items = $wrap.find(".count-item");
+  
+	  // base price from HTML
+	  const BASE_PRICE = parseFloat($priceEl.text());
+  
+	  let currentItem = 1;
+	  let isYearly = false;
+  
+	  function updatePrice() {
+		let price = BASE_PRICE * currentItem;
+  
+		if (isYearly) {
+		  price = currentItem * YEARLY_PERCENT;
+		  $periodEl.text("/ Per Yearly");
+		} else {
+		  $periodEl.text("/ Per Monthly");
+		}
+  
+		$priceEl.text(Math.round(price));
+	  }
+  
+	  /* ---------- Item Click ---------- */
+	  $items.on("click", function () {
+		$items.removeClass("active");
+		$(this).addClass("active");
+  
+		currentItem = parseInt($(this).find(".number").text(), 10);
+		updatePrice();
+	  });
+  
+	  /* ---------- Yearly Toggle ---------- */
+	  $toggle.on("click", function () {
+		$(this).toggleClass("active");
+		isYearly = $(this).hasClass("active");
+		updatePrice();
+	  });
+  
+	  /* ---------- Init ---------- */
+	  updatePrice();
+  
+	});
+  
+  }
+  
+
+
+
+
+
+
+
+
 
 
 
@@ -1493,6 +1903,28 @@ if ($(".wa_marquee_down_top").length) {
       },
     });
   });
+}
+
+
+/* 
+	marquee-top-down 
+*/
+if ($(".wa_marquee_top_down").length) { 
+	const waMarqueeTopDown = document.querySelector('.wa_marquee_top_down');
+	const waMarqueeTopDownClone = waMarqueeTopDown.cloneNode(true);
+	waMarqueeTopDown.parentNode.appendChild(waMarqueeTopDownClone);
+	
+	const waMarqueeTopDownHeight = waMarqueeTopDown.offsetHeight;
+	
+	gsap.to(".wa_marquee_top_down", {
+	  y: `${waMarqueeTopDownHeight}px`, 
+	  ease: "none",
+	  duration: 20,
+	  repeat: -1,
+	  modifiers: {
+		y: gsap.utils.unitize(waY => parseFloat(waY) % waMarqueeTopDownHeight)
+	  }
+	});
 }
 
 

@@ -13,14 +13,14 @@
     z-index: 4;
     width: 40px;
     height: 40px;
-    border: 1px solid var(--pn-clr-pr-1);
-    background-color: #fff;
+    border: 1px solid rgb(133 50 249 / 40%);
+    background-color: var(--sk-clr-back-2);
     transition: 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    color: var(--pn-clr-pr-1);
+    color: var(--sk-clr-pr-1);
     cursor: pointer;
 
     @media #{$xs} {
@@ -28,9 +28,8 @@
     }
 
     &:hover {
-        background: var(--pn-clr-sd-1);
-        color: #fff;
-        border-color: transparent;
+        color: var(--sk-clr-sd-1);
+        border-color: var(--sk-clr-sd-1);
     }
       
     &:is(.active) {
