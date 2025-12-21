@@ -27,7 +27,7 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
-                box-shadow: 0px 0px 70px #ffff;
+                // box-shadow: 0px 0px 70px #ffff;
 
                 position: relative;
                 z-index: 1;
@@ -59,7 +59,8 @@
 
 
         .vertical-line {
-            margin-top: -190px;
+            margin-top: -150px;
+            transform-origin: top;
         }
         
 
@@ -130,6 +131,7 @@
             z-index: 1;
             top: 105px;
             border-radius: 50%;
+            animation: wa-rotated 30s linear infinite;
 
             .single-logo {
                 position: absolute;
@@ -552,7 +554,18 @@
             border-radius: 8px;
             width: 100%;
             text-align: center;
-            padding: 12px 10px;
+            padding: 18px 10px;
+            justify-content: center;
+
+            .bg-clr {
+                opacity: 0;
+            }
+
+            &:hover {
+                .bg-clr {
+                    opacity: 1;
+                }
+            }
         }
     }
     

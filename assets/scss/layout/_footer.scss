@@ -25,6 +25,7 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+            list-style: none;
 
             li {
                 a {
@@ -34,6 +35,23 @@
                     font-size: 18px;
                     opacity: .8;
                     line-height: 1;
+
+                    width: 100%;
+                    display: inline !important;
+                    background-position-y: 0px;
+                    background-repeat: no-repeat;
+                    background-size: 0 100%;
+                    backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
+                    background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+                    -webkit-transition: var(--sk-cube-1);
+                    transition: var(--sk-cube-1);
+
+                    &:hover {
+                        opacity: 1;
+                        color: var(--sk-clr-sd-1);
+                        background-size: 100% 100%;
+                    }
                 }
             }
         }
@@ -73,6 +91,11 @@
 
         a {
             color: #fff;
+            transition: var(--sk-cube-1);
+
+            &:hover {
+                color: var(--sk-clr-sd-1);
+            }
         }
     }
     

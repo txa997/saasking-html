@@ -100,7 +100,6 @@
 
         .sk-pr-btn-2 {
             padding: 16px 23px;
-            box-shadow: unset;
 
             @media #{$xs} {
                 display: none;
@@ -110,10 +109,17 @@
                 display: inline-flex;
             }
 
-            &::after {
-                background: var(--pn-clr-pr-1);
-                // box-shadow: inset 0px 0px 8px #FFFFFF;
+
+            .bg-clr {
+                opacity: 0;
             }
+
+            &:hover {
+                .bg-clr {
+                    opacity: 1;
+                }
+            }
+
         }
 
         .sk-offcanvas-btn-1 {
@@ -282,102 +288,6 @@
 /* 
     header-1-end
 */
-
-/* 
-    header-2-start
-*/
-.pn-header-1-area {
-    &:is(.has-header-2) {
-        .pn-header-1 {
-            &-search-form {
-                .form-input {
-                    background: rgb(255 255 255 / 10%);
-                    border: none;
-                    color: #fff;
-                }
-                .form-btn {
-                    color: var(--pn-clr-black-4);
-                    background-color: #fff;
-                    &:hover {
-                        background: var(--pn-clr-sd-1);
-                        color: #fff;
-                    }
-                }
-            }
-
-            &-action {
-                &-btn {
-                    background: rgb(255 255 255 / 10%);
-                    color: #fff;
-                    .count {
-                        background: var(--pn-clr-sd-1);
-                    }
-
-                    &:hover {
-                        background: var(--pn-clr-sd-1);
-                        .count {
-                            background: var(--pn-clr-pr-1);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-.pn-main-navigation {
-    &:is(.has-header-2) {
-        .navbar-nav {
-            li {
-                a {
-                    color: #F4F4F6;
-                }
-            }
-        }
-    }
-}
-/* 
-    header-2-end
-*/
-/* 
-    header-3-start
-*/
-.pn-header-1-area {
-    &:is(.has-header-3) {
-        .pn-header-1-top {
-            background: linear-gradient(90deg, #FF12DC 0%, #FFB912 100%);
-        }
-
-        .pn-header-1-main-flex {
-            @media #{$over} {
-                margin-left: -132px;
-                margin-right: -132px;
-            }
-        }
-
-        .pn-header-1-action-btn {
-            background: linear-gradient(115.47deg, rgba(255, 255, 255, 0.5) -76.83%, rgba(255, 255, 255, 0.2) 98.12%);
-            color: #fff;
-            .count {
-                background: #fff;
-                color: #000;
-                border: 2px solid #7755FF;
-            }
-
-            &:hover {
-                background-color: var(--pn-clr-sd-1);
-            }
-        }
-    }
-}
-/* 
-    header-3-end
-*/
-
-
-
-
 
 
 

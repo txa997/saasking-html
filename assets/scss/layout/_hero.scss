@@ -16,6 +16,24 @@
         z-index: -1;
     }
 
+
+    &-bg-shape-1 {
+        width: 31%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -4;
+    }
+    
+    &-bg-shape-2 {
+        text-align: right;
+        width: 30%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -4;
+    }
+
     &-content {
         margin-bottom: 200px;
         max-width: 720px;
@@ -63,6 +81,7 @@
             align-items: start;
 
             &-single {
+                will-change: transform;
                 img {
                     width: 100%;
                 }
@@ -97,6 +116,15 @@
                 display: grid;
                 gap: 20px;
                 align-items: start;
+            }
+
+
+            &:is(.active) {
+                .sk-hero-1-db-img-single img {
+                    width: 100%;
+                    animation: fadeInUp2 0.4s backwards;
+                    animation-delay: 0.5s;
+                }
             }
         }
     }
@@ -134,6 +162,9 @@
     }
     
 }
+
+
+
 
 
 @keyframes sk-hero-1-bottom-glow-1 {
