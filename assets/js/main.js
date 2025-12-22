@@ -628,6 +628,22 @@ price1bgGlow2.from(".sk-price-1-animation .vertical-line", {  scaleY: 0, });
 price1bgGlow2.from(".sk-price-1-animation .triangle-shape", {  opacity: 0, });
 price1bgGlow2.from(".sk-price-1-animation .clr-glow-1 img", {  opacity: 0, },"<50%");
 
+// price-1-bg-glow-3
+if (window.matchMedia("(min-width: 1400px)").matches) { 
+	let price1bgGlow3 = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".sk-price-1-bg-illus-3",
+			start: "top 40%", 
+			end: "top top",
+			toggleActions: "play none none reverse",
+			scrub: true,
+			markers: false,
+		},
+	});
+	price1bgGlow3.from(".sk-price-1-bg-illus-3 img", {  yPercent: -50, xPercent: 50, opacity: 0, });
+}
+
+
 
 /* 
 	testimonial-1-dot-animation
@@ -655,6 +671,18 @@ gsap.fromTo(".sk-testimonial-1-animation-dot-svg path",
 );
 
 
+// testimonial-1-bg-glow
+let testimonial1bgGlow3 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-testimonial-1-animation-clr-glow",
+		start: "top 40%", 
+		end: "top top",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+testimonial1bgGlow3.from(".sk-testimonial-1-animation-clr-glow img", {  yPercent: 50,  opacity: 0, });
+
 
 /* 
 	faqs-1-dot-animation
@@ -680,6 +708,20 @@ gsap.fromTo(".sk-faqs-1-animation-dot-svg path",
         ]
     }
 );
+
+
+// faqs-1-bg-glow
+let faqs1bgGlow3 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-faqs-1-animation-clr-glow",
+		start: "top 90%", 
+		end: "top top",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+faqs1bgGlow3.from(".sk-faqs-1-animation-clr-glow img", {  yPercent: -50,  opacity: 0, });
+faqs1bgGlow3.from(".sk-faqs-1-animation-dot-svg", {  opacity: 0, },"<");
 
 
 // features-1-svg-line

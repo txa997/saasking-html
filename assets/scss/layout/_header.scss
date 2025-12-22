@@ -100,7 +100,7 @@
 
         .sk-pr-btn-2 {
             padding: 16px 23px;
-
+            background: var(--sk-clr-pr-1);
             @media #{$xs} {
                 display: none;
             }

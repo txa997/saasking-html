@@ -74,7 +74,7 @@
         flex-direction: column;
         gap: 20px;
         margin-bottom: 20px;
-
+        will-change: transform;
 
         &-single {
             background: #1F1C33;
