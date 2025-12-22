@@ -299,7 +299,49 @@
     }
 }
 
+.sk-pr-btn-3 {
+    font-family: var(--sk-font-1);
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--sk-clr-black-3);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--sk-clr-pr-2);
+    box-shadow: 6px 12px 14px rgba(59, 152, 15, 0.32);
+    border-radius: 8px;
+    padding: 17px 25px;
 
+    .text {
+        position: relative;
+        z-index: 1;
+        transition: var(--sk-cube-1);
+
+        &::after {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            display: block;
+            transition: var(--sk-cube-1);
+            position: absolute;
+            content: attr(data-back);
+            transform: translateY(100%);
+        }
+    
+        &::before {
+            top: 0;
+            left: 0;
+            opacity: 1;
+            display: block;
+            transition: var(--sk-cube-1);
+            position: relative;
+            content: attr(data-front);
+            transform: translateY(0);
+        }
+    }
+}
 
 /* 
     button-end

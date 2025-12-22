@@ -289,6 +289,134 @@
     header-1-end
 */
 
+/* 
+    header-2-start
+*/
+.sk-header-2 {
+    &-area {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+    }
+    &-border {
+        border: 1px solid rgb(255 255 255 / 52%);
+        border-radius: 12px;
+        padding: 8px;
+        max-width: 1030px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap {
+        background: #F5F5F5;
+        border: 1px solid #FFFFFF;
+        box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        justify-content: space-between;
+
+        @media #{$lg,$md,$xs} {
+            padding: 8px 12px;
+        }
+    }
+
+
+    &-action-link {
+        .sk-offcanvas-btn-1 {
+            background: var(--sk-clr-pr-2);
+            color: #000;
+
+            @media #{$over,$xxxl,$xxl,$xl} {
+                display: none;
+            }
+        }
+
+        .sk-pr-btn-3 {
+            &:nth-child(1) {
+                box-shadow: inset 0px 0px 12px #FFFFFF;
+                background: var(--sk-clr-black-3);
+                color: #fff;
+                padding: 14px 20px;
+
+                @media #{$xs} {
+                    display: none;
+                }
+
+                @media #{$sm} {
+                    display: inline-flex;
+                }
+            }
+            &:nth-child(2) {
+                box-shadow: 4px 8px 14px rgba(59, 152, 15, 0.6), inset 0px 0px 9px rgba(0, 33, 1, 0.2);
+                color: #fff;
+                padding: 14px 20px;
+
+                @media #{$xs} {
+                    display: none;
+                }
+
+                @media #{$sm} {
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.sk-main-navigation {
+    &:is(.has-header-2) {
+        .navbar-nav {
+            gap: 28px;
+
+            li {
+                a {
+                    color: var(--sk-clr-black-3);
+                    padding: 20px 0;
+                }
+
+
+                &:is(.dropdown) {
+                    > a {
+                        padding-right: 18px;
+
+                        &::before {
+                            background-image: url("../img/illus/menu-2-arrow.svg");
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    background: #F5F5F5;
+                    border: 1px solid #FFFFFF;
+                    box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1);
+                    border-radius: 12px;
+
+                    li {
+                        a {
+                            color: var(--sk-clr-black-3);
+                        }
+
+                        &:hover {
+                            background: var(--sk-clr-pr-2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+/* 
+    header-2-end
+*/
+
 
 
 /* 

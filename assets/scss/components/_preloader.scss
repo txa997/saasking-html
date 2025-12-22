@@ -65,6 +65,20 @@
             transform: rotateY(360deg);
         }
     }
+
+
+
+    &:is(.has-home-2) {
+        background-color: #EBEBEB;
+        .sk-loader-wrap {
+            &::after {
+                background-color: #EBEBEB;
+            }
+            &::before {
+                background: linear-gradient(180deg, #59D51D 0%, #2E6F0F 100%);
+            }
+        }
+    }
 }
 
 @keyframes skPreloaderKf {
