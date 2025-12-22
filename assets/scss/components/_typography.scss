@@ -106,40 +106,22 @@
     letter-spacing: -0.01em;
     margin-bottom: 0;
     line-height: 1.086;
-}
 
 
-
-.pn-sec-title-1 {
-    font-family: var(--pn-font-1);
-    font-weight: 500;
-    line-height: 110%;
-    font-size: 48px;
-    color: var(--pn-clr-black-1);
-    margin-bottom: 0;
-
-    .has-clr {
-        display: inline-block;
-        font-weight: 700;
-        color: var(--pn-clr-sd-1);
-        border-bottom: 2px solid;
-    }
-    
-
-    @media #{$xl} {
-        font-size: 45px;
-    }
     @media #{$lg} {
-        font-size: 40px;
+        font-size: 44px;
     }
+
     @media #{$md} {
-        font-size: 35px;
+        font-size: 38px;
     }
+
     @media #{$xs} {
-        font-size: 30px;
+        font-size: 32px;
     }
+
     @media #{$sm} {
-        font-size: 33px;
+        font-size: 36px;
     }
 }
 

@@ -49,6 +49,26 @@
             line-height: 1.071;
             font-weight: 600;
             margin-bottom: 21px;
+
+            @media #{$xl} {
+                font-size: 52px;
+            }
+
+            @media #{$lg} {
+                font-size: 48px;
+            }
+
+            @media #{$md} {
+                font-size: 42px;
+            }
+
+            @media #{$xs} {
+                font-size: 36px;
+            }
+
+            @media #{$sm} {
+                font-size: 38px;
+            }
         }
 
         .hero-disc {
@@ -123,7 +143,7 @@
                 .sk-hero-1-db-img-single img {
                     width: 100%;
                     animation: fadeInUp2 0.4s backwards;
-                    animation-delay: 0.5s;
+                    animation-delay: 1s;
                 }
             }
         }

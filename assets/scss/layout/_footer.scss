@@ -6,6 +6,11 @@
         display: flex;
         justify-content: space-between;
         gap: 128px;
+
+        @media #{$lg,$md,$xs} {
+            flex-wrap: wrap;
+            gap: 50px;
+        }
     }
 
     &-widget {
@@ -64,6 +69,22 @@
             line-height: 1;
             font-weight: 700;
             opacity: 5%;
+
+            @media #{$xl} {
+                font-size: 220px;
+            }
+
+            @media #{$lg} {
+                font-size: 195px;
+            }
+
+            @media #{$md} {
+                font-size: 145px;
+            }
+
+            @media #{$xs} {
+                display: none;
+            }
         }
 
         &-title {
@@ -71,6 +92,12 @@
             height: 186px;
             text-align: center;
             border-bottom: 1px solid rgb(255 255 255 / 20%);
+            @media #{$lg} {
+                height: 166px;
+            }
+            @media #{$md} {
+                height: 126px;
+            }
         }
     }
     

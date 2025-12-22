@@ -35,6 +35,17 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
 
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
 
         .ani-line-1 {
             position: absolute;
@@ -45,6 +56,10 @@
             background: radial-gradient( var(--sk-clr-sd-1), transparent);
             z-index: 1;
             animation: skB1line1 7s ease-in-out infinite;
+
+            @media #{$xl,$lg,$md,$xs} {
+                display: none;
+            }
         }
 
         .ani-line-2 {
@@ -56,6 +71,10 @@
             background: radial-gradient( var(--sk-clr-sd-1), transparent);
             z-index: 1;
             animation: skB1line2 7s ease-in-out infinite;
+
+            @media #{$xl,$lg,$md,$xs} {
+                display: none;
+            }
         }
 
         .ani-line-3 {
@@ -67,6 +86,10 @@
             background: radial-gradient(var(--sk-clr-sd-1), transparent);
             z-index: 1;
             animation: skB1line3 7s ease-in-out infinite;
+
+            @media #{$xl,$lg,$md,$xs} {
+                display: none;
+            }
         }
 
         .ani-line-4 {
@@ -78,6 +101,10 @@
             background: radial-gradient(var(--sk-clr-sd-1), transparent);
             z-index: 1;
             animation: skB1line4 7s ease-in-out infinite;
+
+            @media #{$xl,$lg,$md,$xs} {
+                display: none;
+            }
         }
 
         .ani-line-5 {
@@ -89,6 +116,10 @@
             background: radial-gradient(var(--sk-clr-sd-1), transparent);
             z-index: 1;
             animation: skB1line4 7s ease-in-out infinite;
+
+            @media #{$xl,$lg,$md,$xs} {
+                display: none;
+            }
         }
 
         .ani-line-6 {
@@ -100,6 +131,10 @@
             background: radial-gradient(var(--sk-clr-sd-1), transparent);
             z-index: 1;
             animation: skB1line3 7s ease-in-out infinite;
+
+            @media #{$xl,$lg,$md,$xs} {
+                display: none;
+            }
         }
     }
     
@@ -113,6 +148,10 @@
         z-index: 1;
         margin-left: -1px;
         margin-top: -1px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 40px 20px;
+        }
 
         .icon-wrap {
             width: 72px;

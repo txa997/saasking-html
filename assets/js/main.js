@@ -1141,7 +1141,6 @@ if ($(".sk-price-1-right").length) {
 		$priceEl.text(Math.round(price));
 	  }
   
-	  /* ---------- Item Click ---------- */
 	  $items.on("click", function () {
 		$items.removeClass("active");
 		$(this).addClass("active");
@@ -1150,30 +1149,18 @@ if ($(".sk-price-1-right").length) {
 		updatePrice();
 	  });
   
-	  /* ---------- Yearly Toggle ---------- */
 	  $toggle.on("click", function () {
 		$(this).toggleClass("active");
 		isYearly = $(this).hasClass("active");
 		updatePrice();
 	  });
   
-	  /* ---------- Init ---------- */
 	  updatePrice();
   
 	});
   
   }
   
-
-
-
-
-
-
-
-
-
-
 
 /* 
 	products-1-slider-function

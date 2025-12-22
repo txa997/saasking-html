@@ -7,6 +7,10 @@
         border-radius: 30px;
         padding: 80px;
         overflow: hidden;
+
+        @media #{$xs} {
+            padding: 80px 30px;
+        }
     }
 
     &-content {
@@ -177,6 +181,10 @@
         left: -70px;
         width: calc(100% + 140px);
         height: calc(100% + 140px);
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            display: none;
+        }
         
         img {
             width: 100%;

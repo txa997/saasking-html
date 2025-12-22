@@ -17,6 +17,15 @@
         position: relative;
         z-index: 1;
 
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -47,6 +56,15 @@
                 flex-direction: column;
                 justify-content: end;
                 height: 940px;
+
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+            &:nth-child(3) {
+                @media #{$md,$xs} {
+                    display: none;
+                }
             }
         }
     }
