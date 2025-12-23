@@ -639,6 +639,10 @@
 .sk-features-1-item-3-img-2 {
     svg {
         width: 100%;
+        background: rgba(30, 35, 58, 0.6);
+        box-shadow: inset 0px 0px 14px rgba(255, 255, 255, 0.26);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
     }
 }
 @keyframes sk-features-1-item-4-glow {

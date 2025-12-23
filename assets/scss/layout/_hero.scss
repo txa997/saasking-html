@@ -194,10 +194,36 @@
 
     &-area {
         &:is(.active) {
-            .sk-hero-1-db-img-single img {
-                width: 100%;
-                animation: fadeInUp2 0.4s backwards;
-                animation-delay: 1s;
+            .sk-hero-1-db-img-single {
+                img {
+                    width: 100%;
+                    animation: fadeInUp2 0.4s backwards;
+                    animation-delay: 1s;
+                }
+
+                &:is(.img-2) {
+                    img {
+                        animation-delay: 1.4s;
+                    }
+                }
+
+                &:is(.img-6) {
+                    img {
+                        animation-delay: 1.2s;
+                    }
+                }
+
+                &:is(.img-4) {
+                    img {
+                        animation-delay: 1.2s;
+                    }
+                }
+
+                &:is(.img-7) {
+                    img {
+                        animation-delay: 1.4s;
+                    }
+                }
             }
         }
     }

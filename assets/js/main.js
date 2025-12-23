@@ -590,7 +590,7 @@ const paths2 = document.querySelectorAll('.sk-features-1-item-4-dot-svg path');
 let features1bgGlow = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".sk-features-1-bg-clr",
-		start: "top 20%", 
+		start: "top 40%", 
 		end: "bottom bottom",
 		toggleActions: "play none none reverse",
 		scrub: true,
@@ -640,7 +640,7 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
 			markers: false,
 		},
 	});
-	price1bgGlow3.from(".sk-price-1-bg-illus-3 img", {  yPercent: -50, xPercent: 50, opacity: 0, });
+	price1bgGlow3.from(".sk-price-1-bg-illus-3 img", {  opacity: 0, });
 }
 
 
@@ -727,120 +727,117 @@ faqs1bgGlow3.from(".sk-faqs-1-animation-dot-svg", {  opacity: 0, },"<");
 // features-1-svg-line
 if($(".sk-features-1-item-4-line-svg").length) {
 
-	gsap.to(".move-line1", {
-		duration: 10,
+	gsap.to(".f1-svg-line-1", {
+		duration: 5,
 		repeat: -1,
 		motionPath: {
-			path: ".main-line1",
-			align: ".main-line1",
+			path: ".f1-svg-path-1",
+			align: ".f1-svg-path-1",
 			autoRotate: true,
 			alignOrigin: [0.5, 0.5],
 			start: 1,
 			end: 0,
 		},
 	});
-	
-	gsap.to(".move-line2", {
-		duration: 10,
+
+	gsap.to(".f1-svg-line-2", {
+		duration: 5,
 		repeat: -1,
-		delay: 2,
+		delay: .5,
 		motionPath: {
-			path: ".main-line2",
-			align: ".main-line2",
+			path: ".f1-svg-path-2",
+			align: ".f1-svg-path-2",
 			autoRotate: true,
 			alignOrigin: [0.5, 0.5],
 			start: 1,
 			end: 0,
 		},
 	});
-	
-	
-	gsap.to(".move-line3", {
-		duration: 10,
+
+	gsap.to(".f1-svg-line-3", {
+		duration: 5,
 		repeat: -1,
-		delay: 2,
+		delay: 1,
 		motionPath: {
-			path: ".main-line3",
-			align: ".main-line3",
+			path: ".f1-svg-path-3",
+			align: ".f1-svg-path-3",
 			autoRotate: true,
 			alignOrigin: [0.5, 0.5],
 			start: 1,
 			end: 0,
 		},
 	});
-	
-	
-	gsap.to(".move-line4", {
-		duration: 10,
+
+	gsap.to(".f1-svg-line-4", {
+		duration: 5,
 		repeat: -1,
+		delay: 1.5,
 		motionPath: {
-			path: ".main-line4",
-			align: ".main-line4",
+			path: ".f1-svg-path-4",
+			align: ".f1-svg-path-4",
 			autoRotate: true,
 			alignOrigin: [0.5, 0.5],
 			start: 1,
 			end: 0,
 		},
 	});
-	
-	
-	gsap.to(".move-line12", {
-		duration: 10,
+
+	gsap.to(".f1-svg-line-1-2", {
+		duration: 5,
 		repeat: -1,
 		motionPath: {
-			path: ".main-line12",
-			align: ".main-line12",
+			path: ".f1-svg-path-1-2",
+			align: ".f1-svg-path-1-2",
 			autoRotate: true,
 			alignOrigin: [0.5, 0.5],
 			start: 1,
 			end: 0,
 		},
 	});
-	
-	gsap.to(".move-line22", {
-		duration: 10,
+
+	gsap.to(".f1-svg-line-2-2", {
+		duration: 5,
 		repeat: -1,
-		delay: 2,
+		delay: .5,
 		motionPath: {
-			path: ".main-line22",
-			align: ".main-line22",
+			path: ".f1-svg-path-2-2",
+			align: ".f1-svg-path-2-2",
 			autoRotate: true,
 			alignOrigin: [0.5, 0.5],
 			start: 1,
 			end: 0,
 		},
 	});
-	
-	
-	gsap.to(".move-line32", {
-		duration: 10,
+
+	gsap.to(".f1-svg-line-3-2", {
+		duration: 5,
 		repeat: -1,
-		delay: 2,
+		delay: 1,
 		motionPath: {
-			path: ".main-line32",
-			align: ".main-line32",
+			path: ".f1-svg-path-3-2",
+			align: ".f1-svg-path-3-2",
 			autoRotate: true,
 			alignOrigin: [0.5, 0.5],
 			start: 1,
 			end: 0,
 		},
 	});
-	
-	
-	gsap.to(".move-line42", {
-		duration: 10,
+
+	gsap.to(".f1-svg-line-4-2", {
+		duration: 5,
 		repeat: -1,
+		delay: 1.5,
 		motionPath: {
-			path: ".main-line42",
-			align: ".main-line42",
+			path: ".f1-svg-path-4-2",
+			align: ".f1-svg-path-4-2",
 			autoRotate: true,
 			alignOrigin: [0.5, 0.5],
 			start: 1,
 			end: 0,
 		},
 	});
-	
-	
+
+
 }
 
 

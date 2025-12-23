@@ -3903,6 +3903,18 @@ input:focus::placeholder, textarea:focus::placeholder {
   animation: fadeInUp2 0.4s backwards;
   animation-delay: 1s;
 }
+.sk-hero-1-area:is(.active) .sk-hero-1-db-img-single:is(.img-2) img {
+  animation-delay: 1.4s;
+}
+.sk-hero-1-area:is(.active) .sk-hero-1-db-img-single:is(.img-6) img {
+  animation-delay: 1.2s;
+}
+.sk-hero-1-area:is(.active) .sk-hero-1-db-img-single:is(.img-4) img {
+  animation-delay: 1.2s;
+}
+.sk-hero-1-area:is(.active) .sk-hero-1-db-img-single:is(.img-7) img {
+  animation-delay: 1.4s;
+}
 
 @keyframes sk-hero-1-bottom-glow-1 {
   0% {
@@ -4840,6 +4852,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .sk-features-1-item-3-img-2 svg {
   width: 100%;
+  background: rgba(30, 35, 58, 0.6);
+  box-shadow: inset 0px 0px 14px rgba(255, 255, 255, 0.26);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
 }
 
 @keyframes sk-features-1-item-4-glow {
@@ -6082,7 +6098,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-price-1-bg-illus-3 {
   position: absolute;
-  bottom: -20%;
+  bottom: -17%;
   left: 0;
   width: 100%;
   z-index: -2;
