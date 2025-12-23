@@ -341,6 +341,18 @@
             transform: translateY(0);
         }
     }
+
+
+    &:is(.has-border) {
+        background: transparent;
+        box-shadow: none;
+        border: 1px solid rgb(0 33 1 / 16%);
+
+        .icon {
+            color: var(--sk-clr-pr-2);
+        }
+    }
+    
 }
 
 /* 

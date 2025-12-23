@@ -65,3 +65,168 @@
 /* 
     partner-1-end
 */
+
+/* 
+    partner-2-start
+*/
+
+.sk-partner-2 {
+    &-title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--sk-clr-black-4);
+        margin-bottom: 35px;
+
+        b {
+            font-weight: inherit;
+            color: var(--sk-clr-black-3);
+
+        }
+    }
+
+
+    &-border {
+        .border-line-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+        }
+        .border-line-2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+        }
+    }
+
+    &-box {
+        z-index: 2;
+        .line-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: #fff;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+        }
+        .line-2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: #fff;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+        }
+
+        .dot-shape-1 {
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            border: 1px solid #FFFFFF;
+            box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1), 1px -1px 4px #FFFFFF, -1px 3px 6px rgba(0, 0, 0, 0.12);
+            z-index: 3;
+            border-radius: 50%;
+            background: var(--sk-clr-white-1);
+            top: -7px;
+            left: -8px;
+        }
+
+        .dot-shape-2 {
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            border: 1px solid #FFFFFF;
+            box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1), 1px -1px 4px #FFFFFF, -1px 3px 6px rgba(0, 0, 0, 0.12);
+            z-index: 3;
+            border-radius: 50%;
+            background: var(--sk-clr-white-1);
+            bottom: -7px;
+            left: -8px;
+        }
+
+        .dot-shape-3 {
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            border: 1px solid #FFFFFF;
+            box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1), 1px -1px 4px #FFFFFF, -1px 3px 6px rgba(0, 0, 0, 0.12);
+            z-index: 3;
+            border-radius: 50%;
+            background: var(--sk-clr-white-1);
+            bottom: -7px;
+            right: -8px;
+        }
+
+        .dot-shape-4 {
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            border: 1px solid #FFFFFF;
+            box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1), 1px -1px 4px #FFFFFF, -1px 3px 6px rgba(0, 0, 0, 0.12);
+            z-index: 3;
+            border-radius: 50%;
+            background: var(--sk-clr-white-1);
+            top: -7px;
+            right: -8px;
+        }
+    }
+
+
+    &-wrap {
+        padding: 37px 0px;
+
+        &::after {
+            content: "";
+            width: 200px;
+            height: 96%;
+            background: linear-gradient(90deg, var(--sk-clr-white-1) 23.25%, rgba(235, 235, 235, 0) 100%);
+            position: absolute;
+            top: 2px;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+
+            @media #{$xs} {
+                width: 100px;
+            }
+        }
+        &::before {
+            content: "";
+            width: 200px;
+            height: 96%;
+            background: linear-gradient(-90deg, var(--sk-clr-white-1) 23.25%, rgba(235, 235, 235, 0) 100%);
+            position: absolute;
+            top: 2px;
+            right: 0;
+            z-index: 1;
+            pointer-events: none;
+            
+            @media #{$xs} {
+                width: 100px;
+            }
+        }
+
+
+        .single-logo {
+            opacity: .4;
+        }
+    }
+}
+
+/* 
+    partner-2-end
+*/
