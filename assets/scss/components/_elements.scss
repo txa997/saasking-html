@@ -22,3 +22,16 @@
     animation: skGlowEffect1 2s linear infinite;
 }
 
+.sk-playbtn-1 {
+    width: 108px;
+    height: 108px;
+    background: rgba(0, 33, 1, 0.18);
+    box-shadow: inset 0px -4px 9px rgba(0, 33, 1, 0.2);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 28px;
+    color: var(--sk-clr-black-3);
+}
