@@ -1978,9 +1978,15 @@ if($(".wa_parallax_elm").length) {
 /* 
 	faqs-active-class
 */
-$(document).on('click', '.wa_accordion_item', function(){
-	$(this).addClass('active').siblings().removeClass('active')
-})
+$(document).on('click', '.wa_accordion_item', function () {
+
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+	} else {
+		$(this).addClass('active').siblings().removeClass('active');
+	}
+
+});
 
 
 // placeholder-typing
