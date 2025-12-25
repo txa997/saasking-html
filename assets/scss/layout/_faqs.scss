@@ -169,3 +169,153 @@
 /* 
     faqs-end
 */
+
+/* 
+    faqs-2-start
+*/
+.sk-faqs-2 {
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 75px;
+    }
+    
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+   
+
+    }
+
+    &-sec-title {
+        position: sticky;
+        top: 100px;
+        padding-bottom: 130px;
+
+        .sec-disc {
+            margin-top: 18px;
+        }
+    }
+
+    &-author {
+        &-img {
+            display: flex;
+            margin-bottom: 16px;
+
+            .single-img {
+                width: 50px;
+                height: 50px;
+                box-shadow:  0px 0px 4px rgba(255, 255, 255, 0.68);
+                backdrop-filter: blur(11.5px);
+                border-radius: 50%;
+                border: 3px solid #fff;
+            }
+        }
+
+        &-text {
+            b {
+                font-weight: 500;
+                color: var(--sk-clr-black-3);
+            }
+        }
+    }
+
+    &-right {
+        background: rgb(246 246 246 / 48%);
+        border: 1px solid #FFFFFF;
+        border-radius: 16px;
+        padding: 20px 20px;
+
+        .sk-accordion-1 {
+            border: none;
+            gap: 10px;
+
+            &-item {
+                background: #F6F6F6;
+                box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                border: none;
+                padding: 12px 12px;
+ 
+
+                &::after {
+                    display: none;
+                }
+
+                &::before {
+                    display: none;
+                }
+
+
+                .item-title {
+                    justify-content: start;
+                    gap: 12px;
+                    padding: 11px 10px;
+                    font-weight: 400;
+                    .icon-2 {
+                        width: 14px;
+                        height: 14px;
+                        background: #EBEBEB;
+                        box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.16);
+                        border-radius: 50%;
+                        position: relative;
+                        z-index: 1;
+                        transition: var(--sk-cube-1);
+
+                        &::after {
+                            content: "";
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background: var(--sk-clr-pr-2);
+                            position: absolute;
+                            top: 4px;
+                            left: 4px;
+                            transition: var(--sk-cube-1);
+                        }
+                    }
+
+
+                    &:is(:not(.collapsed)) {
+                        font-weight: 500;
+                        .icon-2 {
+                            background: var(--sk-clr-pr-2);
+
+                            &::after {
+                                background: #EBEBEB;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        color: var(--sk-clr-black-3);
+
+                        .icon-2 {
+                            background: var(--sk-clr-pr-2);
+
+                            &::after {
+                                background: #EBEBEB;
+                            }
+                        }
+                    }
+                    
+                }
+
+
+                .item-disc {
+                    padding: 20px 20px;
+                    font-size: 17px;
+                    background: #fff;
+                    border-radius: 6px;
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}
+/* 
+    faqs-2-end
+*/

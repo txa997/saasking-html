@@ -207,6 +207,18 @@
             padding-right: 16px;
             margin-top: 16px;
 
+            @media #{$md} {
+                grid-template-columns: 1fr 1fr 1fr ;
+            }
+
+            @media #{$xs} {
+                grid-template-columns: 1fr ;
+            }
+
+            @media #{$sm} {
+                grid-template-columns: 1fr 1fr ;
+            }
+
             &-single {
                 background: #F4F4F4;
                 border: 1px solid #FFFFFF;
@@ -220,8 +232,18 @@
                 padding: 16px 10px;
                 transition: var(--sk-cube-1);
 
+                @media #{$xl,$lg,$md,$xs} {
+                    font-size: 16px;
+                }
+
                 &:hover {
                     background: var(--sk-clr-pr-2);
+                    border-color: transparent;
+                }
+
+                &:is(.active) {
+                    background: var(--sk-clr-pr-2);
+                    border-color: transparent;
                 }
             }
         }
@@ -236,6 +258,199 @@
                     border-radius: 8px;
                 }
             }
+        }
+
+        &-pane {
+            &-single {
+                background: #F2F2F2;
+                box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.1);
+                border-radius: 20px;
+                min-height: 508px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media #{$xs} {
+                    padding: 10px;
+                }
+                .sk-process-2-card {
+                    transform: translateX(-50%);
+                    @media #{$xl} {
+                        transform: translateX(-20%);
+                    }
+                    @media #{$lg,$md} {
+                        transform: translateX(5%);
+                    }
+                    @media #{$xs} {
+                        transform: translateX(0%);
+                    }
+                }
+
+
+                .bg-line-wrap {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    z-index: -1;
+                }
+                
+                .single-line {
+                    width: 2px;
+                    height: 100%;
+                    border: 1px dashed rgb(47 73 48 / 28%);
+                }
+                
+                .single-line-arrow {
+                    width: 1px;
+                    height: 100%;
+                    background: var(--sk-clr-black-3);
+                    position: relative;
+                    z-index: 1;
+
+                    &::after {
+                        content: "";
+                        width: 12px;
+                        height: 6px;
+                        background: var(--sk-clr-black-3);
+                        position: absolute;
+                        top: 0;
+                        left: -6px;
+                        clip-path: polygon(0 0, 50% 100%, 100% 0);
+                    }
+                }
+
+                &:is(.has-2) {
+                    .sk-process-2-card {
+                        transform: translateX(-0%) translateY(10%);
+                        @media #{$xl} {
+                            transform: translateX(-20%);
+                        }
+                        @media #{$lg,$md} {
+                            transform: translateX(5%);
+                        }
+                        @media #{$xs} {
+                            transform: translateX(0%);
+                        }
+                    }
+                }
+
+                &:is(.has-3) {
+                    .sk-process-2-card {
+                        transform: translateX(50%) translateY(11%);
+                        @media #{$xl} {
+                            transform: translateX(-20%);
+                        }
+                        @media #{$lg,$md} {
+                            transform: translateX(5%);
+                        }
+                        @media #{$xs} {
+                            transform: translateX(0%);
+                        }
+                    }
+                }
+
+                &:is(.has-4) {
+                    .sk-process-2-card {
+                        transform: translateX(51%) translateY(-14%);
+                        @media #{$xl} {
+                            transform: translateX(-20%);
+                        }
+                        @media #{$lg,$md,$xs} {
+                            transform: translateX(5%);
+                        }
+                        @media #{$xs} {
+                            transform: translateX(0%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+    &-card {
+        background: #F6F6F6;
+        border: 2px solid #FFFFFF;
+        box-shadow: 6px -5px 6px #FFFFFF, -5px 8px 9px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        max-width: 540px;
+        padding: 36px 36px;
+        position: relative;
+        z-index: 1;
+
+        @media #{$xs} {
+            padding: 36px 22px;
+        }
+
+        .icon {
+            background: #035705;
+            box-shadow: 6px 10px 12px rgba(0, 33, 1, 0.4), inset 0px 0px 4px #FFFFFF;
+            border-radius: 8px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 75px;
+        }
+
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+        }
+
+        .number {
+            position: absolute;
+            right: 25px;
+            top: 6px;
+            font-size: 94px;
+            letter-spacing: -0.02em;
+            color: rgba(0, 33, 1, 0.08);
+            backdrop-filter: blur(12px);
+            font-weight: 700;
+        }
+
+
+        .bg-shape {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+
+    &-bg-dot-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+    }
+    
+    &-bg-dot-2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+        img {
+            width: 100%;
         }
     }
     
