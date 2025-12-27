@@ -12,30 +12,30 @@
 /* 
 	lenis-smooth-scroll-activation
 */
-// const lenis = new Lenis({
-// 	duration: 1.2, 
-// 	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-// 	direction: 'vertical', 
-// 	smooth: true, 
-// 	smoothTouch: false, 
-// });
-// function raf(time) {
-// 	lenis.raf(time);
-// 	requestAnimationFrame(raf);
-// }
-// requestAnimationFrame(raf);
-// $('a[href^="#"]').on('click', function (e) {
-// 	e.preventDefault(); 
+const lenis = new Lenis({
+	duration: 1, 
+	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+	direction: 'vertical', 
+	smooth: true, 
+	smoothTouch: false, 
+});
+function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+$('a[href^="#"]').on('click', function (e) {
+	e.preventDefault(); 
 
-// 	const target = $(this.getAttribute('href')); 
+	const target = $(this.getAttribute('href')); 
 
-// 	if (target.length) {
-// 		lenis.scrollTo(target[0], {
-// 			duration: 1.2, 
-// 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-// 		});
-// 	}
-// });
+	if (target.length) {
+		lenis.scrollTo(target[0], {
+			duration: 1.2, 
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+		});
+	}
+});
 
 
 gsap.config({
@@ -1140,13 +1140,228 @@ if($(".sk-process-1-line-svg-2").length) {
 
 }
 
+// features-2-line-svg-1
+if($(".sk-features-2-item-2-svg-line").length) {
+
+	gsap.to(".f2-svg-line-1", {
+		duration: 5,
+		repeat: -1,
+
+		motionPath: {
+			path: ".f2-svg-path-1",
+			align: ".f2-svg-path-1",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+	gsap.to(".f2-svg-line-2", {
+		duration: 5,
+		repeat: -1,
+		delay: 1,
+		motionPath: {
+			path: ".f2-svg-path-2",
+			align: ".f2-svg-path-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+	gsap.to(".f2-svg-line-3", {
+		duration: 5,
+		repeat: -1,
+		delay: 1,
+		motionPath: {
+			path: ".f2-svg-path-3",
+			align: ".f2-svg-path-3",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+	gsap.to(".f2-svg-line-1-2", {
+		duration: 5,
+		repeat: -1,
+
+		motionPath: {
+			path: ".f2-svg-path-1-2",
+			align: ".f2-svg-path-1-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+	gsap.to(".f2-svg-line-2-2", {
+		duration: 5,
+		repeat: -1,
+		delay: 1,
+		motionPath: {
+			path: ".f2-svg-path-2-2",
+			align: ".f2-svg-path-2-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+	gsap.to(".f2-svg-line-3-2", {
+		duration: 5,
+		repeat: -1,
+		delay: 1,
+		motionPath: {
+			path: ".f2-svg-path-3-2",
+			align: ".f2-svg-path-3-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+
+}
 
 
 
+/* 
+	process-2-animation
+*/
+if (window.matchMedia("(min-width: 1200px)").matches) {
+	if($(".sk-process-2-height").length) {
 
 
+		ScrollTrigger.create({
+			trigger: ".sk-process-2-height",
+			start: "top 0%",
+			end: "bottom bottom",
+			scrub: true,
+			markers: false,
+		
+			onUpdate: (self) => {
+				const progress = self.progress;
+		
+				const items = document.querySelectorAll(".sk-process-2-tabs-btn-single");
+		
+				items.forEach(item => item.classList.remove("active"));
+		
+				if (progress < 0.25) {
+					items[0].classList.add("active");
+				} 
+				else if (progress < 0.50) {
+					items[1].classList.add("active");
+				} 
+				else if (progress < 0.75) {
+					items[2].classList.add("active");
+				} 
+				else {
+					items[3].classList.add("active");
+				}
+			}
+		});
+
+		ScrollTrigger.create({
+			trigger: ".sk-process-2-height",
+			start: "top 0%",
+			end: "bottom bottom",
+			scrub: true,
+			markers: false,
+		
+			onUpdate: (self) => {
+				const progress = self.progress;
+		
+				const items = document.querySelectorAll(".sk-process-2-tabs-pane .tab-pane");
+		
+				items.forEach(item => item.classList.remove("show"));
+				items.forEach(item => item.classList.remove("active"));
+		
+				if (progress < 0.25) {
+					items[0].classList.add("show");
+					items[0].classList.add("active");
+				} 
+				else if (progress < 0.50) {
+					items[1].classList.add("show");
+					items[1].classList.add("active");
+				} 
+				else if (progress < 0.75) {
+					items[2].classList.add("show");
+					items[2].classList.add("active");
+				} 
+				else {
+					items[3].classList.add("show");
+					items[3].classList.add("active");
+				}
+			}
+		});
+
+	}
+}
 
 
+// features-2-animation-1
+let skFeatures2ani1 = gsap.timeline({
+	repeat: -1,
+	repeatDelay: 3,
+
+	scrollTrigger: {
+		trigger: ".sk-features-2-item-3",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+
+skFeatures2ani1.from(".sk-features-2-item-3 .author-img", { opacity: 0, duration: .3, ease: "ease1" });
+skFeatures2ani1.from(".sk-features-2-item-3 .author-title", { opacity: 0, y: 20, duration: .3, ease: "ease1" });
+skFeatures2ani1.from(".sk-features-2-item-3 .author-inner", { opacity: 0, y: 20, duration: .3, ease: "ease1" });
+skFeatures2ani1.from(".sk-features-2-item-3 .author-inner-text ", { opacity: 0, y: 20, duration: .3, ease: "ease1" });
+skFeatures2ani1.from(".sk-features-2-item-3 .author-inner-svg rect", { opacity: 0, x: 10, stagger: .2, duration: .3, ease: "ease1" });
+skFeatures2ani1.from(".sk-features-2-item-3 .author-inner-icon", { opacity: 0, scale: 1.3, duration: .3, ease: "ease1" });
+
+// features-2-animation-2
+let skFeatures2ani2 = gsap.timeline({
+	repeat: -1,
+	repeatDelay: 3,
+
+	scrollTrigger: {
+		trigger: ".sk-features-2-item-4",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+
+skFeatures2ani2.from(".sk-features-2-item-4 .item-svg-1 .f2-svg-4-text", { opacity: 0, x: 10, duration: 1, ease: "ease1" });
+skFeatures2ani2.from(".sk-features-2-item-4 .item-svg-1 .f2-svg-4-line", { opacity: 0, x: 10, duration: .5, ease: "ease1" });
+skFeatures2ani2.from(".sk-features-2-item-4 .item-svg-1 .f2-svg-4-bar", { opacity: 0, y: 10, stagger: .1, duration: .3, ease: "ease1" });
+skFeatures2ani2.fromTo(".sk-features-2-item-4 .item-svg-3", { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",  duration: 1, ease: "ease1" },{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration: 1, ease: "ease1" });
+skFeatures2ani2.from(".sk-features-2-item-4 .item-svg-2 .f2-svg-5-box", { opacity: 0, y: 10, duration: .3, ease: "ease1" });
+skFeatures2ani2.fromTo(".sk-features-2-item-4 .item-svg-2 .f2-svg-5-line", { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",  duration: 1, ease: "ease1" },{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration: 1, ease: "ease1" });
+skFeatures2ani2.from(".sk-features-2-item-4 .item-favicon", { opacity: 0, x: 10, duration: .5, ease: "ease1" },"<");
+
+// features-2-animation-3
+let skFeatures2ani3 = gsap.timeline({
+	repeat: -1,
+	repeatDelay: 3,
+
+	scrollTrigger: {
+		trigger: ".sk-features-2-item-4",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+
+skFeatures2ani3.from(".sk-features-2-item-5 .item-svg .f2-svg-6-icon", { opacity: 0, duration: 1, ease: "ease1" });
+skFeatures2ani3.fromTo(".sk-features-2-item-5 .item-svg .f2-svg-6-line", { clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",  duration: 1, ease: "ease1" },{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration: 1, ease: "ease1" });
+skFeatures2ani3.from(".sk-features-2-item-5 .item-svg .f2-svg-6-logo", { opacity: 0, duration: 1, ease: "ease1" },"<50%");
+skFeatures2ani3.from(".sk-features-2-item-5 .item-svg rect", { opacity: 0, y: 10, stagger: .1, duration: 1, ease: "ease1" },"<50%");
+skFeatures2ani3.from(".sk-features-2-item-5 .item-svg .f2-svg-6-text", { opacity: 0, y: 10, stagger: .1, duration: 1, ease: "ease1" },"<50%");
 
 
 if ($(".sk-price-1-right").length) {

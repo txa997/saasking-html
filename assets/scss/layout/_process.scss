@@ -368,6 +368,18 @@
                     }
                 }
             }
+
+            @media #{$over,$xxxl,$xxl,$xl} {
+                .tab-pane {
+                    &:is(.active) {
+                        .sk-process-2-card {
+                            animation: skF2card .5s backwards;
+                        }
+                    }
+                }  
+            }
+
+
         }
     }
 
@@ -454,6 +466,31 @@
         }
     }
     
+
+
+    &-height {
+        @media #{$over,$xxxl,$xxl,$xl} {
+            height: 2000px;
+            position: relative;
+        }
+    }
+
+    &-pin {
+        @media #{$over,$xxxl,$xxl,$xl} {
+            position: sticky;
+            top: 100px;
+        }
+
+    }
+}
+
+@keyframes skF2card {
+    0% {
+        top: 30px;
+    }
+    100% {
+        top: 0px;
+    }
 }
 /* 
     process-2-end

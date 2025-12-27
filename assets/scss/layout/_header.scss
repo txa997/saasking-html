@@ -341,6 +341,7 @@
                 background: var(--sk-clr-black-3);
                 color: #fff;
                 padding: 14px 20px;
+                border: none;
 
                 @media #{$xs} {
                     display: none;
@@ -348,6 +349,12 @@
 
                 @media #{$sm} {
                     display: inline-flex;
+                }
+
+                &:hover {
+                    background: #F0F0F0;
+                    box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.1);
+                    color: var(--sk-clr-black-3);
                 }
             }
             &:nth-child(2) {
@@ -361,6 +368,12 @@
 
                 @media #{$sm} {
                     display: inline-flex;
+                }
+
+                &:hover {
+                    background: #F0F0F0;
+                    box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.1);
+                    color: var(--sk-clr-black-3);
                 }
             }
         }

@@ -81,6 +81,7 @@ CSS INDEX
   --sk-clr-black-4: #454B45;
   --sk-clr-white-1: #EBEBEB;
   --sk-clr-gd-1: linear-gradient(92.62deg, #EA9354 0.03%, #8D40D7 54.05%, #863AEB 99.97%);
+  --sk-clr-gd-2: linear-gradient(180deg, #002101 40.38%, #59D51D 100%);
   --sk-cube-1: all .4s cubic-bezier(.18,.82,.41,1);
   --sk-cube-2: linear(0,.154 3.4%,.994 12.4%,1.141 15.2%,1.206 18%,1.197 21.6%,1.01 31.2%,.957 37.2%,1.009 56.2%,1);
 }
@@ -1591,7 +1592,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-color: var(--sk-clr-pr-2);
   box-shadow: 6px 12px 14px rgba(59, 152, 15, 0.32);
   border-radius: 8px;
-  padding: 17px 25px;
+  padding: 16px 25px;
+  border: 1px solid transparent;
+  transition: var(--sk-cube-1);
 }
 .sk-pr-btn-3 .text {
   position: relative;
@@ -1619,6 +1622,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   content: attr(data-front);
   transform: translateY(0);
 }
+.sk-pr-btn-3:hover {
+  background: #F0F0F0;
+  border-color: #FFFFFF;
+  box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.03);
+}
+.sk-pr-btn-3:hover .text::after {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.sk-pr-btn-3:hover .text::before {
+  opacity: 0;
+  transform: translateY(-100%);
+}
 .sk-pr-btn-3:is(.has-border) {
   background: transparent;
   box-shadow: none;
@@ -1626,6 +1642,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-pr-btn-3:is(.has-border) .icon {
   color: var(--sk-clr-pr-2);
+}
+.sk-pr-btn-3:is(.has-border):hover {
+  background: #F0F0F0;
+  border-color: #FFFFFF;
+  box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.03);
 }
 
 /* 
@@ -3721,6 +3742,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   background: var(--sk-clr-black-3);
   color: #fff;
   padding: 14px 20px;
+  border: none;
 }
 @media (max-width: 767px) {
   .sk-header-2-action-link .sk-pr-btn-3:nth-child(1) {
@@ -3731,6 +3753,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   .sk-header-2-action-link .sk-pr-btn-3:nth-child(1) {
     display: inline-flex;
   }
+}
+.sk-header-2-action-link .sk-pr-btn-3:nth-child(1):hover {
+  background: #F0F0F0;
+  box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.1);
+  color: var(--sk-clr-black-3);
 }
 .sk-header-2-action-link .sk-pr-btn-3:nth-child(2) {
   box-shadow: 4px 8px 14px rgba(59, 152, 15, 0.6), inset 0px 0px 9px rgba(0, 33, 1, 0.2);
@@ -3746,6 +3773,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   .sk-header-2-action-link .sk-pr-btn-3:nth-child(2) {
     display: inline-flex;
   }
+}
+.sk-header-2-action-link .sk-pr-btn-3:nth-child(2):hover {
+  background: #F0F0F0;
+  box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.1);
+  color: var(--sk-clr-black-3);
 }
 
 .sk-main-navigation:is(.has-header-2) .navbar-nav {
@@ -4080,7 +4112,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-hero-2-title .icon-2 {
   font-size: 40px;
-  transform: translateY(21px);
+  transform: translateY(25px) translateX(-10px);
 }
 .sk-hero-2-title-writing {
   position: relative;
@@ -4091,7 +4123,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding: 6px 14px;
   padding-right: 0;
   transform: translateY(5px);
-  display: inline;
+  display: inline-block;
 }
 .sk-hero-2-title-writing .box-shape {
   width: 10px;
@@ -4117,7 +4149,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-hero-2-title-writing .cd-words-wrapper b {
   font-weight: inherit;
-  background: var(--sk-clr-gd-1);
+  background: var(--sk-clr-gd-2);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -4374,6 +4406,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-partner-2-wrap .single-logo {
   opacity: 0.4;
+}
+.sk-partner-2-wrap .single-logo:hover {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(77%) saturate(424%) hue-rotate(55deg) brightness(94%) contrast(92%);
+  opacity: 1;
 }
 
 /* 
@@ -5047,6 +5083,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  animation: wa-rotated 10s linear infinite;
 }
 .sk-features-2-item-1 .circle-1-line-bar-1 {
   position: absolute;
@@ -5076,6 +5113,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  animation: wa-rotated-minus 10s linear infinite;
 }
 .sk-features-2-item-1 .circle-2-line-bar-1 {
   position: absolute;
@@ -5107,6 +5145,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  animation: wa-rotated 10s linear infinite;
 }
 .sk-features-2-item-1 .circle-3-line-bar-1 {
   position: absolute;
@@ -7437,6 +7476,11 @@ input:focus::placeholder, textarea:focus::placeholder {
     transform: translateX(0%);
   }
 }
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .sk-process-2-tabs-pane .tab-pane:is(.active) .sk-process-2-card {
+    animation: skF2card 0.5s backwards;
+  }
+}
 .sk-process-2-card {
   background: #F6F6F6;
   border: 2px solid #FFFFFF;
@@ -7508,7 +7552,27 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-process-2-bg-dot-2 img {
   width: 100%;
 }
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .sk-process-2-height {
+    height: 2000px;
+    position: relative;
+  }
+}
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .sk-process-2-pin {
+    position: sticky;
+    top: 100px;
+  }
+}
 
+@keyframes skF2card {
+  0% {
+    top: 30px;
+  }
+  100% {
+    top: 0px;
+  }
+}
 /* 
     process-2-end
 */
