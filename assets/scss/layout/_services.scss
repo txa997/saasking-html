@@ -32,6 +32,11 @@
                     color: var(--sk-clr-black-3);
                     border-color: transparent;
                 }
+                &:is(.active) {
+                    background: var(--sk-clr-pr-2);
+                    color: var(--sk-clr-black-3);
+                    border-color: transparent;
+                }
             }
         }
 
@@ -99,6 +104,28 @@
         .title {
             font-size: 22px;
             margin-bottom: 14px;
+            transition: var(--sk-cube-1);
+
+
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: 0px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+                -webkit-transition: var(--sk-cube-1);
+                transition: var(--sk-cube-1);
+    
+                &:hover {
+                    opacity: 1;
+                    color: var(--sk-clr-pr-2);
+                    background-size: 100% 100%;
+                }
+            }
+
         }
 
         .dot {

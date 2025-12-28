@@ -665,6 +665,21 @@
     features-2-start
 */
 .sk-features-2 {
+    &-sec-title-posi {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+    }
+    &-sec-title {
+        max-width: 600px;
+    }
+
     &-container {
         max-width: 1816px;
         margin-left: auto;
@@ -1380,6 +1395,15 @@
                 width: 100%;
             }
         }
+    }
+
+    &-height {
+        height: 2500px;
+    }
+
+    &-pin {
+        position: sticky;
+        top: 0;
     }
 }
 

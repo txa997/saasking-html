@@ -1140,6 +1140,35 @@ if($(".sk-process-1-line-svg-2").length) {
 
 }
 
+
+// hero-2-img
+let skHero2img = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-hero-2-area",
+		start: "top top", 
+		end: "bottom 80%", 
+		toggleActions: "play none none reverse",
+		scrub: true,
+		markers: false,
+	},
+});
+skHero2img.to(".sk-hero-2-img-box .img-1", {  rotateX: -90,   },);
+skHero2img.to(".sk-hero-2-img-box .img-1", {  opacity: 0 , duration: .3 });
+skHero2img.from(".sk-hero-2-img-box .img-2", {  rotateX: -90, opacity: 0 },"<");
+
+
+
+let skF2cardAni = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-faqs-1-animation-clr-glow",
+		start: "top 90%", 
+		end: "top top",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+skF2cardAni.from(".sk-faqs-1-animation-clr-glow img", {  yPercent: -50,  opacity: 0, });
+
 // features-2-line-svg-1
 if($(".sk-features-2-item-2-svg-line").length) {
 

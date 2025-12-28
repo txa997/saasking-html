@@ -39,6 +39,29 @@
 }
 
 
+@keyframes fadeInRight2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    filter: blur(3px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    filter: blur(0px);
+  }
+}
+
+.fadeInRight2 {
+  -webkit-animation-name: fadeInRight2;
+  animation-name: fadeInRight2;
+  animation-duration: 400ms;
+  animation-timing-function: var(--sk-cube-1);
+}
 /* 
     wow-plus-end
 */

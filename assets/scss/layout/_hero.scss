@@ -442,6 +442,32 @@
             line-height: 1;
         }
     }
+
+    &-img {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+
+
+        img {
+            will-change: transform;
+        }
+
+
+
+        &-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 2000px;
+            transform-style: preserve-3d;
+
+
+
+            .img-2 {
+                position: absolute;
+            }
+        }
+    }
     
 }
 /* 

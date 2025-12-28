@@ -178,6 +178,11 @@
         display: grid;
         grid-template-columns: 1fr 1.5fr;
         gap: 75px;
+
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
     }
     
 
@@ -191,9 +196,13 @@
     }
 
     &-sec-title {
-        position: sticky;
-        top: 100px;
         padding-bottom: 130px;
+
+
+        @media #{$over,$xxxl,$xxl,$xl,$lg} {
+            position: sticky;
+            top: 100px;
+        }
 
         .sec-disc {
             margin-top: 18px;
@@ -212,6 +221,9 @@
                 backdrop-filter: blur(11.5px);
                 border-radius: 50%;
                 border: 3px solid #fff;
+                &:not(:first-child) {
+                    margin-left: -15px;
+                }
             }
         }
 

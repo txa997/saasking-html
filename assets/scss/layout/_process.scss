@@ -487,9 +487,11 @@
 @keyframes skF2card {
     0% {
         top: 30px;
+        opacity: 0;
     }
     100% {
         top: 0px;
+        opacity: 1;
     }
 }
 /* 
