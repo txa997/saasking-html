@@ -284,6 +284,12 @@
             border: 1px solid #59D51D;
             box-shadow: 6px 12px 14px rgba(59, 152, 15, 0.32);
             border-radius: 8px;
+
+            &:hover {
+                i {
+                    color: var(--sk-clr-black-3);
+                }
+            }
         }
     }
 }

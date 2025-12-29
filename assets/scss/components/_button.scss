@@ -348,7 +348,10 @@
         background: #F0F0F0;
         border-color:#FFFFFF;
         box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.03);
-
+        
+        i {
+            color: var(--sk-clr-pr-2);
+        }
         .text {
             &::after {
                 opacity: 1;

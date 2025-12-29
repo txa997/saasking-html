@@ -846,6 +846,7 @@
             border-radius: 12px;
             opacity: 0;
             transition: var(--sk-cube-1);
+            pointer-events: none;
         }
         .card-head {
             padding: 24px 18px;
@@ -950,7 +951,7 @@
                 -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
                 mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
                 mask-composite: exclude;
-            
+                transition: var(--sk-cube-1);
             }
 
         }
@@ -962,6 +963,12 @@
             
             .card-btn {
                 background: var(--sk-clr-pr-2);
+                box-shadow: 4px 8px 14px rgba(59, 152, 15, 0.6), inset 0px 0px 9px rgba(0, 33, 1, 0.2);
+                border-color: transparent;
+                color: #fff;
+                &::before {
+                    opacity: 0;
+                }
             }
         }
 

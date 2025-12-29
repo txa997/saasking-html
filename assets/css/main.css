@@ -1627,6 +1627,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-color: #FFFFFF;
   box-shadow: -4px -6px 12px rgba(255, 255, 255, 0.8), 7px 8px 12px rgba(0, 0, 0, 0.03);
 }
+.sk-pr-btn-3:hover i {
+  color: var(--sk-clr-pr-2);
+}
 .sk-pr-btn-3:hover .text::after {
   opacity: 1;
   transform: translateY(0%);
@@ -5541,15 +5544,23 @@ input:focus::placeholder, textarea:focus::placeholder {
   justify-content: center;
   color: #fff;
   font-size: 16px;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 .sk-features-2-item-3 .bg-glow-1 {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+}
+.sk-features-2-item-3 .glow-line-svg {
+  position: absolute;
+  bottom: 81px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 .sk-features-2-item-4 {
   background: #F0F0F0;
@@ -6770,6 +6781,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 12px;
   opacity: 0;
   transition: var(--sk-cube-1);
+  pointer-events: none;
 }
 .sk-price-2-card .card-head {
   padding: 24px 18px;
@@ -6864,12 +6876,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
+  transition: var(--sk-cube-1);
 }
 .sk-price-2-card:hover::after {
   opacity: 1;
 }
 .sk-price-2-card:hover .card-btn {
   background: var(--sk-clr-pr-2);
+  box-shadow: 4px 8px 14px rgba(59, 152, 15, 0.6), inset 0px 0px 9px rgba(0, 33, 1, 0.2);
+  border-color: transparent;
+  color: #fff;
+}
+.sk-price-2-card:hover .card-btn::before {
+  opacity: 0;
 }
 
 /* 
@@ -7397,6 +7416,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-process-2-tabs-btn-single:is(.active) {
   background: var(--sk-clr-pr-2);
   border-color: transparent;
+  box-shadow: 4px 8px 14px rgba(59, 152, 15, 0.6), 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1), inset 0px 0px 9px rgba(0, 33, 1, 0.2);
 }
 .sk-process-2-tabs-tabs-pane-single {
   background: #F4F4F4;
@@ -7777,7 +7797,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: relative;
 }
 .sk-faqs-2-sec-title {
-  padding-bottom: 130px;
+  padding-bottom: 180px;
 }
 @media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .sk-faqs-2-sec-title {
@@ -8134,6 +8154,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   box-shadow: 6px 12px 14px rgba(59, 152, 15, 0.32);
   border-radius: 8px;
 }
+.sk-cta-2-sec-title .cta-btn:hover i {
+  color: var(--sk-clr-black-3);
+}
 
 /* 
     cta-2-end
@@ -8243,7 +8266,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-video-2-video::after {
   content: "";
-  background: rgba(134, 134, 134, 0.3);
+  background: rgba(134, 134, 134, 0.2);
   border-radius: 16px;
   position: absolute;
   top: 0;
@@ -8412,6 +8435,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   background: var(--sk-clr-pr-2);
   color: var(--sk-clr-black-3);
   border-color: transparent;
+  box-shadow: 4px 8px 14px rgba(59, 152, 15, 0.6), inset 0px 0px 9px rgba(0, 33, 1, 0.2);
 }
 .sk-services-2-tabs-pane {
   display: grid;
@@ -8437,6 +8461,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  transition: var(--sk-cube-1);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .sk-services-2-card {
@@ -8493,6 +8518,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-services-2-card .dot {
   color: var(--sk-clr-pr-2);
+}
+.sk-services-2-card:hover {
+  box-shadow: 9px -10px 13px #FFFFFF, -3px 4px 28px rgba(0, 0, 0, 0.32);
 }
 .sk-services-2-card:hover .bg-shape {
   transform: translate(0px, 0px);
@@ -8819,6 +8847,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-footer-2-newsletter .title {
   font-size: 22px;
   margin-bottom: 10px;
+}
+.sk-footer-2-newsletter .title svg .bell-icon-1 {
+  transform-origin: center top;
+  animation: swing 3s ease-in-out infinite;
 }
 .sk-footer-2-newsletter .disc {
   margin-bottom: 13px;

@@ -355,6 +355,13 @@
         .title {
             font-size: 22px;
             margin-bottom: 10px;
+
+            svg {
+                .bell-icon-1 {
+                    transform-origin: center top;
+                    animation: swing 3s ease-in-out infinite;
+                }
+            }
         }
 
         .disc {

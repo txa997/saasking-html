@@ -2175,6 +2175,30 @@ $('.wa_marquee_left').marquee({
 	pauseOnHover: true,
 })
 
+$('.wa_marquee_right_v2').marquee({
+	speed: 20,
+	gap: 0,
+	delayBeforeStart: 0,
+	startVisible:true,
+	direction: 'right',
+	duplicated: true,
+	pauseOnHover: true,
+})
+
+/* 
+    marquee-left
+*/
+
+$('.wa_marquee_left_v2').marquee({
+	speed: 20,
+	gap: 0,
+	delayBeforeStart: 0,
+	startVisible:true,
+	direction: 'left',
+	duplicated: true,
+	pauseOnHover: true,
+})
+
 /* 
     marquee-left-nopause
 */
