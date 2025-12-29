@@ -429,6 +429,112 @@
 /* 
     header-2-end
 */
+/* 
+    header-3-start
+*/
+.sk-header-3 {
+    &-area {
+        position: absolute;
+        top: 28px;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+    }
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &-action-link {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .sk-pr-btn-4 {
+            font-size: 15px;
+            .btn-border-2 {
+                background: linear-gradient(270deg, #920B02 0%, #360000 40.27%, #360000 60.99%, #920B02 100%);
+                padding: 8px 17px;
+            }
+        }
+
+        .sk-offcanvas-btn-1 {
+            width: 42px;
+            height: 42px;
+            background: var(--sk-clr-gd-3);
+        }
+    }
+
+    &-login-btn {
+        color: #fff;
+        font-weight: 500;
+    }
+    
+}
+
+.sk-main-navigation {
+    &:is(.has-header-3) {
+        .navbar-nav {
+            li {
+                a {
+                    padding: 5px 0;
+
+                    &::after {
+                        content: "";
+                        width: 155%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: linear-gradient(180deg, #120101 26.44%, #B12C21 100%);
+                        z-index: -1;
+                        border-radius: 100px;
+                        opacity: 0;
+                        transition: var(--sk-cube-1);
+                    }
+                }
+
+                &:is(.dropdown) {
+                    > a {
+                        padding-right: 18px;
+
+                        &::before {
+                            background-image: url("../img/illus/menu-3-arrow.svg");
+                            width: 8px;
+                        }
+                    }
+                }
+
+
+                &:hover {
+                    > a {
+                        color: #fff;
+
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    background: #120101;
+                    li {
+                        &:hover {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+/* 
+    header-3-end
+*/
 
 
 

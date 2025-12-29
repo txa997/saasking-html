@@ -394,7 +394,7 @@
     &-review {
         display: inline-flex;
         align-items: center;
-        background: #EBEBEB;
+        background: var(--sk-clr-white-1);
         box-shadow: 4px -2px 6px #FFFFFF, -3px 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 140px;
         padding: 8px 8px;
@@ -409,31 +409,32 @@
                 width: 32px;
                 height: 32px;
                 border-radius: 50%;
-                border: 2px solid #fff;
-
+                padding: 1px;
+                background: var(--sk-clr-white-1);
                 &:not(:first-child) {
                     margin-left: -10px;
                 }
 
 
                 img {
-                    transform: scale(1.2);
+                    border-radius: 50%;
                 }
             }
         }
 
 
         .ratting {
-            font-size: 16px;
+            font-size: 12px;
             color: var(--sk-clr-black-3);
             display: flex;
             align-items: center;
             gap: 3px;
             line-height: 1;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
 
             .text {
                 margin-left: 6px;
+                font-size: 16px;
             }
         }
 
@@ -472,4 +473,15 @@
 }
 /* 
     hero-2-end
+*/
+/* 
+    hero-3-start
+*/
+.sk-hero-3 {
+    &-area {
+        padding-top: 280px;
+    }
+}
+/* 
+    hero-3-end
 */

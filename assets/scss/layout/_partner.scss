@@ -225,7 +225,7 @@
             opacity: .4;
 
             &:hover {
-                filter: brightness(0) saturate(100%) invert(66%) sepia(77%) saturate(424%) hue-rotate(55deg) brightness(94%) contrast(92%);
+                filter: invert(1) brightness(0);
                 opacity: 1;
             }
         }
