@@ -34,4 +34,9 @@
     border-radius: 50%;
     font-size: 28px;
     color: var(--sk-clr-black-3);
+    transition: var(--sk-cube-1);
+
+    &:hover {
+        background: var(--sk-clr-pr-2);
+    }
 }

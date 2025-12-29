@@ -1156,18 +1156,51 @@ skHero2img.to(".sk-hero-2-img-box .img-1", {  rotateX: -90,   },);
 skHero2img.to(".sk-hero-2-img-box .img-1", {  opacity: 0 , duration: .3 });
 skHero2img.from(".sk-hero-2-img-box .img-2", {  rotateX: -90, opacity: 0 },"<");
 
+// features-2-card-animation
+if (window.matchMedia("(min-width: 1400px)").matches) { 
+	let skF2cardAni = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".sk-features-2-height",
+			start: "top top", 
+			end: "bottom bottom",
+			toggleActions: "play none none reverse",
+			scrub: true,
+			markers: false,
+		},
+	});
+	skF2cardAni.from(".sk-features-2-item-1", {  yPercent: -50,  opacity: 0, });
+	skF2cardAni.from(".sk-features-2-item-2", {  yPercent: -50,  opacity: 0, },"<30%");
+	skF2cardAni.from(".sk-features-2-item-3", {  yPercent: 50,  opacity: 0, },"<30%");
+	skF2cardAni.from(".sk-features-2-item-4", {  yPercent: 50,  opacity: 0, },"<30%");
+	skF2cardAni.from(".sk-features-2-item-5", {  yPercent: 50,  opacity: 0, },"<30%");
+	skF2cardAni.to(".sk-features-2-sec-title", {  scale: 0,  opacity: 0, },"=<");
+}
 
 
-let skF2cardAni = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".sk-faqs-1-animation-clr-glow",
-		start: "top 90%", 
-		end: "top top",
-		toggleActions: "play none none reverse",
-		markers: false,
-	},
-});
-skF2cardAni.from(".sk-faqs-1-animation-clr-glow img", {  yPercent: -50,  opacity: 0, });
+// apps-2-animation
+if (window.matchMedia("(min-width: 992px)").matches) { 
+	let skApps2ani = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".sk-apps-2-wrap",
+			start: "top 40%", 
+			end: "top top",
+			toggleActions: "play none none reverse",
+			markers: false,
+		},
+	});
+	skApps2ani.from(".sk-apps-2-item.has-6", { scale: 0, opacity: 0, duration: .5, ease: "ease1" });
+	skApps2ani.from(".sk-apps-2-item.has-5", { x: -120, y: -30, opacity: 0, duration: .5, ease: "ease1"  },"<20%");
+	skApps2ani.from(".sk-apps-2-item.has-7", { x: 120, y: -30, opacity: 0, duration: .5, ease: "ease1"  },"<");
+	skApps2ani.from(".sk-apps-2-item.has-4", { x: -120, y: -72, opacity: 0, duration: .5, ease: "ease1"  },"<20%");
+	skApps2ani.from(".sk-apps-2-item.has-8", { x: 120, y: -72, opacity: 0, duration: .5, ease: "ease1"  },"<");
+	skApps2ani.from(".sk-apps-2-item.has-3", { x: -80, y: -56, opacity: 0, duration: .5, ease: "ease1"  },"<20%");
+	skApps2ani.from(".sk-apps-2-item.has-9", { x: 80, y: -56, opacity: 0, duration: .5, ease: "ease1"  },"<");
+	skApps2ani.from(".sk-apps-2-item.has-2", { x: -70, y: -80, opacity: 0, duration: .5, ease: "ease1"  },"<20%");
+	skApps2ani.from(".sk-apps-2-item.has-10", { x: 70, y: -80, opacity: 0, duration: .5, ease: "ease1"  },"<");
+	skApps2ani.from(".sk-apps-2-item.has-1", { x: -38, y: -30, opacity: 0, duration: .5, ease: "ease1"  },"<20%");
+	skApps2ani.from(".sk-apps-2-item.has-11", { x: 38, y: -30, opacity: 0, duration: .5, ease: "ease1"  },"<");
+}
+
 
 // features-2-line-svg-1
 if($(".sk-features-2-item-2-svg-line").length) {
@@ -1257,6 +1290,22 @@ if($(".sk-features-2-item-2-svg-line").length) {
 	});
 
 
+}
+
+
+
+// apps-2-animation
+if (window.matchMedia("(min-width: 992px)").matches) { 
+	let skApp2bgShape = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".sk-services-2-bg-shape",
+			start: "top 50%", 
+			end: "top top",
+			toggleActions: "play none none reverse",
+			markers: false,
+		},
+	});
+	skApp2bgShape.from(".sk-services-2-bg-shape svg .glow-1", { opacity: .5, transformOrigin: "center center", scale: .5, duration: .5,  });
 }
 
 

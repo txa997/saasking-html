@@ -845,7 +845,7 @@
             z-index: -1;
             border-radius: 12px;
             opacity: 0;
-            transition: var(--sk-clr-cube-1);
+            transition: var(--sk-cube-1);
         }
         .card-head {
             padding: 24px 18px;
@@ -934,7 +934,7 @@
             padding: 14px 12px;
             position: relative;
             z-index: 1;
-
+            transition: var(--sk-cube-1);
             
             &::before {
                 content: '';
@@ -958,6 +958,10 @@
         &:hover {
             &::after {
                 opacity: 1;
+            }
+            
+            .card-btn {
+                background: var(--sk-clr-pr-2);
             }
         }
 

@@ -674,10 +674,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: -1;
+        z-index: 1;
+
+        @media #{$xl,$lg,$md,$xs} {
+            position: unset;
+            margin-bottom: 50px;
+        }
     }
     &-sec-title {
         max-width: 600px;
+
+        .sec-disc {
+            margin-top: 20px;
+        }
     }
 
     &-container {
@@ -1398,7 +1407,9 @@
     }
 
     &-height {
-        height: 2500px;
+        @media #{$over,$xxxl,$xxl} {
+            height: 2000px;
+        }
     }
 
     &-pin {

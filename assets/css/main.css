@@ -3431,6 +3431,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 50%;
   font-size: 28px;
   color: var(--sk-clr-black-3);
+  transition: var(--sk-cube-1);
+}
+.sk-playbtn-1:hover {
+  background: var(--sk-clr-pr-2);
 }
 
 /*
@@ -3467,6 +3471,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .wa-back-to-top:is(.active) {
   bottom: 2.5%;
+}
+.wa-back-to-top:is(.has-home-2) {
+  border-color: var(--sk-clr-pr-2);
+  color: var(--sk-clr-pr-2);
 }
 
 /* 
@@ -5039,10 +5047,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -1;
+  z-index: 1;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .sk-features-2-sec-title-posi {
+    position: unset;
+    margin-bottom: 50px;
+  }
 }
 .sk-features-2-sec-title {
   max-width: 600px;
+}
+.sk-features-2-sec-title .sec-disc {
+  margin-top: 20px;
 }
 .sk-features-2-container {
   max-width: 1816px;
@@ -5681,8 +5698,10 @@ input:focus::placeholder, textarea:focus::placeholder {
     width: 100%;
   }
 }
-.sk-features-2-height {
-  height: 2500px;
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .sk-features-2-height {
+    height: 2000px;
+  }
 }
 .sk-features-2-pin {
   position: sticky;
@@ -6750,7 +6769,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   z-index: -1;
   border-radius: 12px;
   opacity: 0;
-  transition: var(--sk-clr-cube-1);
+  transition: var(--sk-cube-1);
 }
 .sk-price-2-card .card-head {
   padding: 24px 18px;
@@ -6829,6 +6848,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding: 14px 12px;
   position: relative;
   z-index: 1;
+  transition: var(--sk-cube-1);
 }
 .sk-price-2-card .card-btn::before {
   content: "";
@@ -6847,6 +6867,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-price-2-card:hover::after {
   opacity: 1;
+}
+.sk-price-2-card:hover .card-btn {
+  background: var(--sk-clr-pr-2);
 }
 
 /* 
@@ -8215,10 +8238,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  border-radius: 16px;
+  overflow: hidden;
 }
 .sk-video-2-video::after {
   content: "";
-  background: rgba(134, 134, 134, 0.2);
+  background: rgba(134, 134, 134, 0.3);
   border-radius: 16px;
   position: absolute;
   top: 0;
@@ -8303,6 +8328,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-apps-2-item {
   filter: drop-shadow(-3px -2px 6px #FFFFFF) drop-shadow(3px 6px 12px rgba(0, 0, 0, 0.16));
+  will-change: transform;
 }
 @media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .sk-apps-2-item:is(.has-1) {

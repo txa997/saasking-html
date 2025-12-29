@@ -36,6 +36,11 @@
         bottom: 2.5%;
     }
 
+
+    &:is(.has-home-2) {
+        border-color: var(--sk-clr-pr-2);
+        color: var(--sk-clr-pr-2);
+    }
 }
 
 
