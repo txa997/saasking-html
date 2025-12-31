@@ -235,3 +235,101 @@
 /* 
     partner-2-end
 */
+
+/* 
+    partner-3-start
+*/
+.sk-partner-3 {
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 160px 1fr;
+        align-items: center;
+    }
+
+    &-title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 35px;
+        opacity: 68%;
+    }
+
+    &-counter {
+        font-size: 32px;
+    }
+
+    &-logo {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-right: 50px;
+
+        .logo-single {
+            flex: 0 0 auto;
+            opacity: .8;
+        }
+    }
+    
+    &-left {
+        background: linear-gradient(90deg, rgba(18, 1, 1, 0) 0%, #460209 55.29%);
+        position: relative;
+        z-index: 1;
+        padding: 21px 0;
+
+        &::after {
+            content: "";
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, #120101, transparent);
+        }
+        
+
+        svg {
+            position: absolute;
+            right: 0px;
+            top: -8px;
+            z-index: 1;
+        }
+
+        &-padding {
+            padding: 8px 0;
+        }
+    }
+    
+    &-right {
+        background: linear-gradient(-90deg, rgba(18, 1, 1, 0) 0%, #460209 55.29%);
+        position: relative;
+        z-index: 1;
+        padding: 21px 0;
+
+        &::after {
+            content: "";
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(-90deg, #120101, transparent);
+        }
+        
+
+        svg {
+            position: absolute;
+            left: 0px;
+            top: -8px;
+            z-index: 1;
+        }
+
+        &-padding {
+            padding: 8px 0;
+        }
+    }
+}
+
+
+
+/* 
+    partner-3-end
+*/

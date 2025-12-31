@@ -458,12 +458,34 @@
                 background: linear-gradient(270deg, #920B02 0%, #360000 40.27%, #360000 60.99%, #920B02 100%);
                 padding: 8px 17px;
             }
+
+            @media #{$xs} {
+                display: none;
+            }
+
+            @media #{$sm} {
+                display: inline-block;
+            }
+        }
+
+        .sk-header-3-login-btn {
+            @media #{$xs} {
+                display: none;
+            }
+
+            @media #{$sm} {
+                display: inline-block;
+            }
         }
 
         .sk-offcanvas-btn-1 {
             width: 42px;
             height: 42px;
             background: var(--sk-clr-gd-3);
+
+            @media #{$over,$xxxl,$xxl,$xl} {
+                display: none;
+            }
         }
     }
 

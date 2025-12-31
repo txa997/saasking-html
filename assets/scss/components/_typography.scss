@@ -234,6 +234,36 @@
     }
 }
 
+
+.sk-sec-title-3 {
+    font-family: var(--sk-font-2);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 48px;
+    line-height: 1.083;
+    margin-bottom: 0;
+
+    @media #{$xl} {
+        font-size: 44px;
+    }
+
+    @media #{$lg} {
+        font-size: 40px;
+    }
+
+    @media #{$md} {
+        font-size: 36px;
+    }
+
+    @media #{$xs} {
+        font-size: 32px;
+    }
+
+    @media #{$sm} {
+        font-size: 34px;
+    }
+}
 /* 
     typography-end
 */
