@@ -1513,6 +1513,18 @@ if($(".sk-apps-3-logo").length) {
 	});
 }
 
+
+/* 
+	price-3-toggle-class
+*/
+if($(".sk-price-3-toggle-btn").length) {
+	$('.sk-price-3-toggle-btn').on('click', function () {
+		$(".sk-price-3-toggle-btn").toggleClass('active');
+		$('.sk-price-3-card .price-box').toggleClass('active');
+	});
+}
+
+
   
 
 /* 
