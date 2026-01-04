@@ -331,3 +331,54 @@
 /* 
     faqs-2-end
 */
+/* 
+    faqs-3-start
+*/
+.sk-faqs-3 {
+    &-container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-sec-title {
+        max-width: 648px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sec-disc {
+            margin-top: 20px;
+        }
+    }
+
+    &-accordion {
+        .sk-accordion-1 {
+            border-radius: 12px;
+            overflow: hidden;
+
+            &-item {
+                .item-title {
+                    &:hover {
+                        color: var(--sk-clr-pr-3);
+                    }
+                }
+                &::after {
+                    background: var(--sk-clr-pr-3);
+                }
+                &:is(.active) {
+                    background-color: #191111;
+
+                    &::before {
+                        opacity: .5;
+                    }
+
+                    .item-title {
+                        color: var(--sk-clr-pr-3);
+                    }
+                }
+            }
+        }
+    }
+}
+/* 
+    faqs-3-end
+*/
