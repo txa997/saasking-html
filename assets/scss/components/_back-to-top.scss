@@ -41,6 +41,15 @@
         border-color: var(--sk-clr-pr-2);
         color: var(--sk-clr-pr-2);
     }
+
+    &:is(.has-home-3) {
+        border-color: rgb(254 13 58 / 50%);
+        color: var(--sk-clr-pr-3);
+
+        &:hover {
+            border-color: rgb(254 13 58 / 100%);
+        }
+    }
 }
 
 

@@ -492,6 +492,7 @@
             top: 0;
             left: 0;
             z-index: -2;
+            animation: skGlowEffect2 1s linear infinite;
 
             @media #{$xs} {
                 width: 215px;
@@ -515,6 +516,7 @@
             top: 0;
             right: 0;
             z-index: -2;
+            animation: skGlowEffect2 1s linear infinite;
 
             @media #{$xs} {
                 width: 215px;

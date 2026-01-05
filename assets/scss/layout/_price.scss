@@ -1171,7 +1171,11 @@
         }
 
         &:hover {
-
+            .item-btn {
+                .btn-border-2 {
+                    background: var(--sk-clr-gd-3);
+                }
+            }
         }
 
     }
@@ -1181,6 +1185,13 @@
         top: 16px;
         right: 16px;
         z-index: 1;
+
+        svg {
+            overflow: visible;
+        }
+        .smoke {
+            filter: blur(2px);
+        }
     }
 
 
@@ -1268,6 +1279,9 @@
         z-index: -1;
     }
 }
+
+
+
 /* 
     price-3-end
 */

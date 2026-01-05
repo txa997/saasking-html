@@ -598,6 +598,12 @@
                 position: absolute;
                 right: 7px;
                 top: 6px;
+
+                &:hover {
+                    i {
+                        animation: jackInTheBox2 .5s;
+                    }
+                }
             }
         }
         

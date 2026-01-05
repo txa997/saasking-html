@@ -1656,6 +1656,19 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 }
 
 
+// price-3-title
+let skPrice3title = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-price-3-big-title",
+		start: "top 90%", 
+		end: "top 40%",
+		toggleActions: "play none none reverse",
+		scrub: true,
+		markers: false,
+	},
+});
+skPrice3title.from(".sk-price-3-big-title", { y: 100 });
+
 
 /* 
 	price-3-toggle-class
@@ -1668,8 +1681,25 @@ if($(".sk-price-3-toggle-btn").length) {
 }
 
 
-  
-
+// price-3-heart-shape
+gsap.utils.toArray(".sk-price-3-card-ani .smoke").forEach((smoke, i) => {
+    gsap.fromTo(smoke,
+        {
+            y: 15,
+            opacity: 1,
+            scale: 1
+        },
+        {
+            y: -75,
+            opacity: 0,
+            scale: 5,
+            duration: 5,
+            repeat: -1,
+            delay: i * 0.8,
+            ease: "power1.out"
+        }
+    );
+});
 /* 
     marquee-right
 */

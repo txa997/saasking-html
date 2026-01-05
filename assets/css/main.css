@@ -3565,6 +3565,55 @@ input:focus::placeholder, textarea:focus::placeholder {
   animation-timing-function: var(--sk-cube-1);
 }
 
+@-webkit-keyframes jackInTheBox2 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes jackInTheBox2 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.animate__jackInTheBox {
+  -webkit-animation-name: jackInTheBox2;
+  animation-name: jackInTheBox2;
+}
+
 /* 
     wow-plus-end
 */
@@ -3660,6 +3709,13 @@ input:focus::placeholder, textarea:focus::placeholder {
 .wa-back-to-top:is(.has-home-2) {
   border-color: var(--sk-clr-pr-2);
   color: var(--sk-clr-pr-2);
+}
+.wa-back-to-top:is(.has-home-3) {
+  border-color: rgba(254, 13, 58, 0.5);
+  color: var(--sk-clr-pr-3);
+}
+.wa-back-to-top:is(.has-home-3):hover {
+  border-color: rgb(254, 13, 58);
 }
 
 /* 
@@ -4559,6 +4615,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: 0;
   left: 0;
   z-index: -2;
+  animation: skGlowEffect2 1s linear infinite;
 }
 @media (max-width: 767px) {
   .sk-hero-3-area::after {
@@ -4583,6 +4640,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: 0;
   right: 0;
   z-index: -2;
+  animation: skGlowEffect2 1s linear infinite;
 }
 @media (max-width: 767px) {
   .sk-hero-3-area::before {
@@ -8172,11 +8230,20 @@ input:focus::placeholder, textarea:focus::placeholder {
   border: none;
   transition: var(--sk-cube-1);
 }
+.sk-price-3-card:hover .item-btn .btn-border-2 {
+  background: var(--sk-clr-gd-3);
+}
 .sk-price-3-card-ani {
   position: absolute;
   top: 16px;
   right: 16px;
   z-index: 1;
+}
+.sk-price-3-card-ani svg {
+  overflow: visible;
+}
+.sk-price-3-card-ani .smoke {
+  filter: blur(2px);
 }
 .sk-price-3-bottom {
   background: rgba(217, 217, 217, 0.1);
@@ -9942,6 +10009,10 @@ input:focus::placeholder, textarea:focus::placeholder {
     font-size: 34px;
   }
 }
+.sk-cta-3-content .item-btn .sk-pr-btn-4 {
+  box-shadow: 8px 14px 31px rgba(0, 0, 0, 0.4);
+  border-radius: 100px;
+}
 
 /* 
     cta-3-end
@@ -11133,6 +11204,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   right: 7px;
   top: 6px;
+}
+.sk-footer-3-newsletter-form .input-btn:hover i {
+  animation: jackInTheBox2 0.5s;
 }
 .sk-footer-3-bottom {
   display: flex;
