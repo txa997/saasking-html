@@ -1526,6 +1526,8 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: -39px;
+            position: relative;
+            z-index: 2;
 
             .single-logo {
                 width: 48px;
@@ -1598,6 +1600,41 @@
             top: -60px;
             left: -60px;
             z-index: -2;
+        }
+
+        .logo-x-favicon {
+            max-width: 283px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &-svg-1 {
+            position: absolute;
+            bottom: 79px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        &-svg-2 {
+            position: absolute;
+            right: 21px;
+            bottom: 78px;
+            transform: scaleX(-1);
+        }
+
+        &-svg-3 {
+            position: absolute;
+            top: 33px;
+            left: 91px;
+            z-index: 1;
+        }
+
+        &-svg-4 {
+            position: absolute;
+            right: 92px;
+            top: 34px;
+            transform: scaleX(-1);
+            z-index: 1;
         }
     }
     
@@ -1697,6 +1734,10 @@
             right: -120px;
             width: 140%;
             z-index: -1;
+
+            img {
+                animation: wa-rotated-minus 15s linear infinite;
+            }
         }
 
         .bg-shape-1 {
@@ -1825,6 +1866,25 @@
         .title {
             font-size: 20px;
             margin-bottom: 10px;
+
+            
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: 0px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+                -webkit-transition: var(--sk-cube-1);
+                transition: var(--sk-cube-1);
+
+                &:hover {
+                    color: var(--sk-clr-pr-3);
+                    background-size: 100% 100%;
+                }
+            }
         }
 
         .disc {

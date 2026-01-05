@@ -22,6 +22,21 @@
     animation: skGlowEffect1 2s linear infinite;
 }
 
+@keyframes skGlowEffect2 {
+    0% {
+        opacity: .4;
+    }
+    50% {
+        opacity: .3;
+    }
+    100% {
+        opacity: .4;
+    }
+}
+.skGlowEffect2 {
+    animation: skGlowEffect2 2s linear infinite;
+}
+
 .sk-playbtn-1 {
     width: 108px;
     height: 108px;

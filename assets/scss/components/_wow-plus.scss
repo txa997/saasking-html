@@ -38,6 +38,30 @@
   animation-timing-function: var(--sk-cube-1);
 }
 
+@keyframes fadeInDown2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+    filter: blur(3px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+.fadeInDown2 {
+  -webkit-animation-name: fadeInDown2;
+  animation-name: fadeInDown2;
+  animation-duration: 400ms;
+  animation-timing-function: var(--sk-cube-1);
+}
+
 
 @keyframes fadeInRight2 {
   0% {

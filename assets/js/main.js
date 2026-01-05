@@ -1492,26 +1492,169 @@ if ($(".sk-price-1-right").length) {
 	});
   
   }
-  
-if($(".sk-apps-3-logo").length) {
-	const container = document.querySelector('.sk-apps-3-logo');
-	const items = container.querySelectorAll('.sk-apps-3-logo .single-logo');
-	
-	const radius = container.offsetWidth / 2 + 10;
-	const centerX = container.offsetWidth / 2;
-	const centerY = container.offsetHeight / 2;
-	const total = items.length;
-	
-	items.forEach((item, index) => {
-		const angle = (index / total) * (Math.PI * 2);
-	
-		const x = centerX + radius * Math.cos(angle);
-		const y = centerY + radius * Math.sin(angle);
-	
-		item.style.left = `${x}px`;
-		item.style.top = `${y}px`;
+
+
+// hero-3-logo-animation
+gsap.fromTo(".sk-hero-3-apps-single",
+    {
+        y: 50,
+        opacity: 0
+    },
+    {
+        y: -200,
+        opacity: 0,
+        duration: 5,
+        ease: "power1.inOut",
+        stagger: {
+            each: 1,
+			from: "random",
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+
+// section-dot-svg
+const h3sectionDotSvg = document.querySelectorAll('.sk-sec-ani-1-dot path');
+h3sectionDotSvg.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); 
+});
+
+
+// features-3-line-svg-1
+if($(".sk-features-3-box-1-svg-1").length) {
+
+	gsap.to(".sk-features-3-box-1-svg-1 .svg-bar", {
+		duration: 5,
+		repeat: -1,
+
+		motionPath: {
+			path: ".sk-features-3-box-1-svg-1 .svg-path",
+			align: ".sk-features-3-box-1-svg-1 .svg-path",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
 	});
+
+	gsap.to(".sk-features-3-box-1-svg-2 .svg-bar", {
+		duration: 5,
+		repeat: -1,
+
+		motionPath: {
+			path: ".sk-features-3-box-1-svg-2 .svg-path",
+			align: ".sk-features-3-box-1-svg-2 .svg-path",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+	gsap.to(".sk-features-3-box-1-svg-3 .svg-bar", {
+		duration: 5,
+		repeat: -1,
+
+		motionPath: {
+			path: ".sk-features-3-box-1-svg-3 .svg-path",
+			align: ".sk-features-3-box-1-svg-3 .svg-path",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+	gsap.to(".sk-features-3-box-1-svg-4 .svg-bar", {
+		duration: 5,
+		repeat: -1,
+
+		motionPath: {
+			path: ".sk-features-3-box-1-svg-4 .svg-path",
+			align: ".sk-features-3-box-1-svg-4 .svg-path",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 1,
+			end: 0,
+		},
+	});
+
+
+
 }
+
+
+// features-3-box-2-svg-1
+let skFeatures3box2svg = gsap.timeline({
+	repeat: -1,
+	repeatDelay: 3,
+
+	scrollTrigger: {
+		trigger: ".sk-features-3-box-2-svg",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+
+skFeatures3box2svg.from(".sk-features-3-box-2-svg rect", { scaleY: 0, transformOrigin: "bottom", duration: .5, ease: "ease1" ,        stagger: {
+	each: .05,
+	from: "random",
+},});
+
+
+// apps-3-animation
+if (window.matchMedia("(min-width: 1200px)").matches) {  
+	let skApps3ani = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".sk-apps-3-height",
+			start: "top 0", 
+			end: "bottom bottom",
+			toggleActions: "play none none reverse",
+			scrub: true,
+			markers: false,
+		},
+	});
+	
+	skApps3ani.from(".sk-apps-3-logo", {  rotation: -90 , scale: .5, opacity: 0, });
+	skApps3ani.to(".sk-apps-3-sec-title", { scale: .5, opacity: 0, },"<");
+	skApps3ani.from(".sk-apps-3-video", {  rotation: -90 , scale: .5, opacity: 0, },"<50%");
+
+
+	
+	if($(".sk-apps-3-logo").length) {
+		const container = document.querySelector('.sk-apps-3-logo');
+		const items = container.querySelectorAll('.sk-apps-3-logo .single-logo');
+		
+		const radius = container.offsetWidth / 2 + 10;
+		const centerX = container.offsetWidth / 2;
+		const centerY = container.offsetHeight / 2;
+		const total = items.length;
+		
+		items.forEach((item, index) => {
+			const angle = (index / total) * (Math.PI * 2);
+		
+			const x = centerX + radius * Math.cos(angle);
+			const y = centerY + radius * Math.sin(angle);
+		
+			item.style.left = `${x}px`;
+			item.style.top = `${y}px`;
+		});
+	}
+}
+
 
 
 /* 

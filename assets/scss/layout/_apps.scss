@@ -161,6 +161,11 @@
         width: 100%;
         height: 100%;
         z-index: -2;
+
+        @media #{$lg,$md,$xs} {
+            position: unset;
+            margin-bottom: 50px;
+        }
     }
     
     &-sec-title {
@@ -177,7 +182,16 @@
         border-radius: 50%;
         position: relative;
         margin: auto;
-        border: 1px solid red;
+
+        @media #{$lg,$md,$xs} {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: auto;
+            height: auto;
+            margin-bottom: 50px;
+        }
 
         .single-logo {
             position: absolute;
@@ -189,6 +203,12 @@
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
+            }
+
+
+            @media #{$lg,$md,$xs} {
+                position: unset;
+                transform: unset;
             }
         }
     }
@@ -206,6 +226,10 @@
         align-items: center;
         justify-content: center;
         z-index: -1;
+
+        @media #{$lg,$md,$xs} {
+            position: unset;
+        }
     }
 
     &-video {
@@ -227,6 +251,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: -1;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
         }
 
         &-elm {
@@ -237,6 +265,21 @@
         }
         
         
+    }
+
+
+    &-height {
+        @media #{$over,$xxxl,$xxl,$xl} {
+            height: 2000px;
+        }
+    }
+
+    &-pin {
+        @media #{$over,$xxxl,$xxl,$xl} {
+            position: sticky;
+            top: 100px;
+            padding: 70px 0;
+        }
     }
 }
 /* 
