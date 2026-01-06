@@ -788,3 +788,200 @@
 /* 
     hero-3-end
 */
+/* 
+    hero-4-end
+*/
+.sk-hero-4 {
+    &-area {
+        background-color: #020224;
+        padding-top: 135px;
+        padding-bottom: 90px;
+    }
+    
+    &-bg {
+        &-glow-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+        }
+
+        &-glow-2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -2;
+        }
+
+        &-noise-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -3;
+        }
+
+        &-noise-2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -3;
+        }
+    }
+    
+
+
+    &-img {
+        display: inline-block;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 354px;
+            height: 354px;
+            background: #CCC9E4;
+            opacity: 0.76;
+            border: 31px solid #A942FF;
+            filter: blur(76px);
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+        }
+
+        &-wrap {
+            text-align: center;
+            position: relative;
+
+            .bg-illus-1 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -2;
+            }
+        }
+    }
+    
+    &-chat {
+        &-popup {
+            max-width: 385px;
+            width: 100%;
+            display: flex;
+            text-align: left;
+            justify-content: space-between;
+            position: absolute;
+            top: 11%;
+            left: 5%;
+            filter: drop-shadow(0px 40px 60px rgba(1, 35, 255, 0.6));
+
+            &:nth-of-type(3) {
+                left: unset;
+                right: 1%;
+                top: 45%;
+                justify-content: start;
+                .content-wrap {
+                    padding: 20px 20px;
+                    padding-left: 36px;
+                    filter: drop-shadow(0px 40px 60px rgba(255, 30, 30, 0.5));
+                }
+            }
+
+            .content-wrap {
+                padding: 20px 20px;
+                padding-right: 50px;
+                .bg-shape {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+            }
+
+            .disc {
+                font-size: 15px;
+                color: #fff;
+                opacity: 72%;
+            }
+
+            .author-img {
+                margin-top: 12px;
+            }
+        }
+    }
+    
+    &-content {
+        max-width: 690px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .btn-wrap {
+            display: inline-flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    }
+    
+    &-title {
+        font-size: 56px;
+        color: #fff;
+        letter-spacing: -0.01em;
+        line-height: 1.071;
+        margin-bottom: 24px;
+    }
+    
+    &-disc {
+        color: #fff;
+        opacity: .8;
+        margin-bottom: 35px;
+    }
+    
+
+    &-partner {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 406px;
+            background: linear-gradient(90deg, #020224 0%, rgba(11, 11, 44, 0) 100%);
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 406px;
+            background: linear-gradient(-90deg, #020224 0%, rgba(11, 11, 44, 0) 100%);
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+
+        &-logo {
+            display: flex;
+            gap: 88px;
+            margin-right: 88px;
+
+            .logo-single {
+                flex: 0 0 auto;
+                opacity: .6;
+            }
+        }
+        
+    }
+    
+    
+}
+/* 
+    hero-4-end
+*/

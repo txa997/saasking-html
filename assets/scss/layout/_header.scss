@@ -492,6 +492,11 @@
     &-login-btn {
         color: #fff;
         font-weight: 500;
+        transition: var(--sk-cube-1);
+
+        &:hover {
+            color: #FE0D3A;
+        }
     }
     
 }
@@ -558,7 +563,223 @@
     header-3-end
 */
 
+/* 
+    header-4-start
+*/
+.sk-header-4 {
 
+    &-area {
+        position: absolute;
+        top: 30px;
+        width: 100%;
+        z-index: 3;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-menu {
+        @media #{$over,$xxxl,$xxl,$xl} {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            border-radius: 12px;
+            padding: 0 25px;
+        }
+
+        .bg-line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+
+
+        &::after {
+            content: "";
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(94.33deg, rgba(80, 48, 224, 0) 0%, #FFFFFF 50.96%, rgba(80, 48, 224, 0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .5;
+            animation: skHeader1Line 10s ease-in-out infinite;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(94.33deg, rgba(80, 48, 224, 0) 0%, #FFFFFF 50.96%, rgba(80, 48, 224, 0) 100%);
+            border-radius: 2px;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            opacity: .5;
+            animation: skHeader1Line 10s ease-in-out infinite;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+    }
+
+    &-action-link {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        .sk-offcanvas-btn-1 {
+            box-shadow: inset 0px 0px 8px #FFFFFF;
+            background: var(--sk-clr-gd-4);
+            transition: var(--sk-cube-1);
+
+            &:hover {
+                background: var(--sk-clr-pr-4);
+            }
+
+            @media #{$over,$xxxl,$xxl,$xl} {
+                display: none;
+            }
+        }
+
+        .sk-header-3-login-btn {
+            color: var(--sk-clr-pr-4);
+            border-bottom: 1px solid;
+            border-color: transparent;
+
+            &:hover {
+                border-color: var(--sk-clr-pr-4);
+            }
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        .sk-pr-btn-5 {
+            @media #{$xs} {
+                display: none;
+            }
+            @media #{$sm} {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@keyframes skHeader1Line {
+    0% {
+        left: 3%;
+    }
+    50% {
+        left: 73%;
+    }
+    100% {
+        left: 3%;
+    }
+}
+
+
+.sk-main-navigation {
+    &:is(.has-header-4) {
+        .navbar-nav {
+            li {
+                position: relative;
+                
+                &::after {
+                    content: "";
+                    background: linear-gradient(180deg, #5030E0 20.2%, rgba(80, 48, 224, 0.84) 42.2%, #E50FF2 76.01%);
+                    filter: blur(2px);
+                    transform: matrix(1, 0, 0, -1, 0, 0);
+                    width: 100%;
+                    height: 50%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: var(--sk-cube-1);
+                }
+                &::before {
+                    content: "";
+                    background: linear-gradient(180.63deg, #5030E0 20.2%, rgba(80, 48, 224, 0.84) 42.2%, #E50FF2 76.01%);
+                    filter: blur(2px);
+                    width: 100%;
+                    height: 50%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: var(--sk-cube-1);
+                }
+
+
+                &:is(.dropdown) {
+                    > a {
+                        &::before {
+                            display: block;
+                            content: "\f103";
+                            font-family: "Font Awesome 6 Free";
+                            font-weight: 600;
+                            background-image: none;
+                            font-size: 12px;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: auto;
+                            height: auto;
+                            color: var(--sk-clr-sd-4);
+                            transition: var(--sk-cube-1);
+                        }
+                    }
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: .2;
+                    }
+                    &::before {
+                        opacity: .2;
+                    }
+
+                    > a {
+                        color: var(--sk-clr-pr-4);
+
+                        &::before {
+                            color: var(--sk-clr-pr-4);
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    background: rgba(255, 255, 255, 0.06);
+                    backdrop-filter: blur(6px);
+                }
+
+            }
+
+        }
+    }
+
+}
+
+/* 
+    header-4-end
+*/
 
 /* 
     sticky-header-css-start

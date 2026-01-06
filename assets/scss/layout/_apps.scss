@@ -233,12 +233,14 @@
     }
 
     &-video {
-        border: 1px dashed rgb(255 255 255 / 28%);
+        border: 2px dashed rgb(255 255 255 / 28%);
         border-radius: 50%;
         display: inline-block;
         padding: 23px;
         position: relative;
         z-index: 1;
+        
+
 
         &::after {
             content: "";
@@ -262,6 +264,12 @@
             height: 300px;
             border-radius: 50%;
             overflow: hidden;
+            box-shadow: inset 0px 0px 20px #FFFFFF;
+
+            video {
+                position: relative;
+                z-index: -1;
+            }
         }
         
         

@@ -38,6 +38,15 @@
     margin-bottom: 0;
 }
 
+.sk-p-4 {
+    font-family: var(--sk-font-1);
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--sk-clr-black-4);
+    line-height: 1.555;
+    margin-bottom: 0;
+}
+
 .sk-h-1 {
     font-family: var(--sk-font-2);
     font-weight: 600;
@@ -61,6 +70,14 @@
     color: #fff;
     line-height: 1.083;
     letter-spacing: -0.01em;
+    margin-bottom: 0;
+}
+
+.sk-h-4 {
+    font-family: var(--sk-font-2);
+    font-weight: 600;
+    color: var(--sk-clr-black-5);
+    line-height: 1.086;
     margin-bottom: 0;
 }
 

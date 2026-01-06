@@ -482,6 +482,98 @@
     }
 }
 
+.sk-pr-btn-5 {
+    font-family: var(--sk-font-1);
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    transition: var(--sk-cube-1);
+    background: var(--sk-clr-gd-4);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(80, 48, 224, 1) 0%,
+        rgba(80, 48, 224, 0.84) 39%,
+        rgba(229, 15, 242, 1) 100%
+    );
+
+    .text {
+        position: relative;
+        z-index: 1;
+        transition: var(--sk-cube-1);
+
+        &::after {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            display: block;
+            transition: var(--sk-cube-1);
+            position: absolute;
+            content: attr(data-back);
+            transform: translateY(100%);
+        }
+    
+        &::before {
+            top: 0;
+            left: 0;
+            opacity: 1;
+            display: block;
+            transition: var(--sk-cube-1);
+            position: relative;
+            content: attr(data-front);
+            transform: translateY(0);
+        }
+    }
+
+    .btn-border {
+        box-shadow: 0px 42px 107px rgba(80, 48, 224, 0.34), 0px 24.7206px 32.2574px rgba(80, 48, 224, 0.1867), 0px 10.2677px 13.3981px rgba(80, 48, 224, 0.22), 0px 3.71362px 4.84582px rgba(80, 48, 224, 0.153301), inset 0px 1px 18px 2px #363687, inset 0px 1px 4px 2px #363687;
+        background: var(--sk-clr-gd-4);
+        border-radius: 10px;
+
+    }
+
+    .bg-noise {
+        padding: 16px 24px;
+    }
+
+    &:hover {
+        color: #fff;
+
+        .btn-border {
+            &::after {
+                animation-play-state: paused;
+            }
+        }
+        .text {
+            &::after {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+            &::before {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+    }
+
+}
+
+@keyframes skBtn3kf {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 /* 
     button-end
 */
