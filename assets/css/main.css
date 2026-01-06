@@ -2225,6 +2225,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-loader:is(.has-home-2) .sk-loader-wrap::before {
   background: linear-gradient(180deg, #59D51D 0%, #2E6F0F 100%);
 }
+.sk-loader:is(.has-home-3) {
+  background-color: #120101;
+}
+.sk-loader:is(.has-home-3) .sk-loader-wrap::after {
+  background-color: #120101;
+}
+.sk-loader:is(.has-home-3) .sk-loader-wrap::before {
+  background: var(--sk-clr-gd-3);
+}
 
 @keyframes skPreloaderKf {
   to {

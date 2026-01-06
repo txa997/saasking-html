@@ -79,6 +79,18 @@
             }
         }
     }
+
+    &:is(.has-home-3) {
+        background-color: #120101;
+        .sk-loader-wrap {
+            &::after {
+                background-color: #120101;
+            }
+            &::before {
+                background: var(--sk-clr-gd-3);
+            }
+        }
+    }
 }
 
 @keyframes skPreloaderKf {
