@@ -257,6 +257,7 @@
                 top: -21px;
                 left: 0;
                 width: 100%;
+                animation: moveX 5s ease-in-out infinite;
             }
     
             i {
@@ -264,6 +265,20 @@
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-size: 30px;
+            }
+
+
+            
+            @keyframes moveX {
+                0% {
+                    transform: translateX(10px);
+                }
+                50% {
+                    transform: translateX(-10px);
+                }
+                100% {
+                    transform: translateX(10px);
+                }
             }
         }
 

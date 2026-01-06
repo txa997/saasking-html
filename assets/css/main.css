@@ -1145,12 +1145,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .sk-p-3 {
   font-family: var(--sk-font-1);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   color: #fff;
   line-height: 1.555;
-  opacity: 80%;
-  letter-spacing: -0.02em;
+  opacity: 88%;
   margin-bottom: 0;
 }
 
@@ -6568,7 +6567,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 294.71px;
   height: 124.38px;
   background: var(--sk-clr-pr-3);
-  opacity: 0.6;
+  opacity: 0.5;
   filter: blur(42px);
   transform: rotate(29.57deg);
   position: absolute;
@@ -8214,6 +8213,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
+  transition: var(--sk-cube-1);
 }
 .sk-price-3-card .item-btn {
   width: 100%;
@@ -8241,6 +8241,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-price-3-card:hover .item-btn .btn-border-2 {
   background: var(--sk-clr-gd-3);
+}
+.sk-price-3-card:hover .btn-wrap-svg {
+  top: 40px;
 }
 .sk-price-3-card-ani {
   position: absolute;
@@ -8287,6 +8290,21 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: 0;
   left: 10%;
   z-index: -1;
+  transition: var(--sk-cube-1);
+}
+.sk-price-3-toggle .bg-shape-2 {
+  position: absolute;
+  right: 28px;
+  top: 0;
+  transform: scale(-1);
+  z-index: -1;
+  transition: var(--sk-cube-1);
+}
+.sk-price-3-toggle:is(.active) .bg-shape {
+  opacity: 0;
+}
+.sk-price-3-toggle:not(.active) .bg-shape-2 {
+  opacity: 0;
 }
 .sk-price-3-toggle-text {
   opacity: 1;
@@ -8893,6 +8911,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: inset 0px 0px 12px rgba(255, 25, 25, 0.72);
   border-radius: 100px;
+  padding: 5px 0;
 }
 .sk-testimonial-3-bottom-marquee .wa_marquee_left_nopause {
   margin-bottom: -8px;
@@ -10270,7 +10289,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-apps-3-bg-shape-1 {
   max-width: 25%;
   position: absolute;
-  top: -20%;
+  top: 0%;
   left: 0;
   z-index: -1;
 }
@@ -10279,7 +10298,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 25%;
   position: absolute;
   right: 0;
-  top: -20%;
+  top: 0%;
   z-index: -1;
 }
 .sk-apps-3-sec-title-wrap {
@@ -10325,8 +10344,8 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-apps-3-logo .single-logo {
   position: absolute;
-  width: 104px;
-  height: 104px;
+  width: 112px;
+  height: 112px;
   transform: translate(-50%, -50%);
 }
 .sk-apps-3-logo .single-logo img {
@@ -10370,7 +10389,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 920px;
   height: 920px;
   background: radial-gradient(50% 50% at 50% 50%, #FD0C39 0%, rgba(18, 1, 1, 0) 81.25%);
-  opacity: 0.48;
+  opacity: 0.68;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -10634,12 +10653,24 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: -21px;
   left: 0;
   width: 100%;
+  animation: moveX 5s ease-in-out infinite;
 }
 .sk-services-3-card .item-icon-elm i {
   background: linear-gradient(180deg, #FF4646 0%, #FFFFFF 51.44%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 30px;
+}
+@keyframes moveX {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
 }
 .sk-services-3-card .title {
   font-size: 20px;
@@ -11190,7 +11221,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 52px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(4px);
   border-radius: 180px;
   font-family: var(--sk-font-1);
@@ -11203,7 +11234,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 40px;
   height: 40px;
   background: linear-gradient(180deg, #BF2938 0%, #600509 100%);
-  box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   display: inline-flex;
   align-items: center;

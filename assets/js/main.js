@@ -1498,10 +1498,12 @@ if ($(".sk-price-1-right").length) {
 gsap.fromTo(".sk-hero-3-apps-single",
     {
         y: 50,
-        opacity: 0
+        opacity: 0,
+		scale: .7,
     },
     {
-        y: -200,
+        y: -250,
+		scale: 1,
         opacity: 0,
         duration: 5,
         ease: "power1.inOut",
@@ -1516,6 +1518,22 @@ gsap.fromTo(".sk-hero-3-apps-single",
         ]
     }
 );
+
+
+// partner-3
+let skPartner3 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-partner-3-wrap",
+		start: "top 80%",
+		end: "top 30%",
+		toggleActions: "play none none reverse",
+		// scrub: true,
+		markers: false,
+	},
+});
+
+skPartner3.from(".sk-partner-3-left-padding", { x: 80, duration: .5});
+skPartner3.from(".sk-partner-3-right-padding", { x: -80, duration: .5},"<");
 
 // section-dot-svg
 const h3sectionDotSvg = document.querySelectorAll('.sk-sec-ani-1-dot path');
@@ -1675,6 +1693,7 @@ skPrice3title.from(".sk-price-3-big-title", { y: 100 });
 */
 if($(".sk-price-3-toggle-btn").length) {
 	$('.sk-price-3-toggle-btn').on('click', function () {
+		$(".sk-price-3-toggle").toggleClass('active');
 		$(".sk-price-3-toggle-btn").toggleClass('active');
 		$('.sk-price-3-card .price-box').toggleClass('active');
 	});
@@ -1692,7 +1711,7 @@ gsap.utils.toArray(".sk-price-3-card-ani .smoke").forEach((smoke, i) => {
         {
             y: -75,
             opacity: 0,
-            scale: 5,
+            scale: 8,
             duration: 5,
             repeat: -1,
             delay: i * 0.8,

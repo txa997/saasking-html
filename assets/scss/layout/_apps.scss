@@ -137,7 +137,7 @@
     &-bg-shape-1 {
         max-width: 25%;
         position: absolute;
-        top: -20%;
+        top: 0%;
         left: 0;
         z-index: -1;
     }
@@ -147,7 +147,7 @@
         width: 25%;
         position: absolute;
         right: 0;
-        top: -20%;
+        top: 0%;
         z-index: -1;
     }
 
@@ -195,8 +195,8 @@
 
         .single-logo {
             position: absolute;
-            width: 104px;
-            height: 104px;
+            width: 112px;
+            height: 112px;
             transform: translate(-50%, -50%);
             
             img {
@@ -246,7 +246,7 @@
             width: 920px;
             height: 920px;
             background: radial-gradient(50% 50% at 50% 50%, #FD0C39 0%, #12010100 81.25%);
-            opacity: 0.48;
+            opacity: 0.68;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
