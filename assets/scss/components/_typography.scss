@@ -40,7 +40,7 @@
 
 .sk-p-4 {
     font-family: var(--sk-font-1);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 18px;
     color: var(--sk-clr-black-4);
     line-height: 1.555;
@@ -194,6 +194,26 @@
     }
 }
 
+.sk-subtitle-4 {
+    font-family: var(--sk-font-2);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    display: inline-flex;
+    border: 1px solid var(--sk-clr-sd-4);
+    border-radius: 100px;
+    background: #fff;
+    padding: 6px 15px;
+    outline: 6px solid rgb(99 66 245 / 12%);
+    margin-bottom: 17px;
+
+    &-text {
+        background: var(--sk-clr-gd-4);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
 
 .sk-sec-title-1 {
     font-family: var(--sk-font-2);
@@ -281,6 +301,46 @@
         font-size: 34px;
     }
 }
+
+
+.sk-sec-title-4 {
+    font-family: var(--sk-font-2);
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 1.086;
+    letter-spacing: -0.01em;
+    color: var(--sk-clr-black-5);
+    margin-bottom: 0;
+
+    img {
+        margin-top: -11px;
+    }
+    
+
+
+    @media #{$xl} {
+        font-size: 44px;
+    }
+
+
+    @media #{$lg} {
+        font-size: 40px;
+    }
+
+    @media #{$md} {
+        font-size: 36px;
+    }
+
+    @media #{$xs} {
+        font-size: 32px;
+    }
+
+    @media #{$sm} {
+        font-size: 34px;
+    }
+}
+
+
 /* 
     typography-end
 */

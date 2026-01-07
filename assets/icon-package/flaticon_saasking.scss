@@ -2,11 +2,11 @@ $flaticon_saasking-font: "flaticon_saasking";
 
 @font-face {
     font-family: $flaticon_saasking-font;
-    src: url("./flaticon_saasking.woff2?ba7fcc5674dd9a9eeb61f899216585ef") format("woff2"),
-url("./flaticon_saasking.woff?ba7fcc5674dd9a9eeb61f899216585ef") format("woff"),
-url("./flaticon_saasking.eot?ba7fcc5674dd9a9eeb61f899216585ef#iefix") format("embedded-opentype"),
-url("./flaticon_saasking.ttf?ba7fcc5674dd9a9eeb61f899216585ef") format("truetype"),
-url("./flaticon_saasking.svg?ba7fcc5674dd9a9eeb61f899216585ef#flaticon_saasking") format("svg");
+    src: url("./flaticon_saasking.woff2?e1c800f1559adada5498cc2675582437") format("woff2"),
+url("./flaticon_saasking.woff?e1c800f1559adada5498cc2675582437") format("woff"),
+url("./flaticon_saasking.eot?e1c800f1559adada5498cc2675582437#iefix") format("embedded-opentype"),
+url("./flaticon_saasking.ttf?e1c800f1559adada5498cc2675582437") format("truetype"),
+url("./flaticon_saasking.svg?e1c800f1559adada5498cc2675582437#flaticon_saasking") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -101,6 +101,35 @@ $flaticon_saasking-map: (
     "request": "\f14e",
     "send": "\f14f",
     "message": "\f150",
+    "settings-1": "\f151",
+    "magnifying-glass": "\f152",
+    "image": "\f153",
+    "voice-search": "\f154",
+    "up-arrow": "\f155",
+    "layer": "\f156",
+    "network": "\f157",
+    "team": "\f158",
+    "team-management": "\f159",
+    "ai-technology-2": "\f15a",
+    "ai-technology-3": "\f15b",
+    "spreadsheet-app": "\f15c",
+    "code": "\f15d",
+    "ai-technology-4": "\f15e",
+    "global": "\f15f",
+    "security": "\f160",
+    "star-2": "\f161",
+    "chatbot-1": "\f162",
+    "development": "\f163",
+    "shuttle": "\f164",
+    "speedometer": "\f165",
+    "dashboard": "\f166",
+    "plus": "\f167",
+    "back": "\f168",
+    "data-integration": "\f169",
+    "home": "\f16a",
+    "clover": "\f16b",
+    "splash": "\f16c",
+    "petals": "\f16d",
 );
 
 .flaticon-dots:before {
@@ -342,4 +371,91 @@ $flaticon_saasking-map: (
 }
 .flaticon-message:before {
     content: map-get($flaticon_saasking-map, "message");
+}
+.flaticon-settings-1:before {
+    content: map-get($flaticon_saasking-map, "settings-1");
+}
+.flaticon-magnifying-glass:before {
+    content: map-get($flaticon_saasking-map, "magnifying-glass");
+}
+.flaticon-image:before {
+    content: map-get($flaticon_saasking-map, "image");
+}
+.flaticon-voice-search:before {
+    content: map-get($flaticon_saasking-map, "voice-search");
+}
+.flaticon-up-arrow:before {
+    content: map-get($flaticon_saasking-map, "up-arrow");
+}
+.flaticon-layer:before {
+    content: map-get($flaticon_saasking-map, "layer");
+}
+.flaticon-network:before {
+    content: map-get($flaticon_saasking-map, "network");
+}
+.flaticon-team:before {
+    content: map-get($flaticon_saasking-map, "team");
+}
+.flaticon-team-management:before {
+    content: map-get($flaticon_saasking-map, "team-management");
+}
+.flaticon-ai-technology-2:before {
+    content: map-get($flaticon_saasking-map, "ai-technology-2");
+}
+.flaticon-ai-technology-3:before {
+    content: map-get($flaticon_saasking-map, "ai-technology-3");
+}
+.flaticon-spreadsheet-app:before {
+    content: map-get($flaticon_saasking-map, "spreadsheet-app");
+}
+.flaticon-code:before {
+    content: map-get($flaticon_saasking-map, "code");
+}
+.flaticon-ai-technology-4:before {
+    content: map-get($flaticon_saasking-map, "ai-technology-4");
+}
+.flaticon-global:before {
+    content: map-get($flaticon_saasking-map, "global");
+}
+.flaticon-security:before {
+    content: map-get($flaticon_saasking-map, "security");
+}
+.flaticon-star-2:before {
+    content: map-get($flaticon_saasking-map, "star-2");
+}
+.flaticon-chatbot-1:before {
+    content: map-get($flaticon_saasking-map, "chatbot-1");
+}
+.flaticon-development:before {
+    content: map-get($flaticon_saasking-map, "development");
+}
+.flaticon-shuttle:before {
+    content: map-get($flaticon_saasking-map, "shuttle");
+}
+.flaticon-speedometer:before {
+    content: map-get($flaticon_saasking-map, "speedometer");
+}
+.flaticon-dashboard:before {
+    content: map-get($flaticon_saasking-map, "dashboard");
+}
+.flaticon-plus:before {
+    content: map-get($flaticon_saasking-map, "plus");
+}
+.flaticon-back:before {
+    content: map-get($flaticon_saasking-map, "back");
+}
+.flaticon-data-integration:before {
+    content: map-get($flaticon_saasking-map, "data-integration");
+}
+.flaticon-home:before {
+    content: map-get($flaticon_saasking-map, "home");
+}
+.flaticon-clover:before {
+    content: map-get($flaticon_saasking-map, "clover");
+}
+.flaticon-splash:before {
+    content: map-get($flaticon_saasking-map, "splash");
+}
+.flaticon-petals:before {
+    content: map-get($flaticon_saasking-map, "petals");
 }

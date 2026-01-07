@@ -920,6 +920,7 @@
             display: inline-flex;
             gap: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
     
@@ -929,6 +930,26 @@
         letter-spacing: -0.01em;
         line-height: 1.071;
         margin-bottom: 24px;
+
+        @media #{$xl} {
+            font-size: 52px;
+        }
+
+        @media #{$lg} {
+            font-size: 48px;
+        }
+
+        @media #{$md} {
+            font-size: 42px;
+        }
+
+        @media #{$xs} {
+            font-size: 36px;
+        }
+
+        @media #{$sm} {
+            font-size: 38px;
+        }
     }
     
     &-disc {
@@ -980,7 +1001,56 @@
         
     }
     
+    &-bg-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -4;
+    }
     
+
+    &-rainbow {
+        text-align: center;
+        position: absolute;
+        bottom: -229px;
+        left: 0;
+        width: 100%;
+        z-index: -3;
+
+        @media #{$xxxl} {
+            bottom: -320px;
+        }
+
+        @media #{$xxl} {
+            bottom: -320px;
+        }
+
+        @media #{$xl} {
+            bottom: -410px;
+        }
+
+        @media #{$lg} {
+            bottom: -410px;
+        }
+
+        @media #{$md} {
+            bottom: -320px;
+        }
+
+        @media #{$xs} {
+            bottom: -530px;
+        }
+
+        @media #{$sm} {
+            bottom: -490px;
+        }
+        
+
+        svg {
+            width: 100%;
+        }
+    }
 }
 /* 
     hero-4-end
