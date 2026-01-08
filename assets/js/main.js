@@ -1688,6 +1688,45 @@ let skPrice3title = gsap.timeline({
 skPrice3title.from(".sk-price-3-big-title", { y: 100 });
 
 
+
+// price-4-card
+if (window.matchMedia("(min-width: 1200px)").matches) {   
+	let skPrice4card = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".sk-price-4-wrap",
+			start: "top 30%", 
+			toggleActions: "play none none reverse",
+			markers: false,
+		},
+	});
+	skPrice4card.from(".sk-price-4-card:nth-of-type(1)", { x: 45, rotation: -15, duration: .5, ease: "ease1", });
+	skPrice4card.from(".sk-price-4-card:nth-of-type(3)", { x: -45, rotation: 15, duration: .5, ease: "ease1", },"<");
+}
+
+// apps-4-animation
+if (window.matchMedia("(min-width: 1200px)").matches) {  
+	if($(".sk-apps-4-logo").length) {
+		const container = document.querySelector('.sk-apps-4-logo');
+		const items = container.querySelectorAll('.sk-apps-4-logo .single-logo');
+		
+		const radius = container.offsetWidth / 2 + 10;
+		const centerX = container.offsetWidth / 2;
+		const centerY = container.offsetHeight / 2;
+		const total = items.length;
+		
+		items.forEach((item, index) => {
+			const angle = (index / total) * (Math.PI * 2);
+		
+			const x = centerX + radius * Math.cos(angle);
+			const y = centerY + radius * Math.sin(angle);
+		
+			item.style.left = `${x}px`;
+			item.style.top = `${y}px`;
+		});
+	}
+}
+
+
 /* 
 	price-3-toggle-class
 */
@@ -1696,6 +1735,7 @@ if($(".sk-price-3-toggle-btn").length) {
 		$(".sk-price-3-toggle").toggleClass('active');
 		$(".sk-price-3-toggle-btn").toggleClass('active');
 		$('.sk-price-3-card .price-box').toggleClass('active');
+		$('.sk-price-4-card .price-box').toggleClass('active');
 	});
 }
 

@@ -293,3 +293,208 @@
 /* 
     apps-3-end
 */
+/* 
+    apps-4-start
+*/
+.sk-apps-4 {
+    &-area {
+        @media #{$lg,$md,$xs} {
+            padding-bottom: 100px;
+        }
+    }
+    &-sec-title {
+        max-width: 690px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    &-wrap {
+        &::after {
+            content: "";
+            width: 290px;
+            height: 290px;
+            background: linear-gradient(94.33deg, rgba(80, 48, 224, 0.24) 0%, rgba(80, 48, 224, 0.2016) 39.42%, rgba(229, 15, 242, 0.24) 100%);
+            position: absolute;
+            right: 10%;
+            top: 11%;
+            clip-path: polygon( 97.131% 77.484%,97.131% 77.484%,97.911% 76.934%,98.574% 76.283%,99.116% 75.55%,99.533% 74.749%,99.819% 73.899%,99.97% 73.017%,99.981% 72.118%,99.847% 71.22%,99.563% 70.34%,99.124% 69.495%,99.124% 69.495%,93.681% 61.263%,87.879% 53.306%,81.729% 45.635%,75.241% 38.26%,68.427% 31.192%,61.298% 24.442%,53.864% 18.021%,46.137% 11.94%,38.128% 6.21%,29.847% 0.842%,29.847% 0.842%,28.998% 0.411%,28.116% 0.136%,27.217% 0.01%,26.318% 0.028%,25.437% 0.187%,24.589% 0.481%,23.793% 0.905%,23.064% 1.454%,22.42% 2.123%,21.877% 2.907%,0.791% 39.311%,0.791% 39.311%,0.381% 40.172%,0.121% 41.064%,0.007% 41.97%,0.033% 42.877%,0.195% 43.766%,0.488% 44.623%,0.907% 45.432%,1.447% 46.178%,2.103% 46.843%,2.871% 47.413%,2.871% 47.413%,8.802% 51.327%,14.544% 55.49%,20.089% 59.895%,25.431% 64.534%,30.562% 69.401%,35.475% 74.488%,40.162% 79.787%,44.617% 85.293%,48.832% 90.996%,52.8% 96.891%,52.8% 96.891%,53.377% 97.654%,54.048% 98.305%,54.798% 98.838%,55.611% 99.25%,56.471% 99.535%,57.361% 99.688%,58.268% 99.706%,59.174% 99.584%,60.063% 99.316%,60.92% 98.898%,97.131% 77.484% );
+            z-index: 2;
+            backdrop-filter: blur(16px);
+
+            @media #{$xl} {
+                right: 1%;
+            }
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+        &::before {
+            content: "";
+            width: 290px;
+            height: 290px;
+            background: linear-gradient(94.33deg, rgba(80, 48, 224, 0.24) 0%, rgba(80, 48, 224, 0.2016) 39.42%, rgba(229, 15, 242, 0.24) 100%);
+            position: absolute;
+            left: 8%;
+            top: 17%;
+            clip-path: polygon( 74.962% 2.559%,74.962% 2.559%,74.361% 1.822%,73.664% 1.205%,72.889% 0.71%,72.054% 0.343%,71.175% 0.106%,70.27% 0.004%,69.356% 0.04%,68.451% 0.219%,67.572% 0.543%,66.737% 1.017%,66.737% 1.017%,58.665% 6.788%,50.892% 12.898%,43.428% 19.334%,36.283% 26.087%,29.468% 33.143%,22.993% 40.492%,16.868% 48.124%,11.105% 56.025%,5.714% 64.185%,0.704% 72.593%,0.704% 72.593%,0.313% 73.449%,0.08% 74.33%,0% 75.219%,0.068% 76.1%,0.276% 76.957%,0.62% 77.773%,1.094% 78.533%,1.691% 79.22%,2.406% 79.818%,3.232% 80.311%,41.356% 99.117%,41.356% 99.117%,42.254% 99.475%,43.174% 99.684%,44.101% 99.749%,45.021% 99.676%,45.916% 99.471%,46.771% 99.139%,47.571% 98.686%,48.299% 98.117%,48.94% 97.438%,49.478% 96.654%,49.478% 96.654%,53.135% 90.629%,57.057% 84.776%,61.234% 79.103%,65.661% 73.618%,70.33% 68.328%,75.234% 63.241%,80.367% 58.364%,85.722% 53.704%,91.291% 49.27%,97.067% 45.069%,97.067% 45.069%,97.811% 44.463%,98.436% 43.77%,98.938% 43.006%,99.312% 42.187%,99.556% 41.328%,99.664% 40.445%,99.634% 39.555%,99.46% 38.672%,99.14% 37.813%,98.669% 36.993%,74.962% 2.559% );
+            z-index: 2;
+            backdrop-filter: blur(16px);
+
+            @media #{$xl} {
+                left: 1%;
+                top: 12%;
+            }
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+        
+    }
+
+    &-logo-wrap {
+        overflow: hidden;
+        padding-top: 50px;
+        height: 485px;
+
+        @media #{$lg,$md,$xs} {
+            height: auto;
+        }
+    }
+    &-logo {
+        width: 1060px;
+        height: 1060px;
+        border-radius: 50%;
+        position: relative;
+        margin: auto;
+        will-change: transform;
+        animation: wa-rotated 30s linear infinite;
+
+        @media #{$lg,$md,$xs} {
+            animation: unset;
+            width: 100%;
+            height: auto;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .single-logo {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: 68px;
+            height: 68px;
+
+            @media #{$lg,$md,$xs} {
+                position: unset;
+                transform: unset;
+            }
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+        }
+    }
+
+
+    &-shape-2 {
+        position: absolute;
+        top: -11px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: -1;
+
+        @media #{$xl} {
+            transform: scaleX(1.07);
+        }
+
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+    }
+
+
+    &-content-posi {
+        position: absolute;
+        top: 91px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+
+        @media #{$xl} {
+            top: 83px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            position: unset;
+        }
+    }
+    
+    &-content {
+        width: 1000px;
+        height: 1000px;
+        border-radius: 50%;
+        flex: 0 0 auto;
+        position: relative;
+        z-index: 1;
+        padding: 100px;
+
+        @media #{$lg,$md,$xs} {
+            width: 100%;
+            height: auto;
+            padding: 0px;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            background: linear-gradient(94.33deg, #5030E0 0%, rgba(80, 48, 224, 0.84) 39.42%, #E50FF2 100%);
+            opacity: 28%;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 134px;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 255px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.68) 53.44%, #FFFFFF 100%);
+            pointer-events: none;
+            transform: scale(1.5);
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+
+        .disc {
+            display: inline-block;
+            max-width: 493px;
+            margin-bottom: 35px;
+        }
+    }
+}
+/* 
+    apps-4-end
+*/
