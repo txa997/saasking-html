@@ -1727,6 +1727,72 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 }
 
 
+
+// process-4-animation
+if (window.matchMedia("(min-width: 1200px)").matches) {  
+	let skProcess4ani = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".sk-process-4-wrap",
+			start: "top 40%", 
+			end: "bottom bottom",
+			toggleActions: "play none none none",
+			scrub: false,
+			markers: false,
+		},
+	});
+	
+	skProcess4ani.from(".sk-process-4-bg-circle-img img", {  scale: 0, ease: "ease1" , duration: .5, });
+	skProcess4ani.from(".sk-process-4-bg-glow-1 img", {  scale: 0, y: 200, ease: "ease1" , duration: .5, },"<70%");
+	skProcess4ani.from(".sk-process-4-robot-img img", {  scale: 0, y: 200, ease: "ease1" , duration: .5, },"<70%");
+	skProcess4ani.from(".sk-process-4-svg-meteor", {  opacity: 0, ease: "ease1" , duration: .5, },"<");
+	skProcess4ani.fromTo(".sk-process-4-svg-line .svg-path-1", {  clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)", ease: "ease1" , duration: .5, },{  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", ease: "ease1" , duration: 1, },"<70%");
+	skProcess4ani.fromTo(".sk-process-4-svg-line .svg-path-2", {  clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", ease: "ease1" , duration: .5, },{  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", ease: "ease1" , duration: 1, },"<");
+	skProcess4ani.from(".sk-process-4-svg-line .svg-dot-2", {  opacity: 0, ease: "ease1" , duration: .5, },"<80%");
+	skProcess4ani.from(".sk-process-4-svg-line .svg-dot-1", {  opacity: 0, ease: "ease1" , duration: .5, },"<");
+	skProcess4ani.from(".sk-process-4-card", {  opacity: 0, ease: "ease1" , duration: .5, },"<70%");
+
+}
+
+if($(".sk-process-4-svg-meteor").length) {
+
+	const groups = [
+		".sk-process-4-svg-meteor .svg-ani-1",
+		".sk-process-4-svg-meteor .svg-ani-2",
+		".sk-process-4-svg-meteor .svg-ani-3",
+		".sk-process-4-svg-meteor .svg-ani-4",
+		".sk-process-4-svg-meteor .svg-ani-5",
+		".sk-process-4-svg-meteor .svg-ani-6"
+	  ];
+	  
+	  groups.forEach((group) => {
+	  
+		const tl = gsap.timeline({
+		  repeat: -1,
+		  delay: gsap.utils.random(0, 3),
+		  repeatDelay: gsap.utils.random(0.5, 2)
+		});
+	  
+		tl.fromTo(group,
+		  {
+			opacity: 0,
+			y: 0
+		  },
+		  {
+			opacity: 1,
+			y: -150,
+			duration: gsap.utils.random(1.5, 3),
+			ease: "power1.inOut"
+		  }
+		).to(group, {
+		  opacity: 0,
+		  duration: 0.1
+		});
+	  
+	});
+	
+}
+
+
 /* 
 	price-3-toggle-class
 */

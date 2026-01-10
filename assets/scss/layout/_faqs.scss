@@ -382,3 +382,173 @@
 /* 
     faqs-3-end
 */
+/* 
+    faqs-4-start
+*/
+.sk-faqs-4 {
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.65fr;
+        gap: 100px;
+
+        @media #{$lg} {
+            gap: 50px;
+        }
+
+        @media #{$md,$xs} {
+            gap: 50px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &-sec-title {
+        // position: sticky;
+        // top: 100px;
+        // margin-bottom: 250px;
+        margin-bottom: 100px;
+        .sec-disc {
+            margin-top: 18px;
+        }
+    }
+
+
+    &-content {
+        .subtitle {
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .disc {
+            font-size: 16px;
+            max-width: 360px;
+            margin-bottom: 25px;
+        }
+
+        .bg-icon {
+            font-size: 120px;
+            line-height: 1;
+            color: #EBEBEE;
+            position: absolute;
+            top: -47px;
+            left: -45px;
+            z-index: -1;
+        }
+    }
+
+    &-accordion {
+        .sk-accordion-1 {
+            border: none;
+            gap: 6px;
+
+            &-item {
+                background: #F4F4F4;
+                border: none;
+                border-radius: 8px;
+                position: relative;
+                z-index: 1;
+                padding: 0;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    filter: unset;
+                    border-radius: 8px;
+                    background: var(--sk-clr-gd-4);
+                    padding: 2px;
+                    z-index: -1;
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask-composite: exclude;
+                    pointer-events: none;
+                }
+
+                &::after {
+                    display: none;
+                }
+
+
+                .item-title {
+                    font-size: 18px;
+                    font-weight: 400;
+                    justify-content: left;
+                    gap: 10px;
+                    padding: 21px 24px;
+
+                    .illus-1 {
+                        color: var(--sk-clr-sd-4);
+                        margin-bottom: -2px;
+                    }
+
+                    .icon {
+                        width: 28px;
+                        height: 28px;
+                        background: #FFFFFF;
+                        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.12);
+                        border-radius: 5px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: auto;
+                        font-size: 12px;
+                        color: #9A9AA7;
+                        transform: rotate(-90deg);
+                        flex: 0 0 auto;
+                    }
+
+
+                    &:is(:not(.collapsed)) {
+                        font-weight: 500;
+                        color: var(--sk-clr-black-5);
+                        .icon {
+                            transform: rotate(0deg);
+                            box-shadow: inset 0px 0px 4px rgba(229, 15, 242, 0.48);
+                            color: var(--sk-clr-pr-4);
+                        }
+        
+                    }
+        
+                    &:is(.collapsed) {
+                        &:hover {
+                            color: var(--sk-clr-sd-4);
+                        }
+
+                    }
+        
+                }
+
+                &:is(.active) {
+                    background: #fff;
+                    .item-title {
+                        color: var(--sk-clr-black-5);
+                    }
+                }
+
+
+                .item-disc {
+                    margin-top: 0;
+                    padding: 23px 52px;
+                    padding-top: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+/* 
+    faqs-4-end
+*/

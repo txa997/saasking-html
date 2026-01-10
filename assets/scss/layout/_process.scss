@@ -510,6 +510,11 @@
         margin-left: 24px;
         margin-right: 24px;
         background-color: var(--sk-clr-black-5);
+
+        @media #{$xl,$lg,$md,$xs} {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
     }
 
     &-bg-img {
@@ -542,16 +547,24 @@
         grid-template-columns: 1fr 1fr;
         gap: 60px;
 
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+
         .left {
             display: flex;
             flex-direction: column;
             gap: 60px;
 
-            .sk-process-4-card {
-                &:nth-child(2) {
-                    margin-left: 48px;
+            @media #{$over,$xxxl,$xxl,$xl} {
+                .sk-process-4-card {
+                    &:nth-child(2) {
+                        margin-left: 48px;
+                    }
                 }
             }
+
         }
         .right {
             display: flex;
@@ -559,12 +572,14 @@
             gap: 60px;
             align-items: end;
 
-            
-            .sk-process-4-card {
-                &:nth-child(2) {
-                    margin-right: 48px;
+            @media #{$over,$xxxl,$xxl,$xl} {
+                .sk-process-4-card {
+                    &:nth-child(2) {
+                        margin-right: 48px;
+                    }
                 }
             }
+
         }
     }
     
@@ -672,6 +687,15 @@
         bottom: 190px;
         z-index: 1;
         pointer-events: none;
+
+        @media #{$xl} {
+            bottom: 160px;
+            width: 36%;
+        }
+
+        @media #{$lg,$lg,$md,$xs} {
+            display: none;
+        }
     }
 
 
@@ -683,6 +707,10 @@
         bottom: 171px;
         z-index: 3;
         pointer-events: none;
+
+        @media #{$lg,$md,$xs} {
+            position: unset;
+        }
     }
 
     &-bg-glow-1 {
@@ -701,6 +729,20 @@
         left: 0;
         width: 100%;
         z-index: -2;
+    }
+
+
+    &-svg-meteor {
+        position: absolute;
+        bottom: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        overflow: visible;
+
+        * {
+            will-change: transform, opacity;
+          }
     }
 }
 
