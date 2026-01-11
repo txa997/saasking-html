@@ -301,11 +301,58 @@ function afterPreloader() {
 			});
 		});
 
+		document.querySelectorAll(".wa_split_3").forEach((atEl) => {
+			const atSplit3 = new SplitText(atEl, {
+				type: "words,chars",
+				wordsClass: "word",
+				charsClass: "char"
+			});
+
+			let atDuration = parseFloat(atEl.getAttribute("data-speed")) || 1;
+			let atDelay = parseFloat(atEl.getAttribute("data-delay")) || 0;
+
+			if (window.innerWidth <= 768) {
+				atDuration = atDuration * 0.3; 
+			}
+
+
+			gsap.set(atSplit3.chars, {
+				opacity: 0,
+			});
+
+
+			gsap.to(atSplit3.chars, {
+				scrollTrigger: {
+					trigger: atEl,
+					start: "top 80%",
+				},
+				opacity: 1,
+				duration: .3,
+				delay: atDelay,
+				ease: "power3.out",
+				stagger: 0.05,
+			});
+		});
+
 
 
 	}	
 
 
+	// hero-4-animation
+	let skHero4tl = gsap.timeline();
+		
+	skHero4tl.from(".sk-hero-4-img-wrap .bg-illus-1 img", { delay: .5, rotation: -360, opacity: 0, duration: 1, ease: "ease1" });
+	skHero4tl.from(".sk-hero-4-img", { scale: 0, duration: .5, ease: "ease1" },"<70%");
+	skHero4tl.from(".sk-hero-4-img-shadow", { scale: 0, duration: .5, ease: "ease1" },"<50%");
+	skHero4tl.from(".sk-hero-4-chat-popup:nth-of-type(2)", { y: 30, opacity: 0, duration: .5, ease: "ease1" },"<50%");
+	skHero4tl.from(".sk-hero-4-chat-popup:nth-of-type(3)", { y: 30, opacity: 0, duration: .5, ease: "ease1" },"<50%");
+
+	let skHero4tl2 = gsap.timeline();
+	skHero4tl2.from(".sk-hero-4-rainbow svg .svg-line-4", { delay: .5, rotateX: 79, y: 20, opacity: 0, duration: .5, ease: "ease1", });
+	skHero4tl2.from(".sk-hero-4-rainbow svg .svg-line-3", {  y: 40, rotateX: 79, opacity: 0, duration: .5, ease: "ease1", },"<40%");
+	skHero4tl2.from(".sk-hero-4-rainbow svg .svg-line-2", {  y: 60, rotateX: 79, opacity: 0, duration: .5, ease: "ease1", },"<40%");
+	skHero4tl2.from(".sk-hero-4-rainbow svg .svg-line-1", {  y: 80, rotateX: 79, opacity: 0, duration: .5, ease: "ease1", },"<40%");
 
 
 /* 
@@ -1687,6 +1734,82 @@ let skPrice3title = gsap.timeline({
 });
 skPrice3title.from(".sk-price-3-big-title", { y: 100 });
 
+// choose-4-dashboard-animation
+if($(".sk-choose-4-dashboard").length) {
+
+	const typingEl = document.querySelector(".sk-choose-4-dashboard .input-typing-text");
+	const typingText = "Ask Any Things ...";
+	
+	
+	let dashboardTL = gsap.timeline({
+		repeat: -1,
+		repeatDelay: 1
+	});
+	
+
+	function typingTimeline() {
+	
+		if (typingEl.split) {
+			typingEl.split.revert();
+		}
+	
+		typingEl.textContent = typingText;
+	
+		let split = new SplitText(typingEl, {
+			type: "chars"
+		});
+		typingEl.split = split;
+	
+		gsap.set(split.chars, { opacity: 0 });
+	
+		let tl = gsap.timeline();
+		tl.to(split.chars, {
+			opacity: 1,
+			duration: 0.05,
+			stagger: 0.06,
+			ease: "none"
+		});
+	
+		return tl;
+	}
+	
+
+	dashboardTL
+		.set(typingEl, { opacity: 0 })
+	
+		.to(".sk-choose-4-dashboard .has-search-btn", { background: "#fff", scale: 0.9, duration: 0.3 })
+		.to(".sk-choose-4-dashboard .has-search-btn", { background: "#F1F5FD", scale: 1, duration: 0.3 })
+	
+		.to(typingEl, { opacity: 1, duration: 0.2 })
+	
+		.add(typingTimeline())
+	
+		.to({}, { duration: 0.3 })
+	
+		.to(".sk-choose-4-dashboard .has-submit-btn", { background: "#000", scale: 0.85, duration: 0.3 })
+		.to(".sk-choose-4-dashboard .has-submit-btn", { background: "#fff", scale: 1, duration: 0.3 })
+	
+		// hide text
+		.to(typingEl, { opacity: 0, duration: 0.3 });
+	
+}
+
+
+
+
+// services-4-bg
+let skServices4svg = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-features-4-bg-shape",
+		start: "top 80%",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+skServices4svg.from(".sk-features-4-bg-shape svg g g", { opacity: 0, duration: .5, ease: "ease1", stagger: {
+	each: 0.1,
+	from: "right",
+}, });
 
 
 // price-4-card
@@ -1791,6 +1914,20 @@ if($(".sk-process-4-svg-meteor").length) {
 	});
 	
 }
+
+
+
+// footer-4-robot
+let skFooter4robot = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-footer-4-big-title-wrap",
+		// start: "top 90%", 
+		toggleActions: "play none none none",
+		scrub: false,
+		markers: false,
+	},
+});
+skFooter4robot.from(".sk-footer-4-big-title-robot img", { y: -100, opacity: 0, duration: 1, ease: "bounce.out", delay: .3,  });
 
 
 /* 

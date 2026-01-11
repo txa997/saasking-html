@@ -772,6 +772,22 @@
     &-right {
         max-width: 855px;
         margin-left: auto;
+        position: relative;
+        z-index: 2;
+
+        @media #{$lg} {
+            margin-bottom: 310px;
+        }
+
+        @media #{$md} {
+            margin-bottom: 240px;
+        }
+        @media #{$xs} {
+            margin-bottom: 150px;
+        }
+        @media #{$sm} {
+            margin-bottom: 200px;
+        }
 
         .sk-footer-3-widget {
             .widget-title {
@@ -856,6 +872,30 @@
             font-weight: 700;
             line-height: 1;
             margin-bottom: -40px;
+            
+            @media #{$xl} {
+                font-size: 226px;
+            }
+            
+            @media #{$lg} {
+                font-size: 186px;
+                margin-bottom: -20px;
+            }
+            
+            @media #{$md} {
+                font-size: 136px;
+                margin-bottom: -20px;
+            }
+        
+            @media #{$xs} {
+                font-size: 62px;
+                margin-bottom: 0;
+            }
+        
+            @media #{$sm} {
+                font-size: 106px;
+                margin-bottom: -10px;
+            }
         
 
             span {
@@ -874,6 +914,16 @@
             left: -70px;
             z-index: 1;
             width: 39%;
+
+            @media #{$xl} {
+                left: -60px;
+                width: 32%;
+            }
+
+            @media #{$xs} {
+                left: -34px;
+                width: 50%;
+            }
         }
     }
     

@@ -183,6 +183,14 @@
             font-size: 18px;
             color: var(--sk-clr-sd-4);
         }
+
+
+        .input-typing-text {
+            opacity: 0;
+            white-space: nowrap;
+            display: inline-block;
+        }
+        
     }
     
     &-wrap-2 {

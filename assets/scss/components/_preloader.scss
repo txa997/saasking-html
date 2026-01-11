@@ -21,74 +21,131 @@
     align-items: center;
     justify-content: center;
     perspective: 2000px;
-	
-    &-wrap {
-        width: 150px;
-        height: 150px;
+
+
+    
+    .item-favicon-border {
+        width: 94px;
+        height: 94px;
+        background: #FFFFFF;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25), inset 0px -4px 4px rgba(0, 33, 1, 0.3), inset 0px 4px 4px var(--sk-clr-sd-1);
+        border-radius: 79px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
         position: relative;
         z-index: 1;
-        transition: .6s;
 
-        &::after {
-            content: "";
-            width: calc(100% - 2px);
-            height: calc(100% - 2px);
+        &-line-1 {
             position: absolute;
-            top: 1px;
-            left: 1px;
-            background: var(--sk-clr-black-2);
-            border-radius: 50%;
-            z-index: -1;
-        }
-
-        &::before {
-            content: "";
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            background: var(--sk-clr-gd-1);
+            border: 1px solid var(--sk-clr-sd-1);
             border-radius: 50%;
-            z-index: -1;
-            animation: skPreloaderKf 3s linear infinite;
+            animation: skf2item-favicon-border-line-3 3s linear infinite;
+        }
+
+        &-line-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--sk-clr-sd-1);
+            border-radius: 50%;
+            animation: skf2item-favicon-border-line-3 3s linear infinite;
+            animation-delay: 1s;
+        }
+
+        &-line-3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--sk-clr-sd-1);
+            border-radius: 50%;
+            animation: skf2item-favicon-border-line-3 3s linear infinite;
+            animation-delay: 2s;
         }
     }
-
+	
+    @keyframes skf2item-favicon-border-line-3 {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.7);
+            opacity: 0;
+        }
+    }
+    
     &:is(.loaded) {
         opacity: 0;
-        .sk-loader-wrap {
-            transform: rotateY(360deg);
-        }
     }
 
 
 
     &:is(.has-home-2) {
         background-color: #EBEBEB;
-        .sk-loader-wrap {
-            &::after {
-                background-color: #EBEBEB;
-            }
-            &::before {
-                background: linear-gradient(180deg, #59D51D 0%, #2E6F0F 100%);
-            }
+
+        .item-favicon-border {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25), inset 0px -4px 4px rgba(0, 33, 1, 0.3), inset 0px 4px 4px var(--sk-clr-pr-2);
+        }
+
+        .item-favicon-border-line-1 {
+            border-color: var(--sk-clr-pr-2);
+        }
+
+        .item-favicon-border-line-2 {
+            border-color: var(--sk-clr-pr-2);
+        }
+
+        .item-favicon-border-line-3 {
+            border-color: var(--sk-clr-pr-2);
         }
     }
 
     &:is(.has-home-3) {
         background-color: #120101;
-        .sk-loader-wrap {
-            &::after {
-                background-color: #120101;
-            }
-            &::before {
-                background: var(--sk-clr-gd-3);
-            }
+
+        .item-favicon-border {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25), inset 0px -4px 4px rgba(0, 33, 1, 0.3), inset 0px 4px 4px var(--sk-clr-pr-3);
+        }
+
+        .item-favicon-border-line-1 {
+            border-color: var(--sk-clr-pr-3);
+        }
+
+        .item-favicon-border-line-2 {
+            border-color: var(--sk-clr-pr-3);
+        }
+
+        .item-favicon-border-line-3 {
+            border-color: var(--sk-clr-pr-3);
+        }
+    }
+
+    &:is(.has-home-4) {
+        background-color: #FFFFFF;
+
+        .item-favicon-border {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25), inset 0px -4px 4px rgba(0, 33, 1, 0.3), inset 0px 4px 4px var(--sk-clr-pr-3);
+        }
+
+        .item-favicon-border-line-1 {
+            border-color: var(--sk-clr-pr-3);
+        }
+
+        .item-favicon-border-line-2 {
+            border-color: var(--sk-clr-pr-3);
+        }
+
+        .item-favicon-border-line-3 {
+            border-color: var(--sk-clr-pr-3);
         }
     }
 }

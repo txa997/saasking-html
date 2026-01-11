@@ -50,6 +50,15 @@
             border-color: rgb(254 13 58 / 100%);
         }
     }
+
+    &:is(.has-home-4) {
+        border-color: rgb(99 66 245 / 50%);
+        color: var(--sk-clr-sd-4);
+
+        &:hover {
+            border-color: var(--sk-clr-sd-4);
+        }
+    }
 }
 
 
