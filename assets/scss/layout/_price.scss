@@ -81,6 +81,19 @@
                 margin-right: 0px;
             }
         }
+
+
+        &-dot {
+            position: absolute;
+            top: 561px;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+
+            svg {
+                overflow: visible;
+            }
+        }
     }
 
 

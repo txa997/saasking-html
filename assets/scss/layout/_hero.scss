@@ -857,6 +857,10 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -2;
+
+                img {
+                    animation: wa-rotated 25s  linear infinite;
+                }
             }
         }
     }

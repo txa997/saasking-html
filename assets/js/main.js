@@ -646,6 +646,29 @@ let features1bgGlow = gsap.timeline({
 });
 features1bgGlow.from(".sk-features-1-bg-clr img", { opacity: 0, });
 
+// price-1-dot-svg
+gsap.fromTo(".sk-price-1-animation-dot svg path",
+    {
+        y: 50,
+        opacity: 0
+    },
+    {
+        y: -130,
+        opacity: 0,
+        duration: 7,
+        ease: "power1.inOut",
+        stagger: {
+            each: 0.2,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+
+
 // price-1-bg-glow
 let price1bgGlow = gsap.timeline({
 	scrollTrigger: {
@@ -674,6 +697,7 @@ let price1bgGlow2 = gsap.timeline({
 price1bgGlow2.from(".sk-price-1-animation .vertical-line", {  scaleY: 0, });
 price1bgGlow2.from(".sk-price-1-animation .triangle-shape", {  opacity: 0, });
 price1bgGlow2.from(".sk-price-1-animation .clr-glow-1 img", {  opacity: 0, },"<50%");
+price1bgGlow2.from(".sk-price-1-animation-dot svg", {  opacity: 0, },"<");
 
 // price-1-bg-glow-3
 if (window.matchMedia("(min-width: 1400px)").matches) { 
@@ -689,7 +713,6 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
 	});
 	price1bgGlow3.from(".sk-price-1-bg-illus-3 img", {  opacity: 0, });
 }
-
 
 
 /* 
