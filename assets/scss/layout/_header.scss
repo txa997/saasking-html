@@ -220,7 +220,6 @@
                 transform: translateY(10px);
                 transform-origin: top;
                 transition: var(--sk-cube-1);
-                overflow: hidden;
             
                 li {
                     display: block;
@@ -549,6 +548,12 @@
                 .dropdown-menu {
                     background: #120101;
                     li {
+                        a {
+                            &::after {
+                                width: 100%;
+                                border-radius: 6px;
+                            }
+                        }
                         &:hover {
                             background: transparent;
                         }
@@ -779,6 +784,184 @@
 
 /* 
     header-4-end
+*/
+
+/* 
+    header-5-start
+*/
+.sk-header-5 {
+    &-area {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    &-container {
+        max-width: 1630px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+
+    &-menu {
+        position: relative;
+        z-index: 1;
+        border-radius: 12px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 12px;
+            background: linear-gradient( to right, #1D1C2D 0%, #4A4A60 100% );
+            padding: 1px;
+            z-index: -1;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+        }
+    }
+
+    &-action-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        .sk-offcanvas-btn-1 {
+            width: 52px;
+            height: 52px;
+            background: var(--sk-clr-pr-5);
+            transition: var(--sk-cube-1);
+
+            &:hover {
+                color: var(--sk-clr-black-8);
+            }
+
+            @media #{$over,$xxxl,$xxl,$xl} {
+                display: none;
+            }
+        }
+    }
+
+}
+
+
+.sk-main-navigation {
+    &:is(.has-header-5) {
+        .navbar-nav {
+            gap: 0;
+
+            li {
+                border-radius: 12px;
+                padding: 0  16px;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(8.68deg, #2A293B 6.62%, rgba(42, 41, 59, 0) 90.92%);
+                    position: absolute;
+                    top: 0;
+                    left: 0px;
+                    z-index: -1;
+                    border-radius: 12px;
+                    opacity: 0;
+                    transition: var(--sk-cube-1);
+                }
+
+                a {
+                    padding: 14px 0;
+                    // padding-left: -1;
+
+                    // &::after {
+                    //     content: "";
+                    //     width: 5px;
+                    //     height: 5px;
+                    //     border-radius: 50%;
+                    //     background-color: #fff;
+                    //     position: absolute;
+                    //     top: 50%;
+                    //     transform: translateY(-50%);
+                    //     left: -15px;
+                    //     z-index: 1;
+                    //     opacity: 0;
+                    //     transition: var(--sk-cube-1);
+                    // }
+                }
+
+                &:is(.dropdown) {
+                    > a {
+                        padding-right: 12px;
+
+                        &::before {
+                            display: block;
+                            content: "\f0d7";
+                            font-family: "Font Awesome 6 Free";
+                            font-weight: 600;
+                            background-image: unset;
+                            width: auto;
+                            height: auto;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+
+                    > a {
+                        color: var(--sk-clr-pr-5);
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    background: var(--sk-clr-black-8);
+                    border-color: rgba(255, 255, 255, 0.1);
+
+                    li {
+                        padding: 0;
+                        background: transparent;
+
+                        &::after {
+                            display: block;
+                        }
+
+                        &:hover {
+                            > a {
+                                color: var(--sk-clr-pr-5);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+/* 
+    header-5-end
 */
 
 /* 

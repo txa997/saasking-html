@@ -2147,8 +2147,19 @@
         svg {
             width: 100%;
             g {
-                filter: blur(12px);
+                filter: blur(15px);
                 opacity: .7;
+
+                g {
+                    &:nth-child(1) {
+                        opacity: 1;
+                        filter: blur(0);
+                    }
+                    &:nth-child(9) {
+                        opacity: 1;
+                        filter: blur(0);
+                    }
+                }
             }
         }
     }

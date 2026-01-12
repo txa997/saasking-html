@@ -1824,7 +1824,7 @@ if($(".sk-choose-4-dashboard").length) {
 let skServices4svg = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".sk-features-4-bg-shape",
-		start: "top 80%",
+		start: "top 50%",
 		toggleActions: "play none none reverse",
 		markers: false,
 	},
