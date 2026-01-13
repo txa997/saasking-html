@@ -854,6 +854,22 @@
                 display: none;
             }
         }
+
+
+        .sk-pr-btn-8 {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        .sk-pr-btn-9 {
+            @media #{$xs} {
+                display: none;
+            }
+            @media #{$sm} {
+                display: inline-flex;
+            }
+        }
     }
 
 }

@@ -213,9 +213,8 @@
         z-index: 1;
         padding: 40px 40px;
         border-radius: 12px;
-        overflow: hidden;
         background-color: #F6F0FF;
-
+        overflow: hidden;
         @media #{$xl,$lg,$md,$xs} {
             padding: 40px 20px;
         }
@@ -223,11 +222,11 @@
         &::after {
             content: "";
             width: 100%;
-            height: 100%;
+            height: 140%;
             position: absolute;
             top: 50%;
             left: 50%;
-            background: linear-gradient(130.14deg, #E50FF2 0%, #6D4EF6 19.27%, #F6F0FF 38.47%);
+            background: linear-gradient(135.99deg, #E50FF2 17.96%, rgba(109, 78, 246, 0.72) 30.11%, rgba(255, 255, 255, 0) 40.5%, rgba(255, 255, 255, 0) 80.69%);
             border: 1px solid red;
             z-index: -2;
             transform: translate(-50%, -50%) scale(1.7) rotate(311deg);
@@ -287,7 +286,7 @@
             }
 
             &::after {
-                background: linear-gradient(130.14deg, #7edf2b 0%, #e5f500 19.27%, #f1ffe5 38.47%);
+                background: linear-gradient(135.99deg, #7EDF2B 17.96%, rgba(229, 245, 0, 0.72) 30.11%, rgba(255, 255, 255, 0) 40.5%, rgba(255, 255, 255, 0) 80.69%);
             }
         }
 
@@ -297,7 +296,7 @@
                 background-color: #FFF3F0; 
             }
             &::after {
-                background: linear-gradient(130.14deg, #ff4f24 0%, #f59f00 19.27%, #fff3f0 38.47%);
+                background: linear-gradient(135.99deg, #FF4F24 17.96%, rgba(245, 159, 0, 0.72) 30.11%, rgba(255, 255, 255, 0) 40.5%, rgba(255, 255, 255, 0) 80.69%);
             }
         }
     }
@@ -320,10 +319,10 @@
 
 @keyframes skChoose4cardKf {
     0% {
-        transform: translate(-50%, -50%) scale(1.7) rotate(0deg);
+        transform: translate(-50%, -50%) scale(1.3) rotate(0deg);
     }
     100% {
-        transform: translate(-50%, -50%) scale(1.7) rotate(360deg);
+        transform: translate(-50%, -50%) scale(1.3) rotate(360deg);
     }
 }
 /* 

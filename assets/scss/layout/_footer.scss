@@ -503,6 +503,10 @@
 
             &:hover {
                 background: linear-gradient(180deg, #BF2938 0%, #600509 100%);
+
+                &::before {
+                    background: linear-gradient(140deg, #ffffff 0%, rgb(255 255 255 / 0%) 35%, rgba(255, 255, 255, 0) 66%, #ffffff 100%);
+                }
             }
       
         }

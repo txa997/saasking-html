@@ -978,6 +978,119 @@
     }
 }
 
+.sk-pr-btn-10 {
+    font-family: var(--sk-font-1);
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.25;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    border-radius: 12px;
+    padding: 16px 25px;
+
+    position: relative;
+    z-index: 1;
+
+    .text {
+        position: relative;
+        z-index: 1;
+        transition: var(--sk-cube-1);
+
+        &::after {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            display: block;
+            transition: var(--sk-cube-1);
+            position: absolute;
+            content: attr(data-back);
+            transform: translateY(100%);
+        }
+    
+        &::before {
+            top: 0;
+            left: 0;
+            opacity: 1;
+            display: block;
+            transition: var(--sk-cube-1);
+            position: relative;
+            content: attr(data-front);
+            transform: translateY(0);
+        }
+    }
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px;
+        background: linear-gradient(
+            to right,
+            #3B49E0 0%,
+            #182353 50%,
+            #3B49E0 100%
+          );
+          
+          
+        padding: 1px;
+        z-index: -1;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+    }
+
+
+    .line-1 {
+        width: 30%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 8%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 50%, rgba(255, 255, 255, 0) 100%);
+        animation: skBtn10kf 4s ease-in infinite;
+    }
+
+    .line-2 {
+        width: 30%;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 8%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 50%, rgba(255, 255, 255, 0) 100%);
+        animation: skBtn10kf 4s ease-in-out infinite;
+    }
+
+    &:hover {
+        .text {
+            &::after {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+            &::before {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
+
+
+@keyframes skBtn10kf {
+    0% {
+        left: 8%;
+    }
+    50% {
+        left: 67%;
+    }
+    100% {
+        left: 8%;
+    }
+}
 /* 
     button-end
 */

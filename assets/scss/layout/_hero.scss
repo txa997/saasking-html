@@ -1101,6 +1101,294 @@
         }
     }
 }
+
+
 /* 
     hero-4-end
+*/
+
+/* 
+    hero-5-start
+*/
+.sk-hero-5 {
+    &-area {
+        background-color: var(--sk-clr-black-5);
+        padding-top: 200px;
+    }
+
+    &-wrap {
+        text-align: center;
+    }
+
+    &-subtitle {
+        border-color: #3F3F53;
+        color: #fff;
+        margin-bottom: 0;
+
+        &::before {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 50%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        &::after {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 50%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .elm-border {
+            padding: 0;
+            padding-right: 16px;
+            gap: 16px;
+        }
+
+
+        .icon-elm {
+            width: auto;
+            border-radius: 100px;
+            padding: 0 12px;
+            gap: 4px;
+            transform: scale(1.11);
+        }
+
+    }
+
+
+    &-title {
+        color: #fff;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        font-size: 60px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+
+        img {
+            margin-top: -9px;
+        }
+
+
+        @media #{$xl} {
+            font-size: 56px;
+        }
+
+        @media #{$lg} {
+            font-size: 50px;
+        }
+
+        @media #{$md} {
+            font-size: 44px;
+        }
+
+        @media #{$xs} {
+            font-size: 34px;
+        }
+
+        @media #{$sm} {
+            font-size: 38px;
+        }
+    }
+
+    &-disc {
+        font-size: 18px;
+        color: #E5E5E5;
+        max-width: 670px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 80%;
+    }
+
+    &-btn {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 32px;
+    }
+
+    &-img {
+        border-radius: 16px;
+        box-shadow: 0px 8px 50px rgba(67, 81, 225, 0.6);
+        margin-top: 60px;
+    }
+    
+
+    &-top {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media #{$xs} {
+            margin-bottom: 32px;
+        }
+        
+        &-line-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient( to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100% );
+            opacity: 20%;
+        }
+
+        &-line-2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient( to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100% );
+            opacity: 20%;
+        }
+
+        .col-elm {
+            &:is(.has-center) {
+                max-width: 900px;
+                width: 100%;
+            }
+
+
+            &:is(.has-1) {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+
+            &:is(.has-3) {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    &-middle {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-bottom: 32px;
+        padding-top: 32px;
+
+        &-line-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 5%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+            opacity: 20%;
+        }
+
+        &-line-2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 5%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+            opacity: 20%;
+        }
+
+        &-dot-1 {
+            position: absolute;
+            left: -4px;
+            top: -4px;
+            width: 8px;
+            height: 8px;
+            background: var(--sk-clr-pr-5);
+            border-radius: 50%;
+        }
+
+        &-dot-2 {
+            position: absolute;
+            right: -4px;
+            top: -4px;
+            width: 8px;
+            height: 8px;
+            background: var(--sk-clr-pr-5);
+            border-radius: 50%;
+        }
+
+        &-dot-3 {
+            position: absolute;
+            right: -4px;
+            bottom: -4px;
+            width: 8px;
+            height: 8px;
+            background: var(--sk-clr-pr-5);
+            border-radius: 50%;
+        }
+
+        &-dot-4 {
+            position: absolute;
+            left: -4px;
+            bottom: -4px;
+            width: 8px;
+            height: 8px;
+            background: var(--sk-clr-pr-5);
+            border-radius: 50%;
+        }
+    }
+
+    &-dot-shape {
+        .bg-glow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &:is(.has-first) {
+            .bg-glow {
+                right: 0;
+                left: unset;
+            }
+        }
+    }
+    
+    &-bg-glow {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -2;
+
+        @media #{$md} {
+            bottom: -90px;
+        }
+
+        @media #{$xs} {
+            bottom: -340px;
+        }
+
+        @media #{$sm} {
+            bottom: -190px;
+        }
+
+        svg {
+            width: 100%;
+        }
+    }
+
+
+    &-bg-shape-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    
+    &-bg-shape-2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -2;
+    }
+}
+/* 
+    hero-5-end
 */
