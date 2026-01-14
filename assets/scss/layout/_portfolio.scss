@@ -1,0 +1,279 @@
+/* 
+    portfolio-5-start
+*/
+.sk-portfolio-5 {
+    &-area {
+        background-color: #FDFDFD;
+    }
+    &-sec-title {
+        max-width: 630px;
+        margin-left: auto;
+        margin-right: auto;
+
+    
+        .sec-disc {
+            margin-top: 12px;
+        }
+    }
+
+    &-tabs-btn {
+        background-color: #F6F7F9;
+        border: 1px solid #E5E5E5;
+        border-radius: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 12px;
+        gap: 12px;
+
+
+        @media #{$xl,$lg,$md,$xs} {
+            border-radius: 12px;
+        }
+
+        .nav-link {
+            border-radius: 200px;
+            color: var(--sk-clr-black-6);
+            overflow: hidden;
+            font-size: 18px;
+            position: relative;
+            z-index: 1;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 13px;
+            padding-right: 24px;
+            background-color: #fff;
+
+            &::after {
+                content: "";
+                width: 20%;
+                height: 1px;
+                background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(59, 73, 224, 1) 50%, rgba(255, 255, 255, 0) 100%);
+                position: absolute;
+                top: 0px;
+                left: 0;
+                transition: var(--sk-cube-1);
+                animation: skPortfolioBtnKf 10s ease-in infinite;
+                opacity: 0;
+            }
+
+            &::before {
+                content: "";
+                width: 20%;
+                height: 1px;
+                background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(59, 73, 224, 1) 50%, rgba(255, 255, 255, 0) 100%);
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                transition: var(--sk-cube-1);
+                animation: skPortfolioBtnKf 10s ease-in-out infinite;
+                opacity: 0;
+            }
+
+
+            .icon {
+                background-color: #F6F7F9;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 0 0 auto;
+                transition: var(--sk-cube-1);
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: "";
+                    width: 37px;
+                    height: 15px;
+                    background: #FFFFFF;
+                    filter: blur(10px);
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 50%;
+                    top: 80%;
+                    transform: translateX(-50%);
+                    z-index: -1;
+                    opacity: 0;
+                    transition: var(--sk-cube-1);
+                }
+
+                svg *{
+                    fill: var(--sk-clr-black-6);
+                    transition: var(--sk-cube-1);
+                }
+
+                &:is(.has-stroke) {
+                    svg *{
+                        stroke: var(--sk-clr-black-6);
+                        fill: transparent;
+                    }
+    
+                }
+
+
+            }
+
+            &:is(.active) {
+                &::after {
+                    opacity: 1;
+                }
+                &::before {
+                    opacity: 1;
+                }
+                .icon {
+                    background-color: var(--sk-clr-pr-5);
+                    &::after {
+                        opacity: 1;
+                    }
+
+                    svg *{
+                        fill: #fff;
+                    }
+    
+                    &:is(.has-stroke) {
+                        svg *{
+                            stroke: #fff;
+                        }
+        
+                    }
+                }
+            }
+
+            &:hover {
+                .icon {
+                    background-color: var(--sk-clr-pr-5);
+                    &::after {
+                        opacity: 1;
+                    }
+
+                    svg *{
+                        fill: #fff;
+                    }
+    
+                    &:is(.has-stroke) {
+                        svg *{
+                            stroke: #fff;
+                        }
+        
+                    }
+                }
+            }
+        }
+        
+        
+    }
+
+
+    &-tabs-pane-gird {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    &-item {
+        height: 460px;
+        border-radius: 24px;
+        padding: 12px;
+        border: 1px solid #E5E5E5;
+        position: relative;
+        z-index: 1;
+        transition: var(--sk-cube-1);
+
+        .item-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: var(--sk-cube-1);
+            }
+        }
+
+        .item-btn-posi {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: var(--sk-cube-1);
+            opacity: 0;
+        }
+
+        .item-btn {
+            width: 60px;
+            height: 60px;
+            background-color: var(--sk-clr-pr-5);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                width: 46px;
+                height: 19px;
+                background: #FFFFFF;
+                filter: blur(10px);
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+
+        &:hover {
+            border-color: var(--sk-clr-pr-5);
+            background-color: #F6F7F9;
+
+            .item-btn-posi {
+                opacity: 1;
+            }
+            .item-img {
+                &::after {
+                    opacity: .3;
+                }
+            }
+        }
+    }
+    
+    
+
+}
+
+
+@keyframes skPortfolioBtnKf {
+    0% {
+        left: 5%;
+    }
+    50% {
+        left: 72%;
+    }
+    100% {
+        left: 5%;
+    }
+}
+/* 
+    portfolio-5-end
+*/

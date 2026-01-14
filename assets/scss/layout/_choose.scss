@@ -328,3 +328,102 @@
 /* 
     choose-4-end
 */
+/* 
+    choose-5-start
+*/
+.sk-choose-5 {
+    &-area {
+        background-color: #F9F9F9;
+    }
+    &-sec-title {
+        max-width: 570px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sec-disc {
+            margin-top: 12px;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &-card-border {
+        border: 1px solid #F0F0F0;
+        border-radius: 32px;
+        padding: 10px;
+    }
+
+    &-card {
+        border-radius: 32px;
+        padding: 32px 32px;
+        background-color: #fff;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 150px;
+            height: 140px;
+            background: rgba(59, 73, 224, 0.3);
+            opacity: 0.5;
+            filter: blur(65px);
+            right: -30px;
+            top: -30px;
+            position: absolute;
+        }
+
+        .icon-wrap {
+            width: 72px;
+            height: 72px;
+            border-radius: 12px;
+            background-color: rgb(246 247 249 / 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 32px;
+        }
+        
+        .icon-svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            path {
+                transition: var(--sk-cube-1);
+            }
+        }
+        
+        .icon-elm {
+            width: 52px;
+            height: 52px;
+            background-color: rgb(229 229 229 / 40%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .title {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        &:hover {
+            .icon-svg {
+                path {
+                    fill: var(--sk-clr-pr-5);
+                }
+            }
+        }
+    }
+}
+/* 
+    choose-5-end
+*/

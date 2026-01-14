@@ -1965,6 +1965,16 @@ if($(".sk-price-3-toggle-btn").length) {
 	});
 }
 
+/* 
+	price-5-toggle-class
+*/
+if($(".sk-price-5-toggle-btn").length) {
+	$('.sk-price-5-toggle-btn').on('click', function () {
+		$(".sk-price-5-toggle-btn").toggleClass('active');
+		$(".sk-price-5-card .price-wrap").toggleClass('active');
+	});
+}
+
 
 // price-3-heart-shape
 gsap.utils.toArray(".sk-price-3-card-ani .smoke").forEach((smoke, i) => {
@@ -2276,6 +2286,8 @@ if ($('.copyright-year').length) {
     const currentYear = new Date().getFullYear();
     $('.copyright-year').text(currentYear);
 }
+
+
 
 
 
