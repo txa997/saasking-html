@@ -1976,6 +1976,8 @@
             border-radius: 50%;
             position: relative;
             z-index: 1;
+            transition: var(--sk-cube-1);
+            overflow: hidden;
 
             &::before {
                 content: "";
@@ -1991,6 +1993,21 @@
                 -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
                 mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
                 mask-composite: exclude;
+                transition: var(--sk-cube-1);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 42px;
+                height: 17px;
+                background: #FFFFFF;
+                filter: blur(10px);
+                top: 80%;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: var(--sk-cube-1);
+                opacity: 0;
             }
         }
 
@@ -2140,6 +2157,18 @@
             }
             .sk-price-5-card-dot-svg {
                 opacity: 1;
+            }
+
+            .main-icon {
+                background: var(--sk-clr-pr-5);
+
+                &::after {
+                    opacity: 1;
+                }
+
+                &::before {
+                    opacity: 0;
+                }
             }
         }
     }
