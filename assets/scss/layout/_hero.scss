@@ -1246,6 +1246,13 @@
             &:is(.has-center) {
                 max-width: 900px;
                 width: 100%;
+                min-height: 78px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #020224;
+                position: relative;
+                z-index: 1;
             }
 
 
@@ -1335,6 +1342,8 @@
     }
 
     &-dot-shape {
+        overflow: visible;
+
         .bg-glow {
             position: absolute;
             bottom: 0;
@@ -1348,6 +1357,15 @@
                 left: unset;
             }
         }
+
+        &-svg {
+            overflow: visible;
+        }
+
+        &-svg-2 {
+            transform: scaleX(-1);
+            overflow: visible;
+        }
     }
     
     &-bg-glow {
@@ -1357,21 +1375,36 @@
         width: 100%;
         z-index: -2;
 
-        @media #{$md} {
-            bottom: -90px;
+        @media #{$xxxl} {
+            bottom: -80px;
         }
 
-        @media #{$xs} {
-            bottom: -340px;
+        @media #{$xxl} {
+            bottom: -140px;
         }
 
-        @media #{$sm} {
-            bottom: -190px;
+        @media #{$xl} {
+            bottom: -170px;
         }
+
+        @media #{$lg} {
+            bottom: -240px;
+        }
+
+        @media #{$md,$xs} {
+            display: none;
+        }
+
 
         svg {
             width: 100%;
+
+
+            .glow-1 {
+                animation: skHero5bgGlow1 3s linear infinite;
+            }
         }
+
     }
 
 
@@ -1387,6 +1420,18 @@
         right: 0;
         top: 0;
         z-index: -2;
+    }
+}
+
+@keyframes skHero5bgGlow1 {
+    0% {
+        opacity: .2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
     }
 }
 /* 

@@ -55,3 +55,28 @@
         background: var(--sk-clr-pr-2);
     }
 }
+
+
+.sk-img-ani-1 {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 40px;
+        background: #f9f9f9;
+        position: absolute;
+        top: -130%;
+        left: 0;
+        transform: rotate(-37deg) scale(1.4) translate(-98px, 130px);
+        transition: 1s ease-in-out;
+        filter: blur(10px);
+    }
+
+    &:is(.active) {
+        &::after {
+            top: 105%;
+        }
+    }
+}

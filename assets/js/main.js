@@ -1953,6 +1953,48 @@ let skFooter4robot = gsap.timeline({
 skFooter4robot.from(".sk-footer-4-big-title-robot img", { y: -100, opacity: 0, duration: 1, ease: "bounce.out", delay: .3,  });
 
 
+// hero-5-dot-animation
+gsap.fromTo(".sk-hero-5-dot-shape-svg ellipse , .sk-hero-5-dot-shape-svg circle",
+    {
+        x: 200,
+        opacity: 0
+    },
+    {
+        x: -100,
+        opacity: 0,
+        duration: 6,
+        ease: "power1.inOut",
+        stagger: {
+            each: .2,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+gsap.fromTo(".sk-hero-5-dot-shape-svg-2 ellipse , .sk-hero-5-dot-shape-svg-2 circle",
+    {
+        x: 200,
+        opacity: 0
+    },
+    {
+        x: -100,
+        opacity: 0,
+        duration: 6,
+        ease: "power1.inOut",
+        stagger: {
+            each: .2,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+
 /* 
 	price-3-toggle-class
 */

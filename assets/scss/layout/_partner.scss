@@ -342,6 +342,10 @@
     &-area {
         background-color: var(--sk-clr-black-8);
         padding-bottom: 180px;
+
+        @media #{$md,$xs} {
+            padding-top: 100px;
+        }
     }
 
     &-title {

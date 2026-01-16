@@ -2304,7 +2304,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   transition: var(--sk-cube-1);
   position: absolute;
   content: attr(data-back);
-  transform: translateY(100%);
+  transform: translateY(-100%);
 }
 .sk-pr-btn-8 .text::before {
   top: 0;
@@ -2328,6 +2328,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+  transition: var(--sk-cube-1);
 }
 .sk-pr-btn-8::before {
   content: "";
@@ -2344,13 +2345,20 @@ input:focus::placeholder, textarea:focus::placeholder {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
+.sk-pr-btn-8:hover {
+  color: #fff;
+}
 .sk-pr-btn-8:hover .text::after {
   opacity: 1;
   transform: translateY(0%);
 }
 .sk-pr-btn-8:hover .text::before {
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translateY(100%);
+}
+.sk-pr-btn-8:hover::after {
+  top: 150%;
+  opacity: 0;
 }
 
 .sk-pr-btn-9 {
@@ -2365,6 +2373,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding: 16px 25px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .sk-pr-btn-9 .text {
   position: relative;
@@ -2407,6 +2416,23 @@ input:focus::placeholder, textarea:focus::placeholder {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 }
+.sk-pr-btn-9::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--sk-clr-pr-5);
+  filter: blur(21px);
+  transform: translate(100%, 100%);
+  z-index: -1;
+  transition: var(--sk-cube-1);
+  opacity: 0;
+}
+.sk-pr-btn-9:hover {
+  color: #fff;
+}
 .sk-pr-btn-9:hover .text::after {
   opacity: 1;
   transform: translateY(0%);
@@ -2414,6 +2440,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-pr-btn-9:hover .text::before {
   opacity: 0;
   transform: translateY(-100%);
+}
+.sk-pr-btn-9:hover::after {
+  transform: translate(0, 0);
+  opacity: 1;
+  filter: blur(10px);
 }
 
 .sk-pr-btn-10 {
@@ -2486,6 +2517,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 8%;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 50%, rgba(255, 255, 255, 0) 100%);
   animation: skBtn10kf 4s ease-in-out infinite;
+}
+.sk-pr-btn-10:hover {
+  color: #fff;
+  background-color: var(--sk-clr-pr-5);
 }
 .sk-pr-btn-10:hover .text::after {
   opacity: 1;
@@ -4439,6 +4474,26 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-playbtn-1:hover {
   background: var(--sk-clr-pr-2);
+}
+
+.sk-img-ani-1 {
+  position: relative;
+  z-index: 1;
+}
+.sk-img-ani-1::after {
+  content: "";
+  width: 100%;
+  height: 40px;
+  background: #f9f9f9;
+  position: absolute;
+  top: -130%;
+  left: 0;
+  transform: rotate(-37deg) scale(1.4) translate(-98px, 130px);
+  transition: 1s ease-in-out;
+  filter: blur(10px);
+}
+.sk-img-ani-1:is(.active)::after {
+  top: 105%;
 }
 
 /*
@@ -6414,6 +6469,13 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-hero-5-top .col-elm:is(.has-center) {
   max-width: 900px;
   width: 100%;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #020224;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .sk-hero-5-top .col-elm:is(.has-1) {
@@ -6488,6 +6550,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   background: var(--sk-clr-pr-5);
   border-radius: 50%;
 }
+.sk-hero-5-dot-shape {
+  overflow: visible;
+}
 .sk-hero-5-dot-shape .bg-glow {
   position: absolute;
   bottom: 0;
@@ -6498,6 +6563,13 @@ input:focus::placeholder, textarea:focus::placeholder {
   right: 0;
   left: unset;
 }
+.sk-hero-5-dot-shape-svg {
+  overflow: visible;
+}
+.sk-hero-5-dot-shape-svg-2 {
+  transform: scaleX(-1);
+  overflow: visible;
+}
 .sk-hero-5-bg-glow {
   position: absolute;
   bottom: 0;
@@ -6505,23 +6577,36 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   z-index: -2;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
   .sk-hero-5-bg-glow {
-    bottom: -90px;
+    bottom: -80px;
   }
 }
-@media (max-width: 767px) {
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .sk-hero-5-bg-glow {
-    bottom: -340px;
+    bottom: -140px;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .sk-hero-5-bg-glow {
-    bottom: -190px;
+    bottom: -170px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .sk-hero-5-bg-glow {
+    bottom: -240px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .sk-hero-5-bg-glow {
+    display: none;
   }
 }
 .sk-hero-5-bg-glow svg {
   width: 100%;
+}
+.sk-hero-5-bg-glow svg .glow-1 {
+  animation: skHero5bgGlow1 3s linear infinite;
 }
 .sk-hero-5-bg-shape-1 {
   position: absolute;
@@ -6536,6 +6621,17 @@ input:focus::placeholder, textarea:focus::placeholder {
   z-index: -2;
 }
 
+@keyframes skHero5bgGlow1 {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
 /* 
     hero-5-end
 */
@@ -6834,6 +6930,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-partner-5-area {
   background-color: var(--sk-clr-black-8);
   padding-bottom: 180px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .sk-partner-5-area {
+    padding-top: 100px;
+  }
 }
 .sk-partner-5-title {
   text-align: center;

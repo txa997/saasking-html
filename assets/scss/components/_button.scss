@@ -843,7 +843,7 @@
             transition: var(--sk-cube-1);
             position: absolute;
             content: attr(data-back);
-            transform: translateY(100%);
+            transform: translateY(-100%);
         }
     
         &::before {
@@ -870,6 +870,7 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: -1;
+        transition: var(--sk-cube-1);
     }
 
 
@@ -890,6 +891,7 @@
     }
 
     &:hover {
+        color: #fff;
         .text {
             &::after {
                 opacity: 1;
@@ -897,8 +899,13 @@
             }
             &::before {
                 opacity: 0;
-                transform: translateY(-100%);
+                transform: translateY(100%);
             }
+        }
+
+        &::after {
+            top: 150%;
+            opacity: 0;
         }
     }
 }
@@ -917,6 +924,7 @@
 
     position: relative;
     z-index: 1;
+    overflow: hidden;
 
     .text {
         position: relative;
@@ -964,7 +972,23 @@
         mask-composite: exclude;
     }
 
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--sk-clr-pr-5);
+        filter: blur(21px);
+        transform: translate(100%, 100%);
+        z-index: -1;
+        transition: var(--sk-cube-1);
+        opacity: 0;
+    }
+
     &:hover {
+        color: #fff;
         .text {
             &::after {
                 opacity: 1;
@@ -974,6 +998,12 @@
                 opacity: 0;
                 transform: translateY(-100%);
             }
+        }
+
+        &::after {
+            transform: translate(0, 0);
+            opacity: 1;
+            filter: blur(10px);
         }
     }
 }
@@ -1066,6 +1096,8 @@
     }
 
     &:hover {
+        color: #fff;
+        background-color: var(--sk-clr-pr-5);
         .text {
             &::after {
                 opacity: 1;
