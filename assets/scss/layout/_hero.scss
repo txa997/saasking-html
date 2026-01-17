@@ -1204,6 +1204,10 @@
         padding-top: 32px;
     }
 
+    &-img-wrap {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+    }
     &-img {
         border-radius: 16px;
         box-shadow: 0px 8px 50px rgba(67, 81, 225, 0.6);

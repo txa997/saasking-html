@@ -454,6 +454,24 @@
         .title {
             font-size: 20px;
             margin-bottom: 12px;
+
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: 0px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+                -webkit-transition: var(--sk-cube-1);
+                transition: var(--sk-cube-1);
+
+                &:hover {
+                    color: var(--sk-clr-black-6);
+                    background-size: 100% 100%;
+                }
+            }
         }
 
         &:hover {

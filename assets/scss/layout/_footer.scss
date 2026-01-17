@@ -1096,6 +1096,11 @@
         }
     }
     
+    &-big-logo {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+        
+    }
 
     &-bottom {
         border-top: 1px solid rgba(255, 255, 255, 0.2);

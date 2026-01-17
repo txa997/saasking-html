@@ -59,6 +59,15 @@
             border-color: var(--sk-clr-sd-4);
         }
     }
+
+    &:is(.has-home-5) {
+        border-color: rgb(59 73 224 / 30%);
+        color: var(--sk-clr-pr-5);
+
+        &:hover {
+            border-color: var(--sk-clr-pr-5);
+        }
+    }
 }
 
 

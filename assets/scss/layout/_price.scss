@@ -1900,6 +1900,11 @@
                 &:nth-child(1) {
                     background-color: #20232D;
                 }
+                &:nth-child(2) {
+                    &:hover {
+                        background-color: #20232D;
+                    }
+                }
             }
         }
 
@@ -1907,6 +1912,16 @@
             .single-btn {
                 &:nth-child(2) {
                     background-color: #20232D;
+
+                    &:hover {
+                        background-color: #20232D;
+                    }
+                }
+
+                &:nth-child(1) {
+                    &:hover {
+                        background-color: #20232D;
+                    }
                 }
             }
         }

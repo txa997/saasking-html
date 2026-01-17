@@ -1995,6 +1995,49 @@ gsap.fromTo(".sk-hero-5-dot-shape-svg-2 ellipse , .sk-hero-5-dot-shape-svg-2 cir
     }
 );
 
+// hero-5-img
+let skHero5img = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-hero-5-img",
+		start: "top 70%", 
+		end: "top 20%", 
+		toggleActions: "play none none none",
+		scrub: true,
+		markers: false,
+	},
+});
+skHero5img.from(".sk-hero-5-img", { rotateX: -40, y: -40  });
+
+// price-5-card-dot
+const skp5dot = document.querySelectorAll('.sk-price-5-card-dot-svg circle , .sk-price-5-card-dot-svg ellipse');
+
+	skp5dot.forEach((path) => {
+		function animatePath() {
+			gsap.to(path, {
+			opacity: Math.random() > 0.5 ? 1 : 0,
+			duration: Math.random() * 0.6 + 0.2, 
+			delay: Math.random() * 0.2, 
+			onComplete: animatePath, 
+			ease: "power1.inOut"
+		});
+	}
+  	animatePath(); 
+});
+
+
+// footer-5-logo
+let skFooter5logo = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-footer-5-big-logo",
+		start: "top 90%", 
+		end: "top 50%", 
+		toggleActions: "play none none none",
+		scrub: true,
+		markers: false,
+	},
+});
+skFooter5logo.from(".sk-footer-5-big-logo .logo-elm", { rotateX: -60, });
+
 /* 
 	price-3-toggle-class
 */

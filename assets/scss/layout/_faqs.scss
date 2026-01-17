@@ -664,6 +664,9 @@
                             transition: var(--sk-cube-1);
                         }
 
+                        i {
+                            transition: var(--sk-cube-1);
+                        }
                     }
 
 
@@ -676,6 +679,10 @@
 
                             &::after {
                                 opacity: 1;
+                            }
+
+                            i {
+                                transform: rotate(45deg);
                             }
                         }
                     }

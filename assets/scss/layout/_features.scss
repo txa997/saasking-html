@@ -2234,6 +2234,14 @@
 
         .item-img {
             border-radius: 24px;
+
+            img {
+                transition: transform 500ms;
+                transform: perspective(0px) rotateX(0deg) rotateY(0deg) scaleX(1) scaleY(1);
+                transform-origin: center center;
+            }
+    
+
         }
 
         .item-content {
@@ -2263,6 +2271,25 @@
             @media #{$xl,$lg,$md,$xs} {
                 font-size: 22px;
             }
+
+            
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: 0px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+                -webkit-transition: var(--sk-cube-1);
+                transition: var(--sk-cube-1);
+
+                &:hover {
+                    color: var(--sk-clr-black-6);
+                    background-size: 100% 100%;
+                }
+            }
         }
 
         .disc {
@@ -2285,6 +2312,13 @@
                 svg  *{
                     stroke: #009DFF;
                 }
+            }
+        }
+
+
+        &:hover {
+            img {
+                transform: perspective(2000px) rotateX(0.06deg) rotateY(0deg) scaleX(1.1) scaleY(1.1);
             }
         }
 

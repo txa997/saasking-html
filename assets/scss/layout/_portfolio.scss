@@ -204,6 +204,13 @@
                 opacity: 0;
                 transition: var(--sk-cube-1);
             }
+
+            img {
+                transition: transform 500ms;
+                transform: perspective(0px) rotateX(0deg) rotateY(0deg) scaleX(1) scaleY(1);
+                transform-origin: center center;
+            }
+
         }
 
         .item-btn-posi {
@@ -229,6 +236,10 @@
             z-index: 1;
             overflow: hidden;
 
+            i {
+                transition: var(--sk-cube-1);
+            }
+
             &::after {
                 content: "";
                 width: 46px;
@@ -239,6 +250,12 @@
                 top: 80%;
                 left: 50%;
                 transform: translateX(-50%);
+            }
+
+            &:hover {
+                i {
+                    transform: rotate(45deg);
+                }
             }
         }
         
@@ -253,6 +270,10 @@
             .item-img {
                 &::after {
                     opacity: .3;
+                }
+
+                img {
+                    transform: perspective(2000px) rotateX(0.06deg) rotateY(0deg) scaleX(1.1) scaleY(1.1);
                 }
             }
         }
