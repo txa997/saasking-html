@@ -981,6 +981,51 @@
 */
 
 /* 
+    header-6-start
+*/
+.sk-header-6 {
+    &-area {
+        position: absolute;
+        top: 24px;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    &-container {
+        max-width: 1776px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+
+    &-action-link {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+}
+
+
+
+/* 
+    header-6-end
+*/
+
+/* 
     sticky-header-css-start
 */
 
