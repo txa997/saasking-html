@@ -958,6 +958,7 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
 
         @media #{$xs} {
             display: none;
@@ -967,7 +968,8 @@
         .main-circle {
             width: 880px;
             height: 880px;
-            background: linear-gradient(0deg, transparent 48%, var(--sk-clr-pr-5) 80% );
+            // background: linear-gradient(0deg, transparent 30%, var(--sk-clr-pr-5));
+            background: conic-gradient(from -90deg at 50% 50%, rgba(57, 70, 206, 0) 0deg, rgba(57, 70, 206, 0.1) 180deg, #3946CE 360deg);
             clip-path: circle(50% at 50% 50%);
 
             @media #{$md} {
@@ -977,7 +979,7 @@
         }
         
         .circle-wrap {
-            clip-path: polygon(0 0, 50% 50%, 0 50%);
+            // clip-path: polygon(0 0, 44% 46%, 100% 100%, 0 100%);
             transform: rotate(740deg);
             animation: sk-process-5-circle 10s linear infinite;
         }

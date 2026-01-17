@@ -2058,8 +2058,34 @@
             color: #fff;
             font-weight: 500;
 
-            span {
+            .for-time {
                 opacity: 70%;
+            }
+
+            .discount-tag {
+                font-size: 13px;
+                background: var(--sk-clr-pr-5);
+                line-height: 1;
+                padding: 8px 10px;
+                border-radius: 120px;
+                display: inline-block;
+                margin-left: 5px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 37px;
+                    height: 15px;
+                    background: #FFFFFF;
+                    filter: blur(10px);
+                    left: 50%;
+                    top: 80%;
+                    transform: translateX(50%);
+                    z-index: -1;
+                }
             }
         }
         

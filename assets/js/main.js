@@ -1960,7 +1960,7 @@ gsap.fromTo(".sk-hero-5-dot-shape-svg ellipse , .sk-hero-5-dot-shape-svg circle"
         opacity: 0
     },
     {
-        x: -100,
+        x: -50,
         opacity: 0,
         duration: 6,
         ease: "power1.inOut",
@@ -1980,12 +1980,12 @@ gsap.fromTo(".sk-hero-5-dot-shape-svg-2 ellipse , .sk-hero-5-dot-shape-svg-2 cir
         opacity: 0
     },
     {
-        x: -100,
+        x: -50,
         opacity: 0,
-        duration: 6,
+        duration: 8,
         ease: "power1.inOut",
         stagger: {
-            each: .2,
+            each: .4,
             repeat: -1
         },
         keyframes: [

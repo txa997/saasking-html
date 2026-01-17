@@ -6481,8 +6481,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
   opacity: 20%;
+  overflow: hidden;
+}
+.sk-hero-5-top-line-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  height: 100%;
+  transform: translateX(0%);
+  animation: skHero5lineKf2 10s linear infinite;
 }
 .sk-hero-5-top-line-2 {
   position: absolute;
@@ -6490,8 +6501,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
   opacity: 20%;
+  overflow: hidden;
+}
+.sk-hero-5-top-line-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  height: 100%;
+  transform: translateX(0%);
+  animation: skHero5lineKf2 10s linear infinite;
 }
 .sk-hero-5-top .col-elm:is(.has-center) {
   max-width: 900px;
@@ -6529,8 +6551,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 0;
   width: 1px;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 5%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
   opacity: 20%;
+  overflow: hidden;
+}
+.sk-hero-5-middle-line-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 5%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  height: 100%;
+  transform: translateY(0%);
+  animation: skHero5lineKf 10s linear infinite;
 }
 .sk-hero-5-middle-line-2 {
   position: absolute;
@@ -6538,8 +6571,19 @@ input:focus::placeholder, textarea:focus::placeholder {
   right: 0;
   width: 1px;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 5%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
   opacity: 20%;
+  overflow: hidden;
+}
+.sk-hero-5-middle-line-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 5%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  height: 100%;
+  transform: translateY(0%);
+  animation: skHero5lineKf 10s linear infinite;
 }
 .sk-hero-5-middle-dot-1 {
   position: absolute;
@@ -6647,6 +6691,13 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: 0;
   z-index: -2;
 }
+.sk-hero-5-noise-bg {
+  position: absolute;
+  top: 19%;
+  left: 0;
+  width: 100%;
+  z-index: -4;
+}
 
 @keyframes skHero5bgGlow1 {
   0% {
@@ -6657,6 +6708,28 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
   100% {
     opacity: 0.2;
+  }
+}
+@keyframes skHero5lineKf {
+  0% {
+    transform: translateY(-40%);
+  }
+  50% {
+    transform: translateY(40%);
+  }
+  100% {
+    transform: translateY(-40%);
+  }
+}
+@keyframes skHero5lineKf2 {
+  0% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(-20%);
   }
 }
 /* 
@@ -11151,8 +11224,32 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #fff;
   font-weight: 500;
 }
-.sk-price-5-card .price-text span {
+.sk-price-5-card .price-text .for-time {
   opacity: 70%;
+}
+.sk-price-5-card .price-text .discount-tag {
+  font-size: 13px;
+  background: var(--sk-clr-pr-5);
+  line-height: 1;
+  padding: 8px 10px;
+  border-radius: 120px;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.sk-price-5-card .price-text .discount-tag::after {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 15px;
+  background: #FFFFFF;
+  filter: blur(10px);
+  left: 50%;
+  top: 80%;
+  transform: translateX(50%);
+  z-index: -1;
 }
 .sk-price-5-card .price-wrap {
   margin-bottom: 10px;
@@ -13113,6 +13210,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
 }
 @media (max-width: 767px) {
   .sk-process-5-bg-circle-2 {
@@ -13122,7 +13220,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-process-5-bg-circle-2 .main-circle {
   width: 880px;
   height: 880px;
-  background: linear-gradient(0deg, transparent 48%, var(--sk-clr-pr-5) 80%);
+  background: conic-gradient(from -90deg at 50% 50%, rgba(57, 70, 206, 0) 0deg, rgba(57, 70, 206, 0.1) 180deg, #3946CE 360deg);
   clip-path: circle(50% at 50% 50%);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -13132,7 +13230,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 .sk-process-5-bg-circle-2 .circle-wrap {
-  clip-path: polygon(0 0, 50% 50%, 0 50%);
   transform: rotate(740deg);
   animation: sk-process-5-circle 10s linear infinite;
 }
