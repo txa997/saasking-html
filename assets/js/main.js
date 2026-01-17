@@ -2172,7 +2172,7 @@ if ($(".wa_marquee_down_top").length) {
     gsap.to([waMarqueeTop, waMarqueeClone], {
       y: `-${waMarqueeTotalHeight}px`,
       ease: "none",
-      duration: 30,
+      duration: 20,
       repeat: -1,
       modifiers: {
         y: gsap.utils.unitize((waY) => parseFloat(waY) % waMarqueeTotalHeight),
