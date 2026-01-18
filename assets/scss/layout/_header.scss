@@ -1015,6 +1015,15 @@
         display: flex;
         align-items: center;
         gap: 4px;
+
+        .sk-pr-btn-11 {
+            @media #{$xs} {
+                display: none;
+            }
+            @media #{$sm} {
+                display: inline-flex;
+            }
+        }
     }
 
 }

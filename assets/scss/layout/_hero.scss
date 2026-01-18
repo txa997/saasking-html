@@ -1533,6 +1533,18 @@
     hero-6-start
 */
 .sk-hero-6 {
+    &-area {
+        &::after {
+            content: "";
+            width: 100%;
+            height: 260px;
+            background: linear-gradient(180deg, #050010 0%, #000704 100%);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
     &-author {
         display: inline-block;
         padding: 3px;
@@ -1597,6 +1609,28 @@
             -webkit-text-stroke: 1.5px #DC5729;
             -webkit-text-fill-color: transparent;
         }
+
+        
+
+        @media #{$xl} {
+            font-size: 60px;
+        }
+
+        @media #{$lg} {
+            font-size: 55px;
+        }
+
+        @media #{$md} {
+            font-size: 50px;
+        }
+
+        @media #{$xs} {
+            font-size: 35px;
+        }
+
+        @media #{$sm} {
+            font-size: 40px;
+        }
     }
     
     &-disc {
@@ -1625,6 +1659,22 @@
                 left: 16%;
                 z-index: 1;
                 width: 48%;
+
+                @media #{$lg} {
+                    bottom: 24%;
+                }
+
+                @media #{$md} {
+                    bottom: 13%;
+                }
+
+                @media #{$xs} {
+                    bottom: -10%;
+                }
+
+                @media #{$sm} {
+                    bottom: -2%;
+                }
             }
         }
     }
@@ -1634,7 +1684,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: -1;
+        z-index: -2;
 
         &::after {
             content: "";

@@ -2198,7 +2198,7 @@
 
         @media #{$over,$xxxl,$xxl,$xl} {
             position: sticky;
-            top: 100px;
+            top: 140px;
         }
 
         .sec-disc {
@@ -2223,10 +2223,6 @@
         grid-template-columns: 1fr 1.04fr;
         align-items: center;
 
-        @media #{$over,$xxxl,$xxl,$xl} {
-            position: sticky;
-            top: 100px;
-        }
 
         @media #{$md,$xs} {
             grid-template-columns: 1fr;
@@ -2359,6 +2355,22 @@
         }
     }
     
+}
+
+.sk-features-5-card {
+    @media #{$over,$xxxl,$xxl,$xl} {
+        position: sticky;
+        top: 100px;
+
+        &:nth-child(2) {
+            top: 140px;
+        }
+
+        &:nth-child(3) {
+            top: 180px;
+        }
+    }
+
 }
 /* 
     features-5-end

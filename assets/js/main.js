@@ -2025,6 +2025,32 @@ const skp5dot = document.querySelectorAll('.sk-price-5-card-dot-svg circle , .sk
 });
 
 
+// features-5-sticky-card
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	const sk_features_5_card_sticky = document.querySelectorAll('.sk-features-5-card-sticky');
+
+	sk_features_5_card_sticky.forEach((single_elm, index) => {
+		let scaleValue = 0.9 + (index * 0.03);
+		if (scaleValue > 1) scaleValue = 1;
+	
+		let sk_features_5_card_tl = gsap.timeline({
+			scrollTrigger: {
+			trigger: single_elm,
+			toggleActions: "play none none none",
+			scrub: true,
+			markers: false,
+			},
+		});
+	
+		sk_features_5_card_tl.to(single_elm, {
+			scale: scaleValue,
+		});
+	
+	});
+}
+
+
+
 // footer-5-logo
 let skFooter5logo = gsap.timeline({
 	scrollTrigger: {

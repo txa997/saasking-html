@@ -426,3 +426,22 @@
 /* 
     partner-5-end
 */
+/* 
+    partner-6-start
+*/
+.sk-partner-6-area {
+    .sk-partner-5-title span {
+        color: #fff;
+        border-color: transparent;
+    }
+
+    .sk-partner-5-wrap::after {
+        background: linear-gradient(90deg, var(--sk-clr-black-8) 30%, rgba(11, 11, 44, 0) 100%);
+    }
+    .sk-partner-5-wrap::before {
+        background: linear-gradient(-90deg, var(--sk-clr-black-8) 30%, rgba(11, 11, 44, 0) 100%);
+    }
+}
+/* 
+    partner-6-end
+*/

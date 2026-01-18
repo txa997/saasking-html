@@ -58,6 +58,17 @@
     margin-bottom: 0;
 }
 
+
+.sk-p-6 {
+    font-family: var(--sk-font-1);
+    color: var(--sk-clr-white-2);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+}
+
 .sk-h-1 {
     font-family: var(--sk-font-2);
     font-weight: 600;
@@ -100,6 +111,15 @@
     letter-spacing: -0.01em;
     margin-bottom: 0;
     color: var(--sk-clr-black-6);
+}
+
+.sk-h-6 {
+    font-family: var(--sk-font-1);
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+    color: #fff;
 }
 
 
@@ -326,6 +346,49 @@
 }
 
 
+.sk-subtitle-6 {
+    font-family: var(--sk-font-1);
+    color: #fff;
+    display: inline-flex;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .line {
+        width: 40px;
+        height: 1px;
+        background: linear-gradient(-90deg, var(--sk-clr-pr-6), transparent);
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: var(--sk-clr-pr-6);
+            top: -3px;
+            right: 0;
+            z-index: 1;
+        }
+
+        &:nth-child(3) {
+            background: linear-gradient(90deg, var(--sk-clr-pr-6), transparent);
+
+            &::after {
+                right: unset;
+                left: 0;
+            }
+        }
+    }
+}
+
 .sk-sec-title-1 {
     font-family: var(--sk-font-2);
     color: #fff;
@@ -459,6 +522,38 @@
     letter-spacing: -0.02em;
     font-size: 40px;
     margin-bottom: 0;
+
+
+    @media #{$lg} {
+        font-size: 38px;
+    }
+
+    @media #{$md} {
+        font-size: 36px;
+    }
+
+    @media #{$xs} {
+        font-size: 32px;
+    }
+
+    @media #{$sm} {
+        font-size: 34px;
+    }
+}
+
+.sk-sec-title-6 {
+    font-family: var(--sk-font-1);
+    color: #fff;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    font-size: 40px;
+    margin-bottom: 0;
+
+    .has-opacity {
+        opacity: .6;
+        display: inline;
+    }
 
 
     @media #{$lg} {
