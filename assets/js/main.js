@@ -2086,6 +2086,16 @@ if($(".sk-price-5-toggle-btn").length) {
 	});
 }
 
+/* 
+	price-6-toggle-class
+*/
+if($(".sk-price-6-toggle-btn").length) {
+	$('.sk-price-6-toggle-btn').on('click', function () {
+		$(".sk-price-6-toggle-btn").toggleClass('active');
+		$(".sk-price-6-card .price-wrap").toggleClass('active');
+	});
+}
+
 
 // price-3-heart-shape
 gsap.utils.toArray(".sk-price-3-card-ani .smoke").forEach((smoke, i) => {
