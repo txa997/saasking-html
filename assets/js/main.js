@@ -2064,6 +2064,57 @@ let skFooter5logo = gsap.timeline({
 });
 skFooter5logo.from(".sk-footer-5-big-logo .logo-elm", { rotateX: -60, });
 
+
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+	// apps-6-logo-circle
+	if($(".sk-apps-6-logo-1").length) {
+		const container = document.querySelector('.sk-apps-6-logo-1');
+		const items = container.querySelectorAll('.sk-apps-6-logo-1 .single-logo');
+		
+		const radius = container.offsetWidth / 2 + 10;
+		const centerX = container.offsetWidth / 2;
+		const centerY = container.offsetHeight / 2;
+		const total = items.length;
+		
+		items.forEach((item, index) => {
+			const angle = (index / total) * (Math.PI * 2);
+		
+			const x = centerX + radius * Math.cos(angle);
+			const y = centerY + radius * Math.sin(angle);
+		
+			item.style.left = `${x}px`;
+			item.style.top = `${y}px`;
+		});
+	}
+
+
+	// apps-6-logo-circle
+	if($(".sk-apps-6-logo-2").length) {
+		const container = document.querySelector('.sk-apps-6-logo-2');
+		const items = container.querySelectorAll('.sk-apps-6-logo-2 .single-logo');
+		
+		const radius = container.offsetWidth / 2 + 10;
+		const centerX = container.offsetWidth / 2;
+		const centerY = container.offsetHeight / 2;
+		const total = items.length;
+		
+		items.forEach((item, index) => {
+			const angle = (index / total) * (Math.PI * 2);
+		
+			const x = centerX + radius * Math.cos(angle);
+			const y = centerY + radius * Math.sin(angle);
+		
+			item.style.left = `${x}px`;
+			item.style.top = `${y}px`;
+		});
+	}
+
+
+}
+
+
+
 /* 
 	price-3-toggle-class
 */

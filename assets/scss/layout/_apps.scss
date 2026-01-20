@@ -495,6 +495,220 @@
         }
     }
 }
+
 /* 
     apps-4-end
+*/
+
+/* 
+    apps-6-start
+*/
+.sk-apps-6 {
+    &-sec-wrap {
+        &-line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient( to right, rgba(153, 153, 153, 0) 0%, rgba(153, 153, 153, 1) 50%, rgba(153, 153, 153, 0) 100% );
+        }
+    }
+
+    &-bg-glow-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &-sec-title {
+        max-width: 635px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+
+        .sec-disc {
+            margin-top: 16px;
+            
+        }
+    }
+
+    &-height {
+        overflow: hidden;
+        padding-top: 70px;
+        height: 710px;
+
+        @media #{$lg,$md,$xs} {
+            height: auto;
+            padding-top: 0;
+        }
+    }
+
+    &-logo-1 {
+        width: 1050px;
+        height: 1050px;
+        border-radius: 50%;
+        position: relative;
+        margin: auto;
+
+        @media #{$xl} {
+            width: 950px;
+            height: 950px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+    
+        .single-logo {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+    
+
+            @media #{$lg,$md,$xs} {
+                position: unset;
+                transform: unset;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+
+    &-logo-2-posi {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+    }
+
+    &-logo-2 {
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        position: relative;
+        margin: auto;
+
+        @media #{$xl} {
+            width: 750px;
+            height: 750px;
+        }
+    
+        .single-logo {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+    
+        }
+    }
+
+    &-favicon-posi {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+
+        @media #{$lg,$md,$xs} {
+            position: unset;
+        }
+    }
+
+
+    &-favicon {
+        width: 556px;
+        height: 556px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 500%;
+        background: rgb(244 65 1 / 33%);
+        box-shadow: 0px 0px 185px 230px rgb(243 64 0 / 30%);
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg,$md} {
+            box-shadow: none;
+        }
+
+        @media #{$xs} {
+            width: 100%;
+            max-width: 320px;
+            height: 320px;
+            box-shadow: none;
+        }
+
+        .favicon-elm {
+            width: 100px;
+            height: 100px;
+            background: var(--sk-clr-pr-6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            outline: 10px solid rgb(90 45 25 / 60%);
+        }
+
+        &-bg-circle-1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: conic-gradient(from -90deg at 50% 50%, rgb(80 27 3) 0deg, rgb(80 26 3) 180deg, var(--sk-clr-pr-6) 360deg);
+            border-radius: 50%;
+            z-index: -1;
+            will-change: transform;
+            animation: wa-rotated 15s linear infinite;
+        }
+    }
+}
+
+
+@media #{$over,$xxxl,$xxl,$xl} {
+    .sk-apps-6-logo-1 {
+        will-change: transform;
+        animation: wa-rotated 40s linear infinite;
+    }
+    .sk-apps-6-logo-2 {
+        will-change: transform;
+        animation: wa-rotated-minus 40s linear infinite;
+    }
+}
+/* 
+    apps-6-end
 */
