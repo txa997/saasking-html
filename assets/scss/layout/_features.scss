@@ -2512,6 +2512,7 @@
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: -1;
+                transform-origin: center;
             }
         }
 
@@ -2754,6 +2755,10 @@
 
                 @media #{$sm} {
                     bottom: -220px;
+                }
+
+                img {
+                    animation: wa-rotated 20s linear infinite;
                 }
             }
 

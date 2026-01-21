@@ -1189,9 +1189,10 @@
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         background: var(--sk-clr-gd-6);
         z-index: -2;
+        transition: var(--sk-cube-1);
     }
 
     &::before {
@@ -1208,6 +1209,14 @@
 
     &:hover {
         color: #fff;
+
+        &::after {
+            width: 300%;
+        }
+
+        .text {
+            animation: shakeX2 1s;
+        }
     }
 }
 
@@ -1241,10 +1250,19 @@
         padding: 14px 17px;
         background-color: var(--sk-clr-black-6);
         border-radius: 8px;
+        transition: var(--sk-cube-1);
     }
+
 
     &:hover {
         color: #fff;
+        .btn-border {
+            background-color: transparent;
+        }
+
+        .text {
+            animation: shakeX2 1s;
+        }
     }
 }
 

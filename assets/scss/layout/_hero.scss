@@ -1644,10 +1644,18 @@
         margin-bottom: 40px;
     }
 
+
+    &-dashboard-wrap {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+    }
+
     &-dashboard {
         background: linear-gradient(99.13deg, #EE9737 0%, #571709 25.13%, #571709 50.19%, #571709 74.98%, #EE9737 100%);
         padding: 8px;
         border-radius: 32px;
+        transform-origin: bottom;
+        will-change: transform;
 
         &-img {
             border-radius: 32px;

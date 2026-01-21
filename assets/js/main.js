@@ -334,7 +334,39 @@ function afterPreloader() {
 			});
 		});
 
+		if($('.wa_split_left').length) {
+			var wa_split_left = $(".wa_split_left");
 
+			if(wa_split_left.length == 0) return; gsap.registerPlugin(SplitText); wa_split_left.each(function(index, el) {
+			
+				el.split = new SplitText(el, { 
+					type: "lines,words,chars",
+					linesClass: "split-line"
+				});
+			
+				if( $(el).hasClass('wa_split_left') ){
+					gsap.set(el.split.chars, {
+						x: -680,
+					});
+				}
+			
+				el.anim = gsap.to(el.split.chars, {
+					scrollTrigger: {
+						trigger: el,
+						start: "top 90%",
+						toggleActions: 'play none none reverse',
+						markers: false,
+					},
+			
+					x: 0,
+					opacity: 1,
+					ease: "ease1",
+					duration: .4,
+					stagger: -0.1,
+				});
+			
+			});
+		}
 
 	}	
 
@@ -2051,6 +2083,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
 
 
+
 // footer-5-logo
 let skFooter5logo = gsap.timeline({
 	scrollTrigger: {
@@ -2114,6 +2147,164 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 }
 
 
+
+// hero-6-img
+let skHero6img = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-hero-6-dashboard",
+		start: "top 60%", 
+		end: "top 10%", 
+		toggleActions: "play none none none",
+		scrub: true,
+		markers: false,
+	},
+});
+skHero6img.from(".sk-hero-6-dashboard", { rotateX: 40, y: -180  });
+
+
+
+// hero-6-dashboard-svg
+let skHero6svg = gsap.timeline({
+	// scrollTrigger: {
+	// 	trigger: ".sk-hero-6-dashboard-img-svg",
+	// 	toggleActions: "play none none reverse",
+	// 	markers: false,
+	// },
+});
+
+skHero6svg.from(".sk-hero-6-dashboard-img-svg path", { scaleY: 0, transformOrigin: "bottom", duration: .5, delay: .5, ease: "ease1" ,   stagger: {
+	each: .05,
+	from: "random",
+},});
+
+
+// benefits-6-dot-animation
+gsap.fromTo(".sk-benefits-6-right-shape .shape-dot svg path",
+    {
+        y: 100,
+        opacity: 0
+    },
+    {
+        y: 0,
+        opacity: 0,
+        duration: 4,
+        ease: "power1.inOut",
+        stagger: {
+            each: .5,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+
+
+// features-6-svg-dot
+const skFeatures6dot = document.querySelectorAll('.skF6dotSvg ellipse');
+	skFeatures6dot.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); 
+});
+
+
+// features-6-dashboard-svg
+
+let skFeatures6svg = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-features-6-card-img-3",
+		start: "top 70%",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+
+skFeatures6svg.from(".sk-features-6-card-img-3 svg path", { scaleY: 0, transformOrigin: "bottom", duration: .5, delay: .5, ease: "ease1" ,   stagger: {
+	each: .05,
+	from: "random",
+},});
+
+
+
+gsap.fromTo(".sk-features-6-bottom-dot ellipse",
+    {
+        y: 150,
+        opacity: 0
+    },
+    {
+        y: -100,
+        opacity: 0,
+        duration: 5,
+        ease: "power1.inOut",
+        stagger: {
+            each: 0.09,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
+
+
+
+let skFeatures6bgGlow = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sk-features-6-bottom-glow",
+		start: "top 80%", 
+		end: "top top",
+		toggleActions: "play none none reverse",
+		markers: false,
+	},
+});
+skFeatures6bgGlow.from(".sk-features-6-bottom-glow", { opacity: 0, });
+skFeatures6bgGlow.from(".sk-features-6-bottom-dot", { opacity: 0, });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer-6-dot-animation
+gsap.fromTo(".sk-footer-6-dot-svg ellipse , .sk-footer-6-dot-svg circle",
+    {
+        x: -50,
+        opacity: 0
+    },
+    {
+        x: 250,
+        opacity: 0,
+        duration: 6,
+        ease: "power1.inOut",
+        stagger: {
+            each: .2,
+            repeat: -1
+        },
+        keyframes: [
+            { opacity: 1, duration: 1 },
+            { opacity: 0, duration: 1 }
+        ]
+    }
+);
 
 /* 
 	price-3-toggle-class
