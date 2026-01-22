@@ -1722,3 +1722,94 @@
 /* 
     hero-6-end
 */
+
+/* 
+    hero-7-start
+*/
+.sk-hero-7 {
+    &-area {
+        padding-top: 40px;
+    }
+    &-container {
+        max-width: 1550px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+    }
+
+    &-title {
+        font-size: 56px;
+        line-height: 120%;
+    }
+
+    &-title-ani {
+        .sk-hero-7-title {
+            font-size: 48px;
+            font-weight: 500;
+            background: var(--sk-clr-gd-7);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 200px;
+            padding: 10px 29px;
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 200px;
+                background: var(--sk-clr-gd-7);
+                padding: 1px;
+                z-index: -1;
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask-composite: exclude;
+                transition: var(--sk-cube-1);
+            }
+        }
+    }
+
+    &-title-wrap {
+        .row-1 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 6px;
+
+            > .sk-hero-7-title {
+                font-weight: 500;
+            }
+        }
+        .row-2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 6px;
+
+
+
+        }
+
+
+        .sk-hero-6-author-bg {
+            .single-img {
+                width: 44px;
+                height: 44px;
+            }
+        }
+    }
+}
+/* 
+    hero-7-end
+*/
