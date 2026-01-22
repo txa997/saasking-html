@@ -502,6 +502,7 @@
                 mask-composite: exclude;
                 opacity: 0;
                 transition: var(--sk-cube-1);
+                pointer-events: none;
             }
         
             .icon {
@@ -516,10 +517,25 @@
         
             .disc {
                 opacity: 80%;
+                transition: var(--sk-cube-1);
+                border-bottom: 1px solid transparent;
+                display: inline-block;
+
+                a {
+                    transition: var(--sk-cube-1);
+                }
+
+                &:hover {
+                    opacity: 1;
+                    color: var(--sk-clr-pr-6);
+                    border-color: var(--sk-clr-pr-6);
+                }
             }
 
             &:hover  {
-                border-color: transparent;
+                .icon {
+                    animation: shakeX2 .5s;
+                }
                 &::before {
                     opacity: 1;
                 }
@@ -613,6 +629,11 @@
             &::after {
                 opacity: 0;
                 transition: var(--sk-cube-1);
+
+                width: 110%;
+                height: 1010%;
+                top: -264px;
+                left: -27px;
             }
 
             &:hover {

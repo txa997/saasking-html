@@ -2532,6 +2532,10 @@
             &::after {
                 opacity: 0;
                 transition: var(--sk-cube-1);
+                width: 120%;
+                height: 770%;
+                top: -154px;
+                left: -35px;
             }
 
             &:hover {
@@ -2574,8 +2578,31 @@
         border-radius: 24px;
         padding: 28px 24px;
         background-color: #000;
-        background-repeat: repeat;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1;
 
+
+        .bg-shape-1 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg-glow-1 {
+            position: absolute;
+            width: 156.68px;
+            height: 156.68px;
+            background: rgba(244, 65, 1, 0.4);
+            filter: blur(85px);
+            transform: rotate(-90deg);
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10%;
+            z-index: -1;
+
+        }
         .title {
             font-size: 22px;
             margin-bottom: 10px;
@@ -2622,6 +2649,10 @@
             &::after {
                 opacity: 0;
                 transition: var(--sk-cube-1);
+                width: 120%;
+                height: 790%;
+                top: -154px;
+                left: -35px;
             }
 
             &:hover {
@@ -2725,6 +2756,10 @@
             &::after {
                 opacity: 0;
                 transition: var(--sk-cube-1);
+                width: 120%;
+                height: 790%;
+                top: -154px;
+                left: -35px;
             }
 
             &:hover {

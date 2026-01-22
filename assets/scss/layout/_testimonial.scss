@@ -1331,6 +1331,10 @@
             &::before {
                 opacity: 1;
             }
+
+            .comment {
+                opacity: 1;
+            }
         }
 
         &:is(.has-bg-glow) {
@@ -1346,6 +1350,7 @@
                 filter: blur(40px);
                 border-radius: 50%;
             }
+            
         }
 
     }
@@ -1387,6 +1392,7 @@
             border-bottom: 1px dashed #4C504E;
             padding-bottom: 24px;
             margin-bottom: 20px;
+            transition: var(--sk-cube-1);
         }
 
         .author {
@@ -1468,6 +1474,9 @@
     position: relative;
     z-index: 1;
     transition: var(--sk-cube-1);
+    overflow: hidden;
+    border-radius: 100px;
+
 
     .icon {
         width: 36px;
@@ -1500,11 +1509,13 @@
 
     &:hover {
         color: #fff;
+        background: var(--sk-clr-gd-6);
         .icon {
             transform: rotate(45deg);
         }
         &::before {
-            opacity: 1;
+            opacity: 0;
+
         }
     }
 }

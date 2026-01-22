@@ -1275,7 +1275,7 @@
             right: 0;
             top: 14px;
             background: transparent;
-            color: var(--sk-clr-pr-6);
+            color: #F44101;
             font-size: 20px;
 
             i {
@@ -1324,8 +1324,8 @@
             border-bottom: 1px solid transparent;
 
             &:hover {
-                background-color: var(--sk-clr-pr-6);
-                border-color: var(--sk-clr-pr-6);
+                background-color: #F44101;
+                border-color: #F44101;
             }
         }
     }
@@ -1341,7 +1341,7 @@
             letter-spacing: -0.03em;
             pointer-events: none;
             span {
-                color: var(--sk-clr-pr-6);
+                color: #F44101;
             }
 
 
@@ -1398,8 +1398,8 @@
                     transition: var(--sk-cube-1);
 
                     &:hover {
-                        color: var(--sk-clr-pr-6);
-                        border-color: var(--sk-clr-pr-6);
+                        color: #F44101;
+                        border-color: #F44101;
                     }
                 }
             }
@@ -1409,9 +1409,9 @@
             a {
                 transition: var(--sk-cube-1);
                 border-bottom: 1px solid transparent;
-                color: var(--sk-clr-pr-6);
+                color: #F44101;
                 &:hover {
-                    border-color: var(--sk-clr-pr-6);
+                    border-color: #F44101;
                 }
             }
         }

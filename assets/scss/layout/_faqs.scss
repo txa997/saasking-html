@@ -96,9 +96,7 @@
 
         &:is(.active) {
             background-color: #24293D;
-            .item-title {
-                color: var(--sk-clr-sd-1);
-            }
+
 
             &::after {
                 opacity: 1;

@@ -2728,7 +2728,6 @@
             z-index: 1;
             text-align: center;
             height: 400px;
-            overflow: hidden;
             margin-bottom: -22px;
 
             @media #{$lg} {
@@ -2748,6 +2747,7 @@
                 text-align: center;
                 position: absolute;
                 bottom: -220px;
+                transform: scale(1.1);
 
                 @media #{$xs} {
                     bottom: -80px;
@@ -2778,7 +2778,7 @@
     &-bottom {
         position: relative;
         z-index: 1;
-        margin-top: 100px;
+        margin-top: 20px;
 
         &-dot {
             position: absolute;

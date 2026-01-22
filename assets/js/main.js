@@ -2243,7 +2243,7 @@ gsap.fromTo(".sk-features-6-bottom-dot ellipse",
     {
         y: -100,
         opacity: 0,
-        duration: 5,
+        duration: 7,
         ease: "power1.inOut",
         stagger: {
             each: 0.09,
