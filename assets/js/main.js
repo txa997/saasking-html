@@ -2272,18 +2272,6 @@ skFeatures6bgGlow.from(".sk-features-6-bottom-dot", { opacity: 0, });
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // footer-6-dot-animation
 gsap.fromTo(".sk-footer-6-dot-svg ellipse , .sk-footer-6-dot-svg circle",
     {
@@ -2306,6 +2294,150 @@ gsap.fromTo(".sk-footer-6-dot-svg ellipse , .sk-footer-6-dot-svg circle",
     }
 );
 
+
+
+// features-1-svg-line
+if($(".sk-features-7-item-2-logo-bg-line-1").length) {
+
+	gsap.to(".line-bar-1", {
+		duration: 5,
+		repeat: -1,
+		motionPath: {
+			path: ".line-path-1",
+			align: ".line-path-1",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+	gsap.to(".line-bar-2", {
+		duration: 5,
+		repeat: -1,
+		motionPath: {
+			path: ".line-path-2",
+			align: ".line-path-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+	gsap.to(".line-bar-3", {
+		duration: 5,
+		repeat: -1,
+		motionPath: {
+			path: ".line-path-3",
+			align: ".line-path-3",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+
+}
+if($(".sk-features-7-item-2-logo-bg-line-2").length) {
+
+	gsap.to(".line-bar-1-2", {
+		duration: 5,
+		repeat: -1,
+		motionPath: {
+			path: ".line-path-1-2",
+			align: ".line-path-1-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+	gsap.to(".line-bar-2-2", {
+		duration: 5,
+		repeat: -1,
+		motionPath: {
+			path: ".line-path-2-2",
+			align: ".line-path-2-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+	gsap.to(".line-bar-3-2", {
+		duration: 5,
+		repeat: -1,
+		motionPath: {
+			path: ".line-path-3-2",
+			align: ".line-path-3-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+
+}
+
+
+
+if($(".sk-choose-7-scrollbar").length) {
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		const skChooseScrollbar = gsap.utils.toArray('.sk-choose-7-scrollbar .single-scrollbar-line');
+
+		const skC7tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.sk-choose-7-height',
+				start: 'top top',
+				end: 'bottom bottom',
+				scrub: true,
+			}
+		});
+		
+		skC7tl.to(skChooseScrollbar[0], {
+			width: '100%',
+			ease: 'none',
+			duration: 1
+		})
+		.from('.skC7item_2_left', {
+			xPercent: -100,
+			duration: 1,
+			ease: 'power2.out'
+		})
+		.from('.skC7item_2_right', {
+			xPercent: 100,
+			duration: 1,
+			ease: 'power2.out'
+		},"<")
+		.to(skChooseScrollbar[1], {
+			width: '100%',
+			ease: 'none',
+			duration: 1
+		})
+		.from('.skC7item_3_left', {
+			xPercent: -100,
+			duration: 1,
+			ease: 'power2.out'
+		})
+		.from('.skC7item_3_right', {
+			xPercent: 100,
+			duration: 1,
+			ease: 'power2.out'
+		},"<")
+		.to(skChooseScrollbar[2], {
+			width: '100%',
+			ease: 'none',
+			duration: 1
+		})
+	}
+	
+	
+}
 /* 
 	price-3-toggle-class
 */

@@ -69,6 +69,16 @@
     margin-bottom: 0;
 }
 
+.sk-p-7 {
+    font-family: var(--sk-font-1);
+    color: var(--sk-clr-black-7);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+}
+
 .sk-h-1 {
     font-family: var(--sk-font-2);
     font-weight: 600;
@@ -652,6 +662,32 @@
         display: inline;
     }
 
+
+    @media #{$lg} {
+        font-size: 38px;
+    }
+
+    @media #{$md} {
+        font-size: 36px;
+    }
+
+    @media #{$xs} {
+        font-size: 32px;
+    }
+
+    @media #{$sm} {
+        font-size: 34px;
+    }
+}
+
+.sk-sec-title-7 {
+    font-family: var(--sk-font-1);
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 40px;
+    color: var(--sk-clr-black-6);
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
 
     @media #{$lg} {
         font-size: 38px;

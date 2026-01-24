@@ -1729,6 +1729,14 @@
 .sk-hero-7 {
     &-area {
         padding-top: 40px;
+
+        @media #{$xxl,$xl} {
+            padding-top: 120px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            padding-top: 160px;
+        }
     }
     &-container {
         max-width: 1550px;
@@ -1742,11 +1750,46 @@
         display: flex;
         align-items: center;
         gap: 150px;
+
+        @media #{$xl} {
+            gap: 50px;
+        }
+
+        @media #{$lg} {
+            gap: 50px;
+            align-items: end;
+        }
+
+        @media #{$md,$xs} {
+            gap: 50px;
+            align-items: start;
+            flex-direction: column;
+        }
     }
 
     &-title {
         font-size: 56px;
         line-height: 120%;
+
+        @media #{$xl} {
+            font-size: 50px;
+        }
+
+        @media #{$lg} {
+            font-size: 44px;
+        }
+
+        @media #{$md} {
+            font-size: 42px;
+        }
+
+        @media #{$xs} {
+            font-size: 36px;
+        }
+
+        @media #{$sm} {
+            font-size: 38px;
+        }
     }
 
     &-title-ani {
@@ -1781,11 +1824,14 @@
     }
 
     &-title-wrap {
+        margin-bottom: 20px;
+
         .row-1 {
             display: flex;
             align-items: center;
             gap: 12px;
             margin-top: 6px;
+            flex-wrap: wrap;
 
             > .sk-hero-7-title {
                 font-weight: 500;
@@ -1796,19 +1842,97 @@
             align-items: center;
             gap: 12px;
             margin-top: 6px;
-
-
-
+            flex-wrap: wrap;
         }
 
 
-        .sk-hero-6-author-bg {
-            .single-img {
-                width: 44px;
-                height: 44px;
+        .sk-hero-6-author {
+            padding: 1px;
+            margin-bottom: 0;
+
+            &::after {
+                background: var(--sk-clr-gd-7);
+            }
+
+            &-bg {
+                padding: 2px;
+                .single-img {
+                    width: 44px;
+                    height: 44px;
+                }
             }
         }
     }
+
+    &-disc {
+        margin-bottom: 32px;
+        color: #011109;
+    }
+
+    &-content {
+        max-width: 630px;
+
+        @media #{$lg,$md,$xs} {
+            margin-bottom: 70px;
+        }
+
+        .btn-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    }
+
+    &-img {
+        margin-left: auto;
+        margin-right: 165px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            margin-right: 0px;
+        }
+    }
+
+
+    &-bg {
+        &-glow-1 {
+            width: 52%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -3;
+        }
+        &-glow-2 {
+            width: 52%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -3;
+        }
+
+        &-gd-clr {
+            position: absolute;
+            bottom: -380px;
+            right: 0;
+            z-index: -4;
+
+            @media #{$xl,$lg,$md,$xs} {
+                width: 100%;
+            }
+        }
+
+        &-dot {
+            position: absolute;
+            bottom: -60px;
+            right: 70px;
+            z-index: -3;
+
+            @media #{$xl,$lg,$md,$xs} {
+                width: 100%;
+            }
+        }
+    }
+
+
 }
 /* 
     hero-7-end

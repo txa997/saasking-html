@@ -1025,3 +1025,124 @@
 /* 
     process-5-end
 */
+/* 
+    process-7-start
+*/
+.sk-process-7 {
+    &-area {
+        background: linear-gradient(180deg, #FFFFFF 0%, #F6F7F9 100%);
+        border-radius: 60px 60px 0px 0px;
+        overflow: hidden;
+    }
+
+
+    &-bg-glow-1 {
+        width: 52%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -3;
+    }
+    
+    &-bg-glow-2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -3;
+        text-align: right;
+        width: 52%;
+    }
+
+    &-sec-title {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 240px;
+    }
+    
+    &-ani-shape {
+        position: absolute;
+        top: 150px;
+        left: 0;
+        width: 100%;
+    }
+
+    &-card {
+        .row-1 {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            max-width: 1084px;
+            margin-left: auto;
+            align-items: start;
+            margin-bottom: 165px;
+
+            .sk-process-7-card-single {
+                &:nth-child(2) {
+                    margin-top: 70px;
+                    margin-right: 43px;
+                }
+            }
+        }
+
+        .row-2 {
+            margin-left: auto;
+            max-width: 774px;
+            margin-bottom: 140px;
+        }
+    }
+
+    &-card {
+        &-single {
+            display: flex;
+            gap: 20px;
+            max-width: 456px;
+
+            .icon-x-line {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                flex: 0 0 auto;
+            }
+
+            .line {
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(0deg, transparent, #6c3ff3);
+            }
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 24px;
+                font-weight: 500;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+
+                span {
+                    background: var(--sk-clr-gd-7);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            .disc {
+                font-size: 17px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+
+
+
+/* 
+    process-7-end
+*/
