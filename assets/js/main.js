@@ -2385,7 +2385,7 @@ if($(".sk-features-7-item-2-logo-bg-line-2").length) {
 }
 
 
-
+// choose-7-animation
 if($(".sk-choose-7-scrollbar").length) {
 	if (window.matchMedia("(min-width: 1200px)").matches) { 
 		const skChooseScrollbar = gsap.utils.toArray('.sk-choose-7-scrollbar .single-scrollbar-line');
@@ -2438,6 +2438,192 @@ if($(".sk-choose-7-scrollbar").length) {
 	
 	
 }
+
+
+// process-7-animation
+if($(".sk-process-7-ani-shape").length) {
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+		const skPr7tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.sk-process-7-height',
+				start: 'top top',
+				// end: 'bottom bottom',
+				end: 'bottom-=25% top',
+				scrub: true,
+				markers: false,
+			}
+		});
+
+		const skPr7line = document.querySelector(".sk-process-7-ani-shape svg .line");
+		const skPr7lineLength = skPr7line.getTotalLength();
+
+		gsap.set(skPr7line, {
+			strokeDasharray: skPr7lineLength,
+			strokeDashoffset: -skPr7lineLength,
+		});
+
+		skPr7tl.to(skPr7line, {
+			strokeDashoffset: 0,
+			ease: "none",
+		})
+
+		const skPr7tl2 = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.sk-process-7-height',
+				start: 'top -80%',
+				end: 'bottom bottom',
+				// end: 'bottom-=25% top',
+				scrub: true,
+				markers: false,
+			}
+		})
+
+		skPr7tl2.from(".sk-process-7-ani-shape  .glow",{
+			opacity: 0,
+			duration: 2,
+		})
+		
+
+
+		const skPr7cards = gsap.utils.toArray(".sk-process-7-card-single");
+
+		const skPr7tl3 = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".sk-process-7-height",
+				start: "top top",
+				end: "bottom bottom",
+				scrub: true,
+				markers: false,
+			}
+		});
+
+		gsap.set(skPr7cards[0], { opacity: 1, y: 0 });
+
+
+		const skPr7cardsFirstInnerEls = skPr7cards[0].querySelectorAll(
+			".icon, .line, .title, .disc"
+		);
+		
+		gsap.set(skPr7cardsFirstInnerEls, {
+			opacity: 1,
+			y: 0,
+		});
+
+		skPr7cards.forEach((card, index) => {
+
+			const innerEls = card.querySelectorAll(
+				".icon, .line, .title, .disc"
+			);
+
+
+			if (index !== 0) {
+				skPr7tl3.to(skPr7cards[index - 1], {
+					opacity: 0,
+					y: 40,
+					duration: 0.5,
+				});
+			}
+
+			skPr7tl3.to(card, {
+				opacity: 1,
+				y: 0,
+				duration: 0.5,
+				onStart: () => {
+					card.classList.add("active");
+				}
+			});
+
+			skPr7tl3.from(innerEls, {
+				opacity: 0,
+				y: 20,
+				stagger: 0.1,
+				duration: 0.4,
+				delay: 0.2,
+			}, "<");
+		});
+
+
+
+	}
+	
+	
+}
+
+
+
+if($(".sk-apps-7-bg-svg-1").length) {
+
+	gsap.set(".sk-apps-7-bg-svg-1 .svg-1-line-1, .sk-apps-7-bg-svg-1 .svg-1-line-2, .sk-apps-7-bg-svg-1 .svg-1-line-3, .sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 0 });
+
+	let skApps7svgTl = gsap.timeline({
+		repeat: -1,
+		ease: "ease1",
+	});
+
+
+	skApps7svgTl.to(".svg-1-line-1", {
+		duration: 10,
+		motionPath: {
+			path: ".svg-1-path-1",
+			align: ".svg-1-path-1",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+		onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-1", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-1", { opacity: 0, duration: 0.3 }),
+	});
+
+	skApps7svgTl.to(".svg-1-line-2", {
+		duration: 10,
+		motionPath: {
+			path: ".svg-1-path-2",
+			align: ".svg-1-path-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+		onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-2", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-2", { opacity: 0, duration: 0.3 }),
+	},.6);
+
+	skApps7svgTl.to(".svg-1-line-3", {
+		duration: 10,
+		motionPath: {
+			path: ".svg-1-path-3",
+			align: ".svg-1-path-3",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+		onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-3", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-3", { opacity: 0, duration: 0.3 }),
+	},1.9);
+
+	skApps7svgTl.to(".svg-1-line-4", {
+		duration: 10,
+		motionPath: {
+			path: ".svg-1-path-4",
+			align: ".svg-1-path-4",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+		onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 1, duration: 0.3 }),
+		onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 0, duration: 0.3 }),
+	},2.6);
+}
+
+
+
+
+
+
 /* 
 	price-3-toggle-class
 */
@@ -2460,6 +2646,7 @@ if($(".sk-price-5-toggle-btn").length) {
 	});
 }
 
+
 /* 
 	price-6-toggle-class
 */
@@ -2470,6 +2657,27 @@ if($(".sk-price-6-toggle-btn").length) {
 	});
 }
 
+/* 
+	price-7-toggle-class
+*/
+if($(".skP7c1button").length) {
+	$('.skP7c1button').on('click', function () {
+		$(".skP7c1button").toggleClass('active');
+		$(".skP7c1price").toggleClass('active');
+	});
+}
+if($(".skP7c2button").length) {
+	$('.skP7c2button').on('click', function () {
+		$(".skP7c2button").toggleClass('active');
+		$(".skP7c2price").toggleClass('active');
+	});
+}
+if($(".skP7c3button").length) {
+	$('.skP7c3button').on('click', function () {
+		$(".skP7c3button").toggleClass('active');
+		$(".skP7c3price").toggleClass('active');
+	});
+}
 
 // price-3-heart-shape
 gsap.utils.toArray(".sk-price-3-card-ani .smoke").forEach((smoke, i) => {
