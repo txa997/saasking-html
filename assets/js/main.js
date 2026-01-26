@@ -2551,77 +2551,198 @@ if($(".sk-process-7-ani-shape").length) {
 }
 
 
+// apps-7-svg
+if (window.matchMedia("(min-width: 1200px)").matches) {
+	if($(".sk-apps-7-bg-svg-1").length) {
 
-if($(".sk-apps-7-bg-svg-1").length) {
+		gsap.set(".sk-apps-7-bg-svg-1 .svg-1-line-1, .sk-apps-7-bg-svg-1 .svg-1-line-2, .sk-apps-7-bg-svg-1 .svg-1-line-3, .sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 0 });
 
-	gsap.set(".sk-apps-7-bg-svg-1 .svg-1-line-1, .sk-apps-7-bg-svg-1 .svg-1-line-2, .sk-apps-7-bg-svg-1 .svg-1-line-3, .sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 0 });
+		let skApps7svgTl = gsap.timeline({
+			repeat: -1,
+			ease: "ease1",
 
-	let skApps7svgTl = gsap.timeline({
-		repeat: -1,
-		ease: "ease1",
+			scrollTrigger: {
+				trigger: ".sk-apps-7-content .favicon-elm",
+				markers: false,
+			},
+		});
+
+
+		skApps7svgTl.to(".svg-1-line-1", {
+			duration: 10,
+			motionPath: {
+				path: ".svg-1-path-1",
+				align: ".svg-1-path-1",
+				autoRotate: true,
+				alignOrigin: [0.5, 0.5],
+				start: 0,
+				end: 1,
+			},
+			onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-1", { opacity: 1, duration: 0.3 }),
+			onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-1", { opacity: 0, duration: 0.3 }),
+		});
+
+		skApps7svgTl.to(".svg-1-line-2", {
+			duration: 10,
+			motionPath: {
+				path: ".svg-1-path-2",
+				align: ".svg-1-path-2",
+				autoRotate: true,
+				alignOrigin: [0.5, 0.5],
+				start: 0,
+				end: 1,
+			},
+			onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-2", { opacity: 1, duration: 0.3 }),
+			onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-2", { opacity: 0, duration: 0.3 }),
+		},.6);
+
+		skApps7svgTl.to(".svg-1-line-3", {
+			duration: 10,
+			motionPath: {
+				path: ".svg-1-path-3",
+				align: ".svg-1-path-3",
+				autoRotate: true,
+				alignOrigin: [0.5, 0.5],
+				start: 0,
+				end: 1,
+			},
+			onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-3", { opacity: 1, duration: 0.3 }),
+			onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-3", { opacity: 0, duration: 0.3 }),
+		},1.9);
+
+		skApps7svgTl.to(".svg-1-line-4", {
+			duration: 10,
+			motionPath: {
+				path: ".svg-1-path-4",
+				align: ".svg-1-path-4",
+				autoRotate: true,
+				alignOrigin: [0.5, 0.5],
+				start: 0,
+				end: 1,
+			},
+			onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 1, duration: 0.3 }),
+			onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 0, duration: 0.3 }),
+		},2.6);
+	}
+	if($(".sk-apps-7-bg-svg-2").length) {
+
+		gsap.set(".sk-apps-7-bg-svg-2 .svg-2-line-1, .sk-apps-7-bg-svg-2 .svg-2-line-2, .sk-apps-7-bg-svg-2 .svg-2-line-3, .sk-apps-7-bg-svg-2 .svg-2-line-4", { opacity: 0 });
+
+		let skApps7svgTl = gsap.timeline({
+			repeat: -1,
+			ease: "ease1",
+
+			scrollTrigger: {
+				trigger: ".sk-apps-7-content .favicon-elm",
+				markers: false,
+			},
+		});
+
+
+		skApps7svgTl.to(".svg-2-line-1", {
+			duration: 10,
+			motionPath: {
+				path: ".svg-2-path-1",
+				align: ".svg-2-path-1",
+				autoRotate: true,
+				alignOrigin: [0.5, 0.5],
+				start: 0,
+				end: 1,
+			},
+			onStart: () => gsap.to(".sk-apps-7-bg-svg-2 .svg-2-line-1", { opacity: 1, duration: 0.3 }),
+			onComplete: () => gsap.to(".sk-apps-7-bg-svg-2 .svg-2-line-1", { opacity: 0, duration: 0.3 }),
+		});
+
+		skApps7svgTl.to(".svg-2-line-2", {
+			duration: 10,
+			motionPath: {
+				path: ".svg-2-path-2",
+				align: ".svg-2-path-2",
+				autoRotate: true,
+				alignOrigin: [0.5, 0.5],
+				start: 0,
+				end: 1,
+			},
+			onStart: () => gsap.to(".sk-apps-7-bg-svg-2 .svg-2-line-2", { opacity: 1, duration: 0.3 }),
+			onComplete: () => gsap.to(".sk-apps-7-bg-svg-2 .svg-2-line-2", { opacity: 0, duration: 0.3 }),
+		},.6);
+
+		skApps7svgTl.to(".svg-2-line-3", {
+			duration: 10,
+			motionPath: {
+				path: ".svg-2-path-3",
+				align: ".svg-2-path-3",
+				autoRotate: true,
+				alignOrigin: [0.5, 0.5],
+				start: 0,
+				end: 1,
+			},
+			onStart: () => gsap.to(".sk-apps-7-bg-svg-2 .svg-2-line-3", { opacity: 1, duration: 0.3 }),
+			onComplete: () => gsap.to(".sk-apps-7-bg-svg-2 .svg-2-line-3", { opacity: 0, duration: 0.3 }),
+		},1.9);
+
+		skApps7svgTl.to(".svg-2-line-4", {
+			duration: 10,
+			motionPath: {
+				path: ".svg-2-path-4",
+				align: ".svg-2-path-4",
+				autoRotate: true,
+				alignOrigin: [0.5, 0.5],
+				start: 0,
+				end: 1,
+			},
+			onStart: () => gsap.to(".sk-apps-7-bg-svg-2 .svg-2-line-4", { opacity: 1, duration: 0.3 }),
+			onComplete: () => gsap.to(".sk-apps-7-bg-svg-2 .svg-2-line-4", { opacity: 0, duration: 0.3 }),
+		},2.6);
+	}
+}
+
+// overview-7-animation
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	let overview7tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".sk-overview-7-bottom",
+			start: "top 60%", 
+			toggleActions: "play none none reverse",
+			markers: false,
+		},
 	});
-
-
-	skApps7svgTl.to(".svg-1-line-1", {
-		duration: 10,
-		motionPath: {
-			path: ".svg-1-path-1",
-			align: ".svg-1-path-1",
-			autoRotate: true,
-			alignOrigin: [0.5, 0.5],
-			start: 0,
-			end: 1,
-		},
-		onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-1", { opacity: 1, duration: 0.3 }),
-		onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-1", { opacity: 0, duration: 0.3 }),
-	});
-
-	skApps7svgTl.to(".svg-1-line-2", {
-		duration: 10,
-		motionPath: {
-			path: ".svg-1-path-2",
-			align: ".svg-1-path-2",
-			autoRotate: true,
-			alignOrigin: [0.5, 0.5],
-			start: 0,
-			end: 1,
-		},
-		onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-2", { opacity: 1, duration: 0.3 }),
-		onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-2", { opacity: 0, duration: 0.3 }),
-	},.6);
-
-	skApps7svgTl.to(".svg-1-line-3", {
-		duration: 10,
-		motionPath: {
-			path: ".svg-1-path-3",
-			align: ".svg-1-path-3",
-			autoRotate: true,
-			alignOrigin: [0.5, 0.5],
-			start: 0,
-			end: 1,
-		},
-		onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-3", { opacity: 1, duration: 0.3 }),
-		onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-3", { opacity: 0, duration: 0.3 }),
-	},1.9);
-
-	skApps7svgTl.to(".svg-1-line-4", {
-		duration: 10,
-		motionPath: {
-			path: ".svg-1-path-4",
-			align: ".svg-1-path-4",
-			autoRotate: true,
-			alignOrigin: [0.5, 0.5],
-			start: 0,
-			end: 1,
-		},
-		onStart: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 1, duration: 0.3 }),
-		onComplete: () => gsap.to(".sk-apps-7-bg-svg-1 .svg-1-line-4", { opacity: 0, duration: 0.3 }),
-	},2.6);
+	overview7tl.from(".sk-overview-7-bottom .bg-glow", { opacity: 0, yPercent: 50, duration: .5, ease: "power1.out", });
+	overview7tl.from(".sk-overview-7-img", { yPercent: 100, duration: .5, ease: "power1.out", },"<50%");
+	overview7tl.to(".sk-overview-7-img-3", { rotate: 20, x: 170, y: 150, duration: 2.5, ease: "elastic.out(1,0.5)", });
+	overview7tl.to(".sk-overview-7-img-1", { rotate: -20, x: -170, y: 150, duration: 2.5, ease: "elastic.out(1,0.5)", },"<");
 }
 
 
+// overview-7-dot-1
+const skOverview7dot1 = document.querySelectorAll('.sk-overview-7-bg-dot-1 svg circle');
+	skOverview7dot1.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); 
+});
 
-
+// overview-7-dot-2
+const skOverview7dot2 = document.querySelectorAll('.sk-overview-7-bg-dot-2 svg circle');
+	skOverview7dot2.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); 
+});
 
 
 /* 
@@ -2698,6 +2819,39 @@ gsap.utils.toArray(".sk-price-3-card-ani .smoke").forEach((smoke, i) => {
         }
     );
 });
+
+
+/* 
+	testimonial-1-slider-function
+*/
+if ($('.sk_t7_slider').length) {
+	var sk_t7_slider = new Swiper(".sk_t7_slider", {
+		loop: true,
+		speed: 600,
+		autoplay: {
+			delay: 4000,
+		},
+
+	});
+
+}
+
+setTimeout(() => {
+	if ($('.sk_t7_slider_2').length) {
+		var sk_t7_slider_2 = new Swiper(".sk_t7_slider_2", {
+			loop: true,
+			speed: 600,
+			direction: 'vertical',
+			autoplay: {
+				delay: 4000,
+			},
+	
+		});
+	
+	}
+}, 2000);
+
+
 /* 
     marquee-right
 */
