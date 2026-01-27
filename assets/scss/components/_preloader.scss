@@ -178,7 +178,7 @@
         }
     }
 
-    &:is(.has-home-5) {
+    &:is(.has-home-6) {
         background-color: var(--sk-clr-black-6);
 
         .item-favicon-border {
@@ -196,6 +196,27 @@
 
         .item-favicon-border-line-3 {
             border-color: var(--sk-clr-pr-6);
+        }
+    }
+
+    &:is(.has-home-7) {
+        background-color: #F6F7F9;
+
+        .item-favicon-border {
+            background-color: #F6F7F9;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25), inset 0px -4px 4px rgba(0, 33, 1, 0.3), inset 0px 4px 4px var(--sk-clr-pr-7);
+        }
+
+        .item-favicon-border-line-1 {
+            border-color: var(--sk-clr-pr-7);
+        }
+
+        .item-favicon-border-line-2 {
+            border-color: var(--sk-clr-pr-7);
+        }
+
+        .item-favicon-border-line-3 {
+            border-color: var(--sk-clr-pr-7);
         }
     }
 }

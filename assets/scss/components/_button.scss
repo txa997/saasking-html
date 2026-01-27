@@ -1282,6 +1282,9 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 
 
     .text {
@@ -1323,11 +1326,34 @@
         flex: 0 0 auto;
         align-items: center;
         justify-content: center;
+        transition: var(--sk-cube-1);
+    }
+
+
+    &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(-90deg, #663CF6 0%, #7C48EB 22.98%, #DF7CB5 52.95%, #FF9774 79.3%, #FEE89C 100%);
+        z-index: -1;
+        transform: translateY(100%);
+        transition: var(--sk-cube-1);
+        filter: blur(20px);
+        border-radius: 120px;
+        opacity: 0;
     }
 
     &:hover {
         color: #fff;
         background-color: var(--sk-clr-pr-5);
+        &::after {
+            transform: translateY(0);
+            opacity: 1;
+            filter: blur(0px);
+        }
         .text {
             &::after {
                 opacity: 1;
@@ -1338,6 +1364,10 @@
                 transform: translateY(-100%);
             }
         }
+
+        .icon {
+            transform: rotate(45deg);
+        }
     }
 
     &:is(.has-border) {
@@ -1347,6 +1377,10 @@
 
         .icon {
             background-color: var(--sk-clr-black-6);
+            color: #fff;
+        }
+
+        &:hover {
             color: #fff;
         }
     }
@@ -1385,17 +1419,35 @@
         background-color: #F5F6F8;
         border-radius: 200px;
         transition: var(--sk-cube-1);
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left:0px;
+            background: var(--sk-clr-gd-7);
+            z-index: -1;
+            opacity: 0;
+            transition: var(--sk-cube-1);
+        }
     }
 
 
     &:hover {
-        color: var(--sk-clr-black-6);
+        color: #fff;
         .btn-border {
-            background-color: var(--sk-clr-pr-7);
+            &::after {
+                opacity: 1;
+            }
+
         }
 
         .text {
-            animation: shakeX2 1s;
+            // animation: shakeX2 1s;
         }
     }
 }

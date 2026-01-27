@@ -739,6 +739,12 @@
             justify-content: center;
             margin-bottom: 60px;
         }
+
+        .btn-elm {
+            .sk-pr-btn-13 {
+                background: var(--sk-clr-black-6);
+            }
+        }
     }
 
     &-sec-title {
@@ -907,6 +913,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
+            margin-left: 70px;
         }
     }
     

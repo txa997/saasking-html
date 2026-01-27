@@ -658,3 +658,111 @@
     cta-6-end
 */
 
+/* 
+    cta-7-start
+*/
+.sk-cta-7 {
+    &-area {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+
+    &-content {
+        max-width: 670px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .title {
+            font-size: 80px;
+            font-weight: 500;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+
+            @media #{$xxl} {
+                font-size: 65px;
+            }
+
+            @media #{$xl} {
+                font-size: 56px;
+            }
+
+
+            @media #{$lg} {
+                font-size: 48px;
+            }
+        
+            @media #{$md} {
+                font-size: 44px;
+            }
+        
+            @media #{$xs} {
+                font-size: 36px;
+            }
+        
+            @media #{$sm} {
+                font-size: 40px;
+            }
+        }
+
+        .disc {
+            margin-bottom: 40px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .btn-wrap {
+            display: inline-flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .sk-pr-btn-13 {
+                &:not(.has-border) {
+                    background: #fff;
+                    color: #000;
+
+                    .icon {
+                        background-color: #000;
+                        color: #fff;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                &:is(.has-border) {
+                
+                    color: #fff;
+
+                    .icon {
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+
+
+            }
+        }
+    }
+    
+    &-bg-dot-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    &-bg-dot-2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
+/* 
+    cta-7-end
+*/
+

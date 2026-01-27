@@ -2832,6 +2832,7 @@
             right: 0;
             top: 0;
             z-index: -2;
+            opacity: .5;
         }
 
         .card-top-bg-shape-2 {
@@ -2956,6 +2957,10 @@
             border: 1px solid #E5E5E5;
             color: var(--sk-clr-black-6);
             margin-bottom: 15px;
+
+            &::after {
+                border-radius: 12px;
+            }
         }
 
 

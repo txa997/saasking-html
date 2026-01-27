@@ -368,6 +368,69 @@ function afterPreloader() {
 			});
 		}
 
+		document.querySelectorAll(".wa_split_4").forEach((atEl) => {
+			const atSplit3 = new SplitText(atEl, {
+				type: "words,chars",
+				wordsClass: "word",
+				charsClass: "char"
+			});
+
+			let atDuration = parseFloat(atEl.getAttribute("data-speed")) || 1;
+			let atDelay = parseFloat(atEl.getAttribute("data-delay")) || 0;
+
+			if (window.innerWidth <= 768) {
+				atDuration = atDuration * 0.3; 
+			}
+
+
+			gsap.set(atSplit3.words, {
+				opacity: 1,
+				yPercent: 100,
+			});
+
+
+			gsap.to(atSplit3.words, {
+				scrollTrigger: {
+					trigger: atEl,
+					start: "top 80%",
+				},
+				yPercent: 0,
+				opacity: 1,
+				duration: .3,
+				delay: atDelay,
+				ease: "power3.out",
+				stagger: 0.1,
+			});
+		});
+
+
+		const wa_bg_position = new SplitText(".wa_split_clr_1", { type: "lines" });
+		wa_bg_position.lines.forEach((target) => {
+			gsap.to(target, {
+				backgroundPositionX: 0,
+				duration: 3,
+				scrollTrigger: {
+					trigger: target,
+					scrub: false,
+					start: 'top 85%',
+					end: "bottom center"
+				}
+			});
+		});
+
+		const wa_bg_position2 = new SplitText(".wa_split_clr_2", { type: "lines" });
+		wa_bg_position2.lines.forEach((target) => {
+			gsap.to(target, {
+				backgroundPositionX: 0,
+				duration: 3,
+				scrollTrigger: {
+					trigger: target,
+					scrub: false,
+					start: 'top 85%',
+					end: "bottom center"
+				}
+			});
+		});
 	}	
 
 
@@ -386,6 +449,9 @@ function afterPreloader() {
 	skHero4tl2.from(".sk-hero-4-rainbow svg .svg-line-2", {  y: 60, rotateX: 79, opacity: 0, duration: .5, ease: "ease1", },"<40%");
 	skHero4tl2.from(".sk-hero-4-rainbow svg .svg-line-1", {  y: 80, rotateX: 79, opacity: 0, duration: .5, ease: "ease1", },"<40%");
 
+	// hero-7-tl
+	let skHero7tl = gsap.timeline();
+	skHero7tl.from(".sk-hero-7-img", { rotate: -80, duration: 1, ease: "ease1", });
 
 /* 
 	after-preloader-end
@@ -2295,8 +2361,23 @@ gsap.fromTo(".sk-footer-6-dot-svg ellipse , .sk-footer-6-dot-svg circle",
 );
 
 
+// hero-7-dot-1
+const skHeroDot1 = document.querySelectorAll('.sk-hero-7-bg-dot circle');
+	skHeroDot1.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); 
+});
 
-// features-1-svg-line
+
+// features-7-svg-line
 if($(".sk-features-7-item-2-logo-bg-line-1").length) {
 
 	gsap.to(".line-bar-1", {
@@ -2406,12 +2487,12 @@ if($(".sk-choose-7-scrollbar").length) {
 		})
 		.from('.skC7item_2_left', {
 			xPercent: -100,
-			duration: 1,
+			duration: 2,
 			ease: 'power2.out'
 		})
 		.from('.skC7item_2_right', {
 			xPercent: 100,
-			duration: 1,
+			duration: 2,
 			ease: 'power2.out'
 		},"<")
 		.to(skChooseScrollbar[1], {
@@ -2421,12 +2502,12 @@ if($(".sk-choose-7-scrollbar").length) {
 		})
 		.from('.skC7item_3_left', {
 			xPercent: -100,
-			duration: 1,
+			duration: 2,
 			ease: 'power2.out'
 		})
 		.from('.skC7item_3_right', {
 			xPercent: 100,
-			duration: 1,
+			duration: 2,
 			ease: 'power2.out'
 		},"<")
 		.to(skChooseScrollbar[2], {
@@ -2697,6 +2778,23 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 	}
 }
 
+
+// apps-7-dot
+const skApps7dot = document.querySelectorAll('.sk-apps-7-bg-dot-svg circle');
+	skApps7dot.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); 
+});
+
+
 // overview-7-animation
 if (window.matchMedia("(min-width: 1200px)").matches) { 
 	let overview7tl = gsap.timeline({
@@ -2744,6 +2842,35 @@ const skOverview7dot2 = document.querySelectorAll('.sk-overview-7-bg-dot-2 svg c
   	animatePath(); 
 });
 
+// cta-7-dot-1
+const skCta7dot1 = document.querySelectorAll('.sk-cta-7-bg-dot-1 svg ellipse');
+	skCta7dot1.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); 
+});
+
+// cta-7-dot-2
+const skCta7dot2 = document.querySelectorAll('.sk-cta-7-bg-dot-2 svg ellipse');
+	skCta7dot2.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); 
+});
 
 /* 
 	price-3-toggle-class
@@ -2822,7 +2949,7 @@ gsap.utils.toArray(".sk-price-3-card-ani .smoke").forEach((smoke, i) => {
 
 
 /* 
-	testimonial-1-slider-function
+	testimonial-7-slider-function
 */
 if ($('.sk_t7_slider').length) {
 	var sk_t7_slider = new Swiper(".sk_t7_slider", {

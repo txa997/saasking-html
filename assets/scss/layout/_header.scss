@@ -1179,6 +1179,8 @@
 
                         a {
                             transition: var(--sk-cube-1);
+                            font-weight: 400;
+                            font-size: 15px;
                         }
                         &::before {
                             display: none;

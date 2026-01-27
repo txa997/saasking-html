@@ -8,17 +8,54 @@
 
 .sk-home-2 {
     background-color: var(--sk-clr-white-1);
+
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--sk-clr-pr-2);
+        }
+    }
 }
 
 .sk-home-3 {
     background-color: #120101;
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--sk-clr-pr-3);
+        }
+    }
+}
+
+.sk-home-4 {
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--sk-clr-pr-4);
+        }
+    }
+}
+
+.sk-home-5 {
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--sk-clr-pr-5);
+        }
+    }
 }
 
 .sk-home-6 {
     background-color: var(--sk-clr-black-6);
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--sk-clr-pr-6);
+        }
+    }
 }
 .sk-home-7 {
     background-color: #F6F7F9;
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--sk-clr-pr-7);
+        }
+    }
 }
 
 /* 

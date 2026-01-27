@@ -542,7 +542,7 @@
         font-weight: 500;
         font-size: 68px;
         margin-bottom: 140px;
-
+        letter-spacing: -0.03em;
         @media #{$xxl} {
             font-size: 60px;
         }
@@ -576,10 +576,23 @@
             align-items: center;
             border-radius: 100px;
 
-            &:nth-child(2) {
+            &:is(.has-1) {
+                img {
+                    animation: swing 5s ease-in-out infinite;
+                    transform-origin: right bottom;
+                }
+            }
+
+            &:is(.has-2) {
                 background: #663CF6;
+
+                img {
+                    animation: swing 5s ease-in-out infinite;
+                    transform-origin: center bottom;
+                }
             }
         }
+
     }
     
     &-sec-title {
@@ -670,6 +683,11 @@
         .title {
             font-size: 24px;
             margin-bottom: 20px;
+            transition: var(--sk-cube-1);
+
+            &:hover {
+                color: var(--sk-clr-pr-7);
+            }
         }
 
         .dissc {
@@ -690,6 +708,11 @@
                 background: #FFFFFF;
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
                 border-radius: 5px;
+                transition: var(--sk-cube-1);
+
+                &:hover {
+                    transform: translateY(-4px);
+                }
             }
         }
 

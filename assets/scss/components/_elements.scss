@@ -80,3 +80,32 @@
         }
     }
 }
+
+
+.wa_split_4 {
+    overflow: hidden;
+}
+
+
+
+.wa_split_clr_1 {
+    div {
+        background-size: 200% 100%;
+        background-position-x: 100%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right,  rgb(0 7 4) 50%, rgba(104, 104, 104, 0.30) 50%);
+    }
+}
+
+.wa_split_clr_2 {
+    div {
+        background-size: 200% 100%;
+        background-position-x: 100%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right,  rgb(123 132 129) 50%, rgba(104, 104, 104, 0.20) 50%);
+    }
+}

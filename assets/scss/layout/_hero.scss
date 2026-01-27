@@ -1801,8 +1801,15 @@
             -webkit-text-fill-color: transparent;
             border-radius: 200px;
             padding: 10px 29px;
+            animation: skH7text2 5s linear infinite;
+        }
+
+        &-elm {
             position: relative;
             z-index: 1;
+            background: rgb(255 255 255 / 40%);
+            border-radius: 200px;
+            animation: skH7text 5s linear infinite;
 
             &::before {
                 content: "";
@@ -1818,7 +1825,8 @@
                 -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
                 mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
                 mask-composite: exclude;
-                transition: var(--sk-cube-1);
+                // animation: skH7text 5s linear infinite;
+                // animation-delay: 2.5s;
             }
         }
     }
@@ -1886,7 +1894,8 @@
     &-img {
         margin-left: auto;
         margin-right: 165px;
-
+        transform-origin: right bottom;
+        
         @media #{$xl,$lg,$md,$xs} {
             margin-right: 0px;
         }
@@ -1899,32 +1908,61 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: -3;
+            z-index: -2;
         }
         &-glow-2 {
             width: 52%;
             position: absolute;
             right: 0;
             top: 0;
-            z-index: -3;
+            z-index: -2;
         }
 
         &-gd-clr {
             position: absolute;
-            bottom: -380px;
+            bottom: 0;
             right: 0;
-            z-index: -4;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            text-align: right;
 
-            @media #{$xl,$lg,$md,$xs} {
-                width: 100%;
+            @media #{$md,$xs} {
+                display: flex;
+                align-items: center;
             }
+
+
+            img {
+                animation: chaos3D 45s ease-in-out infinite;
+                margin-top: -130px;
+                margin-right: -140px;
+
+                @media #{$xl} {
+                    margin-top: 0px;
+                }
+
+                @media #{$lg,$md,$xs} {
+                    margin-top: 0px;
+                    margin-right: 0px;
+                    animation: unset;
+                }
+            }
+
+
         }
 
+        &-line {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -3;
+        }
         &-dot {
             position: absolute;
             bottom: -60px;
             right: 70px;
-            z-index: -3;
+            z-index: -1;
 
             @media #{$xl,$lg,$md,$xs} {
                 width: 100%;
@@ -1934,6 +1972,174 @@
 
 
 }
+
+@keyframes skH7text {
+    0% {
+        transform: perspective(1200px) scale(1) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(1200px) scale(1.04) rotateY(28.1965deg);
+    }
+    100% {
+        transform: perspective(1200px) scale(1) rotateY(0deg);
+    }
+}
+
+@keyframes skH7text2 {
+    0% {
+        transform: perspective(1200px) scale(1) rotateX(0deg);
+    }
+    50% {
+        transform: perspective(1200px) scale(1.07) rotateX(25deg);
+    }
+    100% {
+        transform: perspective(1200px) scale(1) rotateX(0deg);
+    }
+}
+
+@keyframes chaos3D {
+    0% {
+      transform: translate3d(0,0,0) scale3d(1,1,1);
+    }
+  
+    5% {
+      transform: rotateX(7deg) rotateY(-14deg) rotateZ(12deg)
+        translate3d(15px, -16px, 17px)
+        scale3d(1.11, 0.84, 1.08)
+        skew(-3deg, -4deg);
+    }
+  
+    10% {
+      transform: rotateX(-5deg) rotateY(10deg) rotateZ(-8deg)
+        translate3d(-18px, 20px, -10px)
+        scale3d(0.95, 1.1, 1)
+        skew(2deg, -3deg);
+    }
+  
+    15% {
+      transform: rotateX(12deg) rotateY(-6deg) rotateZ(6deg)
+        translate3d(22px, -10px, 14px)
+        scale3d(1.08, 0.9, 1.12)
+        skew(-4deg, 1deg);
+    }
+  
+    20% {
+      transform: rotateX(-9deg) rotateY(14deg) rotateZ(-12deg)
+        translate3d(-25px, 18px, -16px)
+        scale3d(0.88, 1.15, 0.96)
+        skew(3deg, 4deg);
+    }
+  
+    25% {
+      transform: rotateX(4deg) rotateY(-10deg) rotateZ(14deg)
+        translate3d(18px, -22px, 8px)
+        scale3d(1.14, 0.86, 1.05)
+        skew(-2deg, -5deg);
+    }
+  
+    30% {
+      transform: rotateX(-14deg) rotateY(6deg) rotateZ(-6deg)
+        translate3d(-15px, 12px, 20px)
+        scale3d(0.92, 1.06, 1.1)
+        skew(5deg, -1deg);
+    }
+  
+    35% {
+      transform: rotateX(8deg) rotateY(-12deg) rotateZ(9deg)
+        translate3d(26px, -14px, -12px)
+        scale3d(1.1, 0.9, 0.98)
+        skew(-4deg, 2deg);
+    }
+  
+    40% {
+      transform: rotateX(-6deg) rotateY(15deg) rotateZ(-15deg)
+        translate3d(-28px, 24px, 6px)
+        scale3d(0.85, 1.18, 1.02)
+        skew(4deg, 5deg);
+    }
+  
+    45% {
+      transform: rotateX(10deg) rotateY(-5deg) rotateZ(18deg)
+        translate3d(20px, -26px, 16px)
+        scale3d(1.16, 0.82, 1.09)
+        skew(-5deg, -2deg);
+    }
+  
+    50% {
+      transform: rotateX(-12deg) rotateY(12deg) rotateZ(-10deg)
+        translate3d(-22px, 10px, -20px)
+        scale3d(0.9, 1.12, 0.94)
+        skew(3deg, -4deg);
+    }
+  
+    55% {
+      transform: rotateX(6deg) rotateY(-16deg) rotateZ(8deg)
+        translate3d(30px, -18px, 12px)
+        scale3d(1.12, 0.88, 1.06)
+        skew(-3deg, 3deg);
+    }
+  
+    60% {
+      transform: rotateX(-10deg) rotateY(8deg) rotateZ(-18deg)
+        translate3d(-26px, 28px, -14px)
+        scale3d(0.86, 1.2, 1)
+        skew(6deg, 2deg);
+    }
+  
+    65% {
+      transform: rotateX(14deg) rotateY(-4deg) rotateZ(12deg)
+        translate3d(24px, -12px, 22px)
+        scale3d(1.08, 0.92, 1.14)
+        skew(-2deg, -6deg);
+    }
+  
+    70% {
+      transform: rotateX(-7deg) rotateY(18deg) rotateZ(-6deg)
+        translate3d(-20px, 16px, -24px)
+        scale3d(0.93, 1.1, 0.9)
+        skew(5deg, 4deg);
+    }
+  
+    75% {
+      transform: rotateX(9deg) rotateY(-14deg) rotateZ(16deg)
+        translate3d(28px, -30px, 10px)
+        scale3d(1.18, 0.84, 1.03)
+        skew(-6deg, -1deg);
+    }
+  
+    80% {
+      transform: rotateX(-15deg) rotateY(6deg) rotateZ(-12deg)
+        translate3d(-32px, 26px, 18px)
+        scale3d(0.82, 1.22, 1.08)
+        skew(4deg, 6deg);
+    }
+  
+    85% {
+      transform: rotateX(11deg) rotateY(-18deg) rotateZ(10deg)
+        translate3d(22px, -18px, -16px)
+        scale3d(1.1, 0.9, 0.96)
+        skew(-3deg, 2deg);
+    }
+  
+    90% {
+      transform: rotateX(-8deg) rotateY(10deg) rotateZ(-20deg)
+        translate3d(-24px, 14px, 26px)
+        scale3d(0.94, 1.14, 1.16)
+        skew(6deg, -3deg);
+    }
+  
+    95% {
+      transform: rotateX(16deg) rotateY(-6deg) rotateZ(14deg)
+        translate3d(18px, -28px, -22px)
+        scale3d(1.2, 0.8, 0.92)
+        skew(-5deg, 5deg);
+    }
+  
+    100% {
+      transform: translate3d(0,0,0) scale3d(1,1,1);
+    }
+  }
+  
 /* 
     hero-7-end
 */

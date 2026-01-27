@@ -574,6 +574,14 @@
             gap: 20px 60px;
             flex-wrap: wrap;
         }
+
+        .single-logo {
+            &:hover {
+                img {
+                    animation: zoomInUp2 .5s;
+                }
+            }
+        }
     }
 
     &-content {
