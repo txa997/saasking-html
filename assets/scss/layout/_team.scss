@@ -1,0 +1,179 @@
+/* 
+    team-1-start
+*/
+.sk-team-1 {
+    &-sec-title {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+    
+        .left {
+            max-width: 550px;
+        }
+        
+        .right {
+            max-width: 420px;
+        }
+    
+        .sec-disc {
+            margin-bottom: 32px;
+        }
+    }
+
+
+    &-wrap {
+        border-radius: 32px;
+        background-color: #fff;
+        padding: 16px 16px;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @media #{$xl,$lg} {
+            padding: 6px;
+        }
+
+        @media #{$md} {
+            padding: 6px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            padding: 6px;
+            grid-template-columns: 1fr ;
+        }
+
+        @media #{$sm} {
+            padding: 6px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    &-member {
+        border-radius: 26px;
+        background-color: #F6F7F9;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        z-index: 1;
+
+        .img-elm {
+            height: 288px;
+            border-radius: 24px;
+            margin-bottom: 10px;
+
+            @media #{$xs} {
+                height: auto;
+            }
+
+            @media #{$sm} {
+                height: 288px;
+            }
+        }
+
+        .content-border {
+            background: var(--sk-clr-gd-8);
+            border-radius: 24px;
+            padding-bottom: 0px;
+            transition: var(--sk-cube-1);
+        }
+
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 22px;
+            gap: 4px;
+            padding: 10px 15px;
+        }
+
+
+        .name {
+            font-size: 18px;
+            font-weight: 500;
+            transition: var(--sk-cube-1);
+
+            &:hover {
+                color: var(--sk-clr-pr-1);
+            }
+        }
+
+
+        .social-link {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 239px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: var(--sk-cube-1);
+
+            .link-elm {
+                width: 40px;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.4);
+                border: 1px solid rgba(239, 240, 239, 0.7);
+                border-radius: 1000px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 1;
+                font-size: 18px;
+                color: var(--sk-clr-black-6);
+                transition: var(--sk-cube-1);
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background: var(--sk-clr-gd-8);
+                    box-shadow: inset 0px 0px 8px #FFFFFF;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    opacity: 0;
+                    transition: var(--sk-cube-1);
+                }
+
+                &:hover {
+                    color: #fff;
+                    border-color: transparent;
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        
+
+        &:hover {
+            .content-border {
+                padding-bottom: 2px;
+            }
+
+            .social-link {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+    }
+    
+
+    
+
+    
+
+    
+}
+
+/* 
+    team-1-end
+*/

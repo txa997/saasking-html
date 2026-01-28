@@ -964,3 +964,14 @@
 /* 
     faqs-7-end
 */
+/* 
+    faqs-8-start
+*/
+.sk-faqs-8-area {
+    .sk-faqs-5-accordion .sk-accordion-1-item .item-title:is(:not(.collapsed)) .icon {
+        background: var(--sk-clr-gd-8);
+    }
+}
+/* 
+    faqs-8-end
+*/

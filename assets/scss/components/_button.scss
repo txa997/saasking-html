@@ -1405,6 +1405,18 @@
             color: #fff;
         }
     }
+
+
+    &:is(.has-v2) {
+        padding: 15px 32px;
+
+
+        &::before {
+            background: var(--sk-clr-gd-8);
+            z-index: -1;
+            box-shadow: inset 0px 0px 8px #FFFFFF;
+        }
+    }
 }
 
 

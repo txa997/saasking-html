@@ -2872,6 +2872,108 @@ const skCta7dot2 = document.querySelectorAll('.sk-cta-7-bg-dot-2 svg ellipse');
   	animatePath(); 
 });
 
+
+// breadcrumb-svg
+if($(".sk-breadcrumb-shape").length) {
+
+	gsap.to(".b-svg-line-1", {
+		duration: 5,
+		repeat: -1,
+		motionPath: {
+			path: ".b-svg-path-1",
+			align: ".b-svg-path-1",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+	gsap.to(".b-svg-line-2", {
+		duration: 5,
+		repeat: -1,
+		delay: 1,
+		motionPath: {
+			path: ".b-svg-path-2",
+			align: ".b-svg-path-2",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+	gsap.to(".b-svg-line-3", {
+		duration: 5,
+		repeat: -1,
+		delay: 1.5,
+		motionPath: {
+			path: ".b-svg-path-3",
+			align: ".b-svg-path-3",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+	gsap.to(".b-svg-line-4", {
+		duration: 5,
+		repeat: -1,
+		delay: .5,
+		motionPath: {
+			path: ".b-svg-path-4",
+			align: ".b-svg-path-4",
+			autoRotate: true,
+			alignOrigin: [0.5, 0.5],
+			start: 0,
+			end: 1,
+		},
+	});
+
+	gsap.fromTo(".sk-breadcrumb-dot-shape-1 ellipse",
+		{
+			x: 50,
+			opacity: 0
+		},
+		{
+			x: -200,
+			opacity: 0,
+			duration: 7,
+			ease: "power1.inOut",
+			stagger: {
+				each: 0.09,
+				repeat: -1
+			},
+			keyframes: [
+				{ opacity: 1, duration: 1 },
+				{ opacity: 0, duration: 1 }
+			]
+		}
+	);
+
+	gsap.fromTo(".sk-breadcrumb-dot-shape-2 ellipse",
+		{
+			x: 50,
+			opacity: 0
+		},
+		{
+			x: -200,
+			opacity: 0,
+			duration: 7,
+			ease: "power1.inOut",
+			stagger: {
+				each: 0.09,
+				repeat: -1
+			},
+			keyframes: [
+				{ opacity: 1, duration: 1 },
+				{ opacity: 0, duration: 1 }
+			]
+		}
+	);
+}
+
 /* 
 	price-3-toggle-class
 */
@@ -2977,6 +3079,24 @@ setTimeout(() => {
 	
 	}
 }, 2000);
+
+
+// choose-8-slider-function
+if ($('.sk_c8_slider').length) {
+	var sk_c8_slider = new Swiper(".sk_c8_slider", {
+		loop: true,
+		speed: 600,
+		autoplay: {
+			delay: 4000,
+		},
+
+		pagination: {
+			el: '.sk_c8_slider_pagi',
+			clickable: true, 
+		},
+	});
+
+}
 
 
 /* 

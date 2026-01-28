@@ -595,3 +595,32 @@
 /* 
     partner-7-end
 */
+
+
+/* 
+    partner-8-start
+*/
+.sk-partner-8-area {
+    .sk-partner-5 {
+        &-wrap {
+            &::after {
+                background: linear-gradient(90deg, #f6f7f9 0%, rgba(11, 11, 44, 0) 100%);
+            }
+            &::before {
+                background: linear-gradient(-90deg, #f6f7f9 0%, rgba(11, 11, 44, 0) 100%);
+            }
+        }
+
+        &-title {
+            color: var(--sk-clr-black-6);
+            span {
+                color: var(--sk-clr-pr-1);
+                border-color: var(--sk-clr-pr-1);
+            }
+        }
+    }
+}
+
+/* 
+    partner-8-end
+*/
