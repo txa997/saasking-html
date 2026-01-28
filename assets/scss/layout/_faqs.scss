@@ -925,9 +925,6 @@
                         color: var(--sk-clr-black-6);
                     }
 
-
-                    
-
                     &:is(:not(.collapsed)) {
                         color: var(--sk-clr-black-6);
                         .icon {
@@ -941,7 +938,7 @@
         
                     &:is(.collapsed) {
                         &:hover {
-                            color: var(--sk-clr-pr-7);
+                            color: var(--sk-clr-black-6);
                         }
                     }
                 }
@@ -956,7 +953,9 @@
         .sk-faqs-5-content {
             .btn-elm {
                 .sk-pr-btn-13 {
-                    background: var(--sk-clr-black-6);
+                    &::before {
+                        background: #000;
+                    }
                 }
             }
         }

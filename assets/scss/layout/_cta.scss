@@ -721,8 +721,10 @@
 
             .sk-pr-btn-13 {
                 &:not(.has-border) {
-                    background: #fff;
                     color: #000;
+                    &::before {
+                        background: #fff;
+                    }
 
                     .icon {
                         background-color: #000;
@@ -734,7 +736,6 @@
                     }
                 }
                 &:is(.has-border) {
-                
                     color: #fff;
 
                     .icon {

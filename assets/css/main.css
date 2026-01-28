@@ -2900,7 +2900,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 120px;
   padding: 7px 8px;
   padding-left: 20px;
-  background: var(--sk-clr-gd-7);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -2961,14 +2960,29 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 120px;
   opacity: 0;
 }
+.sk-pr-btn-13::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--sk-clr-gd-7);
+  z-index: -1;
+  transition: var(--sk-cube-1);
+  border-radius: 120px;
+  transition: opacity 1s;
+}
 .sk-pr-btn-13:hover {
   color: #fff;
-  background-color: var(--sk-clr-pr-5);
 }
 .sk-pr-btn-13:hover::after {
   transform: translateY(0);
   opacity: 1;
   filter: blur(0px);
+}
+.sk-pr-btn-13:hover::before {
+  opacity: 0;
 }
 .sk-pr-btn-13:hover .text::after {
   opacity: 1;
@@ -2989,6 +3003,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-pr-btn-13:is(.has-border) .icon {
   background-color: var(--sk-clr-black-6);
   color: #fff;
+}
+.sk-pr-btn-13:is(.has-border)::before {
+  opacity: 0;
 }
 .sk-pr-btn-13:is(.has-border):hover {
   color: #fff;
@@ -7910,6 +7927,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sk-hero-7-title-wrap .row-1 > .sk-hero-7-title {
   font-weight: 500;
+  opacity: 80%;
 }
 .sk-hero-7-title-wrap .row-2 {
   display: flex;
@@ -14417,6 +14435,13 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sk-price-7-card .price-btn::after {
   border-radius: 12px;
 }
+.sk-price-7-card .price-btn::before {
+  opacity: 0;
+  border-radius: 12px;
+}
+.sk-price-7-card .price-btn:hover {
+  border-color: transparent;
+}
 .sk-price-7-card .price-note {
   text-align: center;
   font-size: 15px;
@@ -14471,8 +14496,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   opacity: 1;
 }
 .sk-price-7-card:hover .price-btn {
-  background: var(--sk-clr-gd-7);
   color: #fff;
+}
+.sk-price-7-card:hover .price-btn::before {
+  opacity: 1;
 }
 .sk-price-7-card:hover .features-list li i {
   color: #6D40F3;
@@ -17871,14 +17898,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: rotate(45deg);
 }
 .sk-faqs-7-area .sk-accordion-1-item .item-title:is(.collapsed):hover {
-  color: var(--sk-clr-pr-7);
+  color: var(--sk-clr-black-6);
 }
 .sk-faqs-7-area .sk-accordion-1-item:is(.active) {
   border-radius: 12px;
   background: linear-gradient(90deg, rgba(102, 60, 246, 0.05) 0%, rgba(124, 72, 235, 0.05) 22.98%, rgba(223, 124, 181, 0.05) 52.95%, rgba(255, 151, 116, 0.05) 79.3%, rgba(254, 232, 156, 0.05) 100%);
 }
-.sk-faqs-7-area .sk-faqs-5-content .btn-elm .sk-pr-btn-13 {
-  background: var(--sk-clr-black-6);
+.sk-faqs-7-area .sk-faqs-5-content .btn-elm .sk-pr-btn-13::before {
+  background: #000;
 }
 
 /* 
@@ -18496,8 +18523,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   justify-content: center;
 }
 .sk-cta-7-content .btn-wrap .sk-pr-btn-13:not(.has-border) {
-  background: #fff;
   color: #000;
+}
+.sk-cta-7-content .btn-wrap .sk-pr-btn-13:not(.has-border)::before {
+  background: #fff;
 }
 .sk-cta-7-content .btn-wrap .sk-pr-btn-13:not(.has-border) .icon {
   background-color: #000;
@@ -19757,8 +19786,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   justify-content: center;
   margin-bottom: 60px;
 }
-.sk-apps-7-content .btn-elm .sk-pr-btn-13 {
-  background: var(--sk-clr-black-6);
+.sk-apps-7-content .btn-elm .sk-pr-btn-13::before {
+  background: #000;
 }
 .sk-apps-7-sec-title {
   margin-bottom: 236px;

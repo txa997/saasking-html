@@ -2961,6 +2961,15 @@
             &::after {
                 border-radius: 12px;
             }
+
+            &::before {
+                opacity: 0;
+                border-radius: 12px;
+            }
+
+            &:hover {
+                border-color: transparent;
+            }
         }
 
 
@@ -3030,8 +3039,10 @@
                 opacity: 1;
             }
             .price-btn {
-                background: var(--sk-clr-gd-7);
                 color: #fff;
+                &::before {
+                    opacity: 1;
+                }
             }
 
             .features-list {
