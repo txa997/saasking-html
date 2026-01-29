@@ -918,3 +918,33 @@
 /* 
     choose-9-end
 */
+/* 
+    choose-10-start
+*/
+.sk-choose-10-wrap {
+    display: grid;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 24px;
+    background-color: #fff;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media #{$md} {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media #{$xs} {
+        grid-template-columns: 1fr ;
+    }
+
+    @media #{$sm} {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sk-choose-8-card {
+        min-height: 300px;
+    }
+}
+/* 
+    choose-10-end
+*/

@@ -69,3 +69,21 @@
 /* 
     gallery-1-end
 */
+
+/* 
+    gallery-2-start
+*/
+.sk-gallery-2 {
+    &-sec-title  {
+        max-width: 610px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sec-disc {
+            margin-top: 16px;
+        }
+    }
+}
+/* 
+    gallery-2-end
+*/
