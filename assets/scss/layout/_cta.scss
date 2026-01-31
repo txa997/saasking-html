@@ -767,3 +767,88 @@
     cta-7-end
 */
 
+/* 
+    contact-7-start
+*/
+.sk-contact-7-area {
+    .sk-contact-6-info-single {
+        background-color: #fff;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .sk-contact-6-form {
+        background-color: #fff;
+
+        &-label {
+            color: var(--sk-clr-black-6);
+        }
+        &-input {
+            background-color: #F6F7F9;
+            color: #909393;
+        }
+
+        .sk-contact-7-form-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+/* 
+    contact-7-end
+*/
+
+/* 
+    contact-8-start
+*/
+.sk-contact-8 {
+    background-color: #fff;
+    border-radius: 40px;
+    margin-top: 32px;
+    padding: 40px 40px;
+
+    @media #{$xl,$lg,$md,$xs} {
+        padding: 40px 20px;
+    }
+
+    &-title {
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 48px;
+    }
+
+
+    .sk-contact-6-form {
+        padding: 0;
+
+        &-label {
+            color: var(--sk-clr-black-6);
+        }
+        &-input {
+            border-radius: 12px;
+            background-color: #F6F7F9;
+            color: #909393;
+        }
+
+        .sk-contact-7-form-btn {
+            width: 100%;
+            justify-content: center;
+            border-radius: 12px;
+
+            &::after {
+                border-radius: 12px;
+            }
+
+            &::before {
+                border-radius: 12px;
+            }
+        }
+    }
+}
+
+/* 
+    contact-8-end
+*/
+

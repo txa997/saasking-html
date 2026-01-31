@@ -1482,6 +1482,10 @@
         .text {
             // animation: shakeX2 1s;
         }
+
+        &::after {
+            opacity: 0;
+        }
     }
 }
 

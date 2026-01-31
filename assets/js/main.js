@@ -3100,6 +3100,24 @@ if ($('.sk_c8_slider').length) {
 
 
 /* 
+	progress-animation
+*/
+const wa_progress_ani = document.querySelectorAll('.wa_progress_ani');
+wa_progress_ani.forEach((elm) => {
+	gsap.from(elm, {
+		width: "0",
+		duration: 2,
+		ease: "power1.inOut",
+
+		scrollTrigger: {
+			trigger: elm,
+			start: "top 90%",   
+			toggleActions: "play none none reverse",
+		}
+	});
+});
+
+/* 
     marquee-right
 */
 
