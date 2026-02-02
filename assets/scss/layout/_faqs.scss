@@ -975,3 +975,78 @@
 /* 
     faqs-8-end
 */
+/* 
+    faqs-9-start
+*/
+.sk-faqs-9 {
+    &-wrap {
+        max-width: 1076px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        .sk-portfolio-5-tabs-btn {
+            display: inline-flex;
+
+            .nav-link {
+                .icon {
+                    &::after {
+                        background: linear-gradient(92.62deg, #EA9354 0.03%, #8D40D7 54.05%, #863AEB 99.97%);
+                        box-shadow: inset 0px 0px 8px #FFFFFF;
+                        width: 100%;
+                        height: 100%;
+                        filter: blur(0px);
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0%;
+                        top: 0%;
+                        transform: unset;
+                    }
+
+                    &:is(.has-stroke) {
+                        svg *{
+                            stroke: transparent;
+                            fill: var(--sk-clr-black-6);
+                        }
+        
+                    }
+                }
+
+                &:hover {
+                    .icon {
+                        &:is(.has-stroke) {
+                            svg *{
+                                stroke: transparent;
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+                &:is(.active) {
+                    .icon {
+
+                        background: transparent;
+
+                        &:is(.has-stroke) {
+                            svg *{
+                                stroke: transparent;
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .sk-faqs-5-accordion .sk-accordion-1-item .item-title:is(:not(.collapsed)) .icon {
+            background: var(--sk-clr-gd-8);
+        }
+    }
+}
+/* 
+    faqs-9-end
+*/
+/* 
+    faqs-9-end
+*/
