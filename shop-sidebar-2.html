@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Saasking - Shop Page</title>
+        <title>Saasking - Shop Left Sidebar Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -477,747 +477,900 @@
                         </div>
                     </div>
 
-                    <div class="sk-shop-1-grid grid-view">
+                    <div class="sk-shop-1-wrap has-left-sidebar">
+                        <div class="sk-shop-1-sidebar">
 
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Urban Baby Stroller</a>
-                                </h4>
+                            <!-- single-widget -->
+                            <div class="sk-sidebar-widget">
+                                <h4 class="sk-h-7 sk-sidebar-widget-title">Search</h4>
 
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
+                                <div class="sk-sidebar-widget-search">
+                                    <form action="" class="sk-sidebar-widget-search-form">
+                                        <input type="text" class="form-input" placeholder="Search">
+                                        <button type="submit" class="form-btn">
+                                            <i class="ph ph-magnifying-glass"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-1.png" alt="">
+                            <!-- single-widget -->
+                            <div class="sk-sidebar-widget">
+                                <h4 class="sk-h-7 sk-sidebar-widget-title">Category</h4>
+                                
+                                <ul>
+                                    <li>
+                                        <a href="#" aria-label="name">
+                                            Dresses
+                                            <span>(02)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="name">
+                                            T-shirts
+                                            <span>(07)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="name">
+                                            Bags
+                                            <span>(05)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="name">
+                                            Jackets
+                                            <span>(01)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="name">
+                                            Jumpers
+                                            <span>(03)</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $230.50
-                                    </span>
-                                    <del class="old-price">
-                                        $330.50
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Best Seller</p>
+                            <!-- single-widget -->
+                            <div class="sk-sidebar-widget">
+                                <h4 class="sk-h-7 sk-sidebar-widget-title">Filter by Price</h4>
+                                
+                                <div class="sk-sidebar-price-filter">
+
+                                    <div class="range-slider" id="rangeSlider">
+                                        <div class="slider-track"></div>
+                                        <div class="slider-range" id="sliderRange"></div>
+                                
+                                        <input type="range" min="0" max="1000" value="120" id="minRange">
+                                        <input type="range" min="0" max="1000" value="400" id="maxRange">
+                                    </div>
+                                
+                                    <div class="price-row">
+                                        <h3 class="price-text sk-h-7">
+                                            Price : $<span id="minPrice">120</span> - $<span id="maxPrice">400</span>
+                                        </h3>
+                                
+                                        <button class="filter-btn sk-p-7">Filter</button>
+                                    </div>
+                                </div>
+                                
                             </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
 
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Best Seller</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Urban Baby Stroller</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $230.50
-                                    </span>
-                                    <del class="old-price">
-                                        $330.50
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
+                            <!-- single-widget -->
+                            <div class="sk-sidebar-widget">
+                                <h4 class="sk-h-7 sk-sidebar-widget-title">Popular Items</h4>
+                                <div class="sk-sidebar-product">
 
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Striped Knit Sweater</a>
-                                </h4>
+                                    <!-- single-item -->
+                                    <div class="sk-sidebar-product-single">
+                                        <div class="img-elm">
+                                            <img src="assets/img/shop/p1-img-1.png" alt="">
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h5 class="sk-h-7 title">
+                                                <a href="#" aria-label="name">Explorer Travel Backpack</a>
+                                            </h5>
+                                            <h6 class="sk-h-7 item-price">
+                                                <span class="current-price">$82.00</span>
+                                                <del class="old-price">$105.00</del>
+                                            </h6>
+                                        </div>
+                                    </div>
 
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
+                                    <!-- single-item -->
+                                    <div class="sk-sidebar-product-single">
+                                        <div class="img-elm">
+                                            <img src="assets/img/shop/p1-img-2.png" alt="">
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h5 class="sk-h-7 title">
+                                                <a href="#" aria-label="name">Urban Baby Stroller</a>
+                                            </h5>
+                                            <h6 class="sk-h-7 item-price">
+                                                <span class="current-price">$199.00</span>
+                                                <del class="old-price">$249.00</del>
+                                            </h6>
+                                        </div>
+                                    </div>
+
+                                    <!-- single-item -->
+                                    <div class="sk-sidebar-product-single">
+                                        <div class="img-elm">
+                                            <img src="assets/img/shop/p1-img-3.png" alt="">
+                                        </div>
+                                        <div class="content-wrap">
+                                            <h5 class="sk-h-7 title">
+                                                <a href="#" aria-label="name">Urban Baby Stroller</a>
+                                            </h5>
+                                            <h6 class="sk-h-7 item-price">
+                                                <span class="current-price">$189.00</span>
+                                                <del class="old-price">$229.00</del>
+                                            </h6>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-2.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $54.00
-                                    </span>
-                                    <del class="old-price">
-                                        $70.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Popular</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Popular</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Striped Knit Sweater</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $54.00
-                                    </span>
-                                    <del class="old-price">
-                                        $70.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
+                            <!-- single-widget -->
+                            <div class="sk-sidebar-widget">
+                                <h4 class="sk-h-7 sk-sidebar-widget-title">Popular Tag</h4>
+                                
+                                <div class="sk-sidebar-tags">
+                                    <a href="#" aria-label="name" class="single-tag sk-h-7">#Innovation</a>
+                                    <a href="#" aria-label="name" class="single-tag sk-h-7">#UI Design</a>
+                                    <a href="#" aria-label="name" class="single-tag sk-h-7">#Trends</a>
+                                    <a href="#" aria-label="name" class="single-tag sk-h-7">#Guides</a>
+                                    <a href="#" aria-label="name" class="single-tag sk-h-7">#Resources</a>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Explorer Travel Backpack</a>
-                                </h4>
+                        <div class="sk-shop-1-wrap-left">
+                            <div class="sk-shop-1-grid grid-view">
 
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Urban Baby Stroller</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-1.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $230.50
+                                            </span>
+                                            <del class="old-price">
+                                                $330.50
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Best Seller</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
                                     </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Best Seller</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Urban Baby Stroller</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $230.50
+                                            </span>
+                                            <del class="old-price">
+                                                $330.50
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Striped Knit Sweater</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-2.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $54.00
+                                            </span>
+                                            <del class="old-price">
+                                                $70.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Popular</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
                                     </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Popular</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Striped Knit Sweater</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $54.00
+                                            </span>
+                                            <del class="old-price">
+                                                $70.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Explorer Travel Backpack</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-3.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $79.00
+                                            </span>
+                                            <del class="old-price">
+                                                $99.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Trending</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Trending</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Explorer Travel Backpack</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $79.00
+                                            </span>
+                                            <del class="old-price">
+                                                $99.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Classic College Sweatshirt</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-4.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $42.00
+                                            </span>
+                                            <del class="old-price">
+                                                $59.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Limited Stock</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Limited Stock</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Classic College Sweatshirt</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $42.00
+                                            </span>
+                                            <del class="old-price">
+                                                $59.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Minimal Button Knit Top</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-5.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $46.00
+                                            </span>
+                                            <del class="old-price">
+                                                $60.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">New Arrival</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">New Arrival</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Minimal Button Knit Top</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $46.00
+                                            </span>
+                                            <del class="old-price">
+                                                $60.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Vintage Zip Bomber Jacket</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-6.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $88.00
+                                            </span>
+                                            <del class="old-price">
+                                                $120.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Hot Deal</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Hot Deal</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Vintage Zip Bomber Jacket</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $88.00
+                                            </span>
+                                            <del class="old-price">
+                                                $120.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Casual Denim Jacket</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-7.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $49.00
+                                            </span>
+                                            <del class="old-price">
+                                                $65.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Editor’s Pick</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Editor’s Pick</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Casual Denim Jacket</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $49.00
+                                            </span>
+                                            <del class="old-price">
+                                                $65.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Midland Graphic Sweatshirt</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-8.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $58.00
+                                            </span>
+                                            <del class="old-price">
+                                                $78.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Premium</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Premium</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Midland Graphic Sweatshirt</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $58.00
+                                            </span>
+                                            <del class="old-price">
+                                                $78.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Soft Knit Polo Sweater</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-9.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $58.00
+                                            </span>
+                                            <del class="old-price">
+                                                $78.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Premium</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Premium</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Soft Knit Polo Sweater</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $58.00
+                                            </span>
+                                            <del class="old-price">
+                                                $78.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Urban Baby Stroller</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-10.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $199.00
+                                            </span>
+                                            <del class="old-price">
+                                                $249.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">New</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">New</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Urban Baby Stroller</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $199.00
+                                            </span>
+                                            <del class="old-price">
+                                                $249.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Classic Striped Rugby Shirt</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-11.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $52.00
+                                            </span>
+                                            <del class="old-price">
+                                                $68.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Best Seller</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Best Seller</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Classic Striped Rugby Shirt</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $52.00
+                                            </span>
+                                            <del class="old-price">
+                                                $68.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- single-product -->
+                                <div class="sk-shop-1-item" >
+                                    <div class="title-x-link">
+                                        <h4 class="title sk-h-7 grid-view">
+                                            <a href="#" aria-label="name">Explorer Travel Backpack</a>
+                                        </h4>
+
+                                        <div class="item-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-arrows-in-simple"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-eye"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="ph ph-heart-straight"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-img">
+                                        <img src="assets/img/shop/p1-img-12.png" alt="">
+                                    </div>
+
+                                    <div class="price-x-label grid-view">
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $82.00
+                                            </span>
+                                            <del class="old-price">
+                                                $105.00
+                                            </del>
+                                        </h5>
+                                        <p class="sk-p-7 item-label">Eco Choice</p>
+                                    </div>
+                                    <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                        Add To Cart
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </a>
+
+                                    <div class="list-view">
+                                        <p class="sk-p-7 item-label">Eco Choice</p>
+                                        <h4 class="title sk-h-7">
+                                            <a href="#" aria-label="name">Explorer Travel Backpack</a>
+                                        </h4>
+                                        <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                        <h5 class="sk-h-7 price-wrap">
+                                            <span class="current-price">
+                                                $82.00
+                                            </span>
+                                            <del class="old-price">
+                                                $105.00
+                                            </del>
+                                        </h5>
+                                        <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                            Add To Cart
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="text-center mt-60">
+                                <div class="sk-pagination-1">
+                                    <a class="link-elm has-btn" href="#" aria-label="name">
+                                        <i class="ph ph-caret-double-left"></i>
+                                    </a>
+                                    <a class="link-elm" href="#" aria-label="name">
+                                        1
+                                    </a>
+                                    <a class="link-elm" href="#" aria-label="name">
+                                        2
+                                    </a>
+                                    <a class="link-elm" href="#" aria-label="name">
+                                        3
+                                    </a>
+                                    <a class="link-elm has-btn" href="#" aria-label="name">
+                                        <i class="ph ph-caret-double-right"></i>
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-3.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $79.00
-                                    </span>
-                                    <del class="old-price">
-                                        $99.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Trending</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Trending</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Explorer Travel Backpack</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $79.00
-                                    </span>
-                                    <del class="old-price">
-                                        $99.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Classic College Sweatshirt</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-4.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $42.00
-                                    </span>
-                                    <del class="old-price">
-                                        $59.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Limited Stock</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Limited Stock</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Classic College Sweatshirt</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $42.00
-                                    </span>
-                                    <del class="old-price">
-                                        $59.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Minimal Button Knit Top</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-5.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $46.00
-                                    </span>
-                                    <del class="old-price">
-                                        $60.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">New Arrival</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">New Arrival</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Minimal Button Knit Top</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $46.00
-                                    </span>
-                                    <del class="old-price">
-                                        $60.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Vintage Zip Bomber Jacket</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-6.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $88.00
-                                    </span>
-                                    <del class="old-price">
-                                        $120.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Hot Deal</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Hot Deal</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Vintage Zip Bomber Jacket</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $88.00
-                                    </span>
-                                    <del class="old-price">
-                                        $120.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Casual Denim Jacket</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-7.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $49.00
-                                    </span>
-                                    <del class="old-price">
-                                        $65.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Editor’s Pick</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Editor’s Pick</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Casual Denim Jacket</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $49.00
-                                    </span>
-                                    <del class="old-price">
-                                        $65.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Midland Graphic Sweatshirt</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-8.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $58.00
-                                    </span>
-                                    <del class="old-price">
-                                        $78.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Premium</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Premium</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Midland Graphic Sweatshirt</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $58.00
-                                    </span>
-                                    <del class="old-price">
-                                        $78.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Soft Knit Polo Sweater</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-9.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $58.00
-                                    </span>
-                                    <del class="old-price">
-                                        $78.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Premium</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Premium</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Soft Knit Polo Sweater</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $58.00
-                                    </span>
-                                    <del class="old-price">
-                                        $78.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Urban Baby Stroller</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-10.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $199.00
-                                    </span>
-                                    <del class="old-price">
-                                        $249.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">New</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">New</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Urban Baby Stroller</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $199.00
-                                    </span>
-                                    <del class="old-price">
-                                        $249.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Classic Striped Rugby Shirt</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-11.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $52.00
-                                    </span>
-                                    <del class="old-price">
-                                        $68.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Best Seller</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Best Seller</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Classic Striped Rugby Shirt</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $52.00
-                                    </span>
-                                    <del class="old-price">
-                                        $68.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-product -->
-                        <div class="sk-shop-1-item" >
-                            <div class="title-x-link">
-                                <h4 class="title sk-h-7 grid-view">
-                                    <a href="#" aria-label="name">Explorer Travel Backpack</a>
-                                </h4>
-
-                                <div class="item-link">
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-arrows-in-simple"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-eye"></i>
-                                    </a>
-                                    <a href="#" aria-label="name" class="link-elm">
-                                        <i class="ph ph-heart-straight"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="item-img">
-                                <img src="assets/img/shop/p1-img-12.png" alt="">
-                            </div>
-
-                            <div class="price-x-label grid-view">
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $82.00
-                                    </span>
-                                    <del class="old-price">
-                                        $105.00
-                                    </del>
-                                </h5>
-                                <p class="sk-p-7 item-label">Eco Choice</p>
-                            </div>
-                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
-                                Add To Cart
-                                <i class="ph ph-shopping-cart"></i>
-                            </a>
-
-                            <div class="list-view">
-                                <p class="sk-p-7 item-label">Eco Choice</p>
-                                <h4 class="title sk-h-7">
-                                    <a href="#" aria-label="name">Explorer Travel Backpack</a>
-                                </h4>
-                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
-                                <h5 class="sk-h-7 price-wrap">
-                                    <span class="current-price">
-                                        $82.00
-                                    </span>
-                                    <del class="old-price">
-                                        $105.00
-                                    </del>
-                                </h5>
-                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
-                                    Add To Cart
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="text-center mt-60">
-                        <div class="sk-pagination-1">
-                            <a class="link-elm has-btn" href="#" aria-label="name">
-                                <i class="ph ph-caret-double-left"></i>
-                            </a>
-                            <a class="link-elm" href="#" aria-label="name">
-                                1
-                            </a>
-                            <a class="link-elm" href="#" aria-label="name">
-                                2
-                            </a>
-                            <a class="link-elm" href="#" aria-label="name">
-                                3
-                            </a>
-                            <a class="link-elm has-btn" href="#" aria-label="name">
-                                <i class="ph ph-caret-double-right"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
