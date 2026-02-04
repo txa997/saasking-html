@@ -430,12 +430,13 @@
                     <!-- section-title -->
                     <h3 class="sk-product-details-sec-title text-center sk-h-7">Product Details</h3>
 
-                    <div class="sk-product-details-wrap">
+                    <div class="sk-product-details-wrap mb-70">
                         <!-- left -->
                         <div class="sk-product-details-wrap-left wa-fix">
                             <!-- preview -->
                             <div class="sk-product-details-slider-preview sk_pd_preview wa-fix">
                                 <div class="swiper-wrapper">
+
                                     <!-- single-item -->
                                     <div class="swiper-slide">
                                         <div class="sk-product-details-slider-preview-img">
@@ -467,7 +468,7 @@
                             </div>
 
                             <!-- main -->
-                            <div class="sk-product-details-slider-main wa-fix">
+                            <div class="sk-product-details-slider-main sk_pd_main wa-fix">
                                 <div class="swiper-wrapper">
 
                                     <!-- single-item -->
@@ -521,6 +522,10 @@
                                 <p class="sk-p-7 rating-elm-text">(03 Review)</p>
                             </div>
 
+                            <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, 
+                                compact folding,and everyday comfort.
+                            </p>
+
                             <h4 class="price-elm sk-h-7">
                                 <span class="current-price">$88.00</span>
                                 <del class="old-price">$120.00</del>
@@ -529,12 +534,18 @@
                             <div class="btn-wrap">
                                 <div class="btn-wrap-left">
                                     <div class="qty-stepper" data-min="1" data-max="10">
-                                        <button class="qty-btn minus" type="button">−</button>
                                         <input type="number" class="qty-input" value="1" min="1" max="10">
-                                        <button class="qty-btn plus" type="button">+</button>
+                                        <div class="qty-stepper-btn">
+                                            <button class="qty-btn plus" type="button">
+                                                <i class="fa-solid fa-angle-up"></i>
+                                            </button>
+                                            <button class="qty-btn minus" type="button">
+                                                <i class="fa-solid fa-angle-down"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                     <a href="#" aria-label="name" class="sk-pr-btn-13 has-v2">
-                                        <span class="text" data-back="Add To Cart" data-front="Add To Cart"></span>
+                                        <span class="text" data-back="Buy Now" data-front="Buy Now"></span>
                                     </a>
                                 </div>
                                 
@@ -560,19 +571,457 @@
                         </div>
                     </div>
 
+                    <div class="sk-product-details-tabs">
+
+                        <!-- tabs-btn -->
+                        <div class="sk-product-details-tabs-btn mb-40" role="tablist">
+                            <!-- single-btn -->
+                            <button class="nav-link sk-h-7 active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Description</button>
+                            
+                            <!-- single-btn -->
+                            <button class="nav-link sk-h-7" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Additional information</button>
+
+                            <!-- single-btn -->
+                            <button class="nav-link sk-h-7" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Shipping & Returns</button>
+
+                            <!-- single-btn -->
+                            <button class="nav-link sk-h-7" id="nav-contact-tab2" data-bs-toggle="tab" data-bs-target="#nav-contact2" type="button" role="tab" aria-controls="nav-contact2" aria-selected="false">Reviews (03)</button>
+
+                        </div>
+
+
+                        <div class="tab-content sk-product-details-tabs-pane" >
+                            <!-- single-pane -->
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <div class="sk-product-details-tabs-content">
+                                    <h4 class="sk-h-7 title">Product Information :</h4>
+                                    <p class="sk-p-7 disc">Crafted for modern lifestyles, the Vintage Zip Bomber Jacket blends classic design with everyday comfort. Made from premium-quality fabric, 
+                                        it offers a relaxed fit, smooth zipper closure, and durable stitching. Ideal for casual outings, travel, and seasonal layering, this jacket delivers timeless style with long-lasting wear.</p>
+                                    <h4 class="sk-h-7 subtitle"> basics  Info :</h4>
+                                    <ul class="wa-ul list-disc">
+                                        <li class="sk-p-7">
+                                            82% Protein by Weight (24g of Protein Per 31.5g Serving Size).
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Whey Protein Isolates (WPI) Main Ingredient.
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Whey Protein Micro-functions from Whey Protein Isolate and Ultra-Filtered Whey Protein Concentrate.
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Over 4g of Naturally Occurring Glutamine & Glutamic Acid in Each Serving.
+                                        </li>
+                                        <li class="sk-p-7">
+                                            The “Gold Standard” for Protein Quality.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- single-pane -->
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="sk-product-details-tabs-content">
+                                    <h4 class="sk-h-7 title">Product Information :</h4>
+                                    <p class="sk-p-7 disc">Crafted for modern lifestyles, the Vintage Zip Bomber Jacket blends classic design with everyday comfort. Made from premium-quality fabric, 
+                                        it offers a relaxed fit, smooth zipper closure, and durable stitching. Ideal for casual outings, travel, and seasonal layering, this jacket delivers timeless style with long-lasting wear.</p>
+                                    <h4 class="sk-h-7 subtitle"> basics  Info :</h4>
+                                    <ul class="wa-ul list-disc">
+                                        <li class="sk-p-7">
+                                            Material: Premium cotton blend
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Fit: Regular fit
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Closure: Front zip closure
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Sleeve: Full sleeves
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Style: Vintage bomber
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Season: Spring, Autumn, Winter
+                                        </li>
+                                        <li class="sk-p-7">
+                                            Care: Machine wash cold, do not bleach
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- single-pane -->
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div class="sk-product-details-tabs-content">
+                                    <h4 class="sk-h-7 title">Shipping & Returns</h4>
+                                    <p class="sk-p-7 disc">Crafted for modern lifestyles, the Vintage Zip Bomber Jacket blends classic design with everyday comfort. Made from premium-quality fabric, it offers a relaxed fit, smooth zipper closure, and durable stitching. Ideal for casual outings, travel, and seasonal layering, this jacket delivers timeless style with long-lasting wear.</p>
+                                </div>
+                            </div>
+
+                            <!-- single-pane -->
+                            <div class="tab-pane fade" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab2">
+                                <div class="sk-product-details-tabs-content">
+                                    <!-- comment-list -->
+                                    <div class="sk-blog-details-comment-wrap">
+                                        <h5 class="sk-h-7 sk-blog-details-comment-title">
+                                            Reviews (03)
+                                        </h5>
+
+                                        <div class="sk-blog-details-comment">
+
+                                            <div class="sk-blog-details-comment-single">
+                                                <div class="person-img">
+                                                    <img src="assets/img/testimonial/t1-author-4.jpg" alt="">
+                                                </div>
+                                                <div class="content-wrap">
+                                                    <h5 class="sk-h-7 name">Marvin McKinney</h5>
+                                                    <p class="sk-p-7 date">October 07,2026</p>
+                                                    <p class="sk-p-7 comment">Working with this team has been an outstanding experience from start to finish. They truly understood our vision and transformed it into a clean, user-friendly digital product. thoughtful design decisions, and clear communication made the entire process smooth and efficient.</p>
+
+                                                    <a class="reply-btn sk-h-7" href="#">
+                                                        <i class="fa-solid fa-reply"></i>
+                                                        Reply
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="children"> 
+                                                <div class="sk-blog-details-comment-single">
+                                                    <div class="person-img">
+                                                        <img src="assets/img/testimonial/t1-author-5.jpg" alt="">
+                                                    </div>
+                                                    <div class="content-wrap">
+                                                        <h5 class="sk-h-7 name">David Malan</h5>
+                                                        <p class="sk-p-7 date">October 07,2026</p>
+                                                        <p class="sk-p-7 comment">We were impressed by how deeply they focused on user experience and scalability. Every design choice felt intentional and aligned with our long-term business goals.</p>
+                
+                                                        <a class="reply-btn sk-h-7" href="#">
+                                                            <i class="fa-solid fa-reply"></i>
+                                                            Reply
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="sk-blog-details-comment-single">
+                                                <div class="person-img">
+                                                    <img src="assets/img/testimonial/t1-author-9.jpg" alt="">
+                                                </div>
+                                                <div class="content-wrap">
+                                                    <h5 class="sk-h-7 name">Robert Fox</h5>
+                                                    <p class="sk-p-7 date">October 07,2026</p>
+                                                    <p class="sk-p-7 comment">From the initial concept to the final delivery, the team demonstrated a strong understanding of modern design and usability principles.</p>
+
+                                                    <a class="reply-btn sk-h-7" href="#">
+                                                        <i class="fa-solid fa-reply"></i>
+                                                        Reply
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="sk-choose-9-bottom-line mt-60 mb-60"></div>
+
+                                    <!-- comment-form -->
+                                    <div class="sk-blog-details-form">
+                                        <h5 class="sk-h-7 sk-blog-details-form-title">
+                                            Add Your Voice to the Conversation
+                                        </h5>
+
+                                        <form action="" class="sk-contact-6-form ">
+                                            <div class="input-box">
+                                                <label class="sk-contact-6-form-label sk-p-7">
+                                                    Full Name<span>*</span>
+                                                </label>
+                                                <input type="text" placeholder="Full Name" class="sk-contact-6-form-input sk-p-7 wa_placeholder">
+                                            </div>
+                                            <div class="input-box">
+                                                <label class="sk-contact-6-form-label sk-p-7">
+                                                    Email Address<span>*</span>
+                                                </label>
+                                                <input type="text" placeholder="Email Address" class="sk-contact-6-form-input sk-p-7 wa_placeholder">
+                                            </div>
+                                            <div class="input-box has-full-width">
+                                                <label class="sk-contact-6-form-label sk-p-7">
+                                                    Message<span>*</span>
+                                                </label>
+                                                <textarea class="sk-contact-6-form-input sk-p-7 wa_placeholder" placeholder="Write your message here..."></textarea>
+                                            </div>
+                                            <div class="input-box has-full-width">
+                                                <button type="submit" class="sk-contact-7-form-btn sk-pr-btn-13 has-v2">
+                                                    <span class="text"></span>
+                                                    <span class="text" data-back="Send Message" data-front="Send Message"></span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </section>
             <!-- shop-end -->
 
 
+            <!-- related-products-start -->
+            <section class="sk-related-products-area pb-120">
+                <div class="container sk-container-2">
+                    <h4 class="sk-related-products-title sk-h-7">
+                        You May Also Like
+                    </h4>
 
+                    <!-- products -->
+                    <div class="sk-shop-1-grid ">
+                        <!-- single-product -->
+                        <div class="sk-shop-1-item" >
+                            <div class="title-x-link">
+                                <h4 class="title sk-h-7 grid-view">
+                                    <a href="#" aria-label="name">Casual Denim Jacket</a>
+                                </h4>
 
+                                <div class="item-link">
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-arrows-in-simple"></i>
+                                    </a>
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-eye"></i>
+                                    </a>
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-heart-straight"></i>
+                                    </a>
+                                </div>
+                            </div>
 
+                            <div class="item-img">
+                                <img src="assets/img/shop/p1-img-7.png" alt="">
+                            </div>
 
+                            <div class="price-x-label grid-view">
+                                <h5 class="sk-h-7 price-wrap">
+                                    <span class="current-price">
+                                        $49.00
+                                    </span>
+                                    <del class="old-price">
+                                        $65.00
+                                    </del>
+                                </h5>
+                                <p class="sk-p-7 item-label">Editor’s Pick</p>
+                            </div>
+                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                Add To Cart
+                                <i class="ph ph-shopping-cart"></i>
+                            </a>
 
+                            <div class="list-view">
+                                <p class="sk-p-7 item-label">Editor’s Pick</p>
+                                <h4 class="title sk-h-7">
+                                    <a href="#" aria-label="name">Casual Denim Jacket</a>
+                                </h4>
+                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                <h5 class="sk-h-7 price-wrap">
+                                    <span class="current-price">
+                                        $49.00
+                                    </span>
+                                    <del class="old-price">
+                                        $65.00
+                                    </del>
+                                </h5>
+                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                    Add To Cart
+                                </a>
+                            </div>
+                        </div>
 
+                        <!-- single-product -->
+                        <div class="sk-shop-1-item" >
+                            <div class="title-x-link">
+                                <h4 class="title sk-h-7 grid-view">
+                                    <a href="#" aria-label="name">Midland Graphic Sweatshirt</a>
+                                </h4>
 
+                                <div class="item-link">
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-arrows-in-simple"></i>
+                                    </a>
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-eye"></i>
+                                    </a>
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-heart-straight"></i>
+                                    </a>
+                                </div>
+                            </div>
 
+                            <div class="item-img">
+                                <img src="assets/img/shop/p1-img-8.png" alt="">
+                            </div>
+
+                            <div class="price-x-label grid-view">
+                                <h5 class="sk-h-7 price-wrap">
+                                    <span class="current-price">
+                                        $58.00
+                                    </span>
+                                    <del class="old-price">
+                                        $78.00
+                                    </del>
+                                </h5>
+                                <p class="sk-p-7 item-label">Premium</p>
+                            </div>
+                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                Add To Cart
+                                <i class="ph ph-shopping-cart"></i>
+                            </a>
+
+                            <div class="list-view">
+                                <p class="sk-p-7 item-label">Premium</p>
+                                <h4 class="title sk-h-7">
+                                    <a href="#" aria-label="name">Midland Graphic Sweatshirt</a>
+                                </h4>
+                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                <h5 class="sk-h-7 price-wrap">
+                                    <span class="current-price">
+                                        $58.00
+                                    </span>
+                                    <del class="old-price">
+                                        $78.00
+                                    </del>
+                                </h5>
+                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                    Add To Cart
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- single-product -->
+                        <div class="sk-shop-1-item" >
+                            <div class="title-x-link">
+                                <h4 class="title sk-h-7 grid-view">
+                                    <a href="#" aria-label="name">Soft Knit Polo Sweater</a>
+                                </h4>
+
+                                <div class="item-link">
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-arrows-in-simple"></i>
+                                    </a>
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-eye"></i>
+                                    </a>
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-heart-straight"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item-img">
+                                <img src="assets/img/shop/p1-img-9.png" alt="">
+                            </div>
+
+                            <div class="price-x-label grid-view">
+                                <h5 class="sk-h-7 price-wrap">
+                                    <span class="current-price">
+                                        $58.00
+                                    </span>
+                                    <del class="old-price">
+                                        $78.00
+                                    </del>
+                                </h5>
+                                <p class="sk-p-7 item-label">Premium</p>
+                            </div>
+                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                Add To Cart
+                                <i class="ph ph-shopping-cart"></i>
+                            </a>
+
+                            <div class="list-view">
+                                <p class="sk-p-7 item-label">Premium</p>
+                                <h4 class="title sk-h-7">
+                                    <a href="#" aria-label="name">Soft Knit Polo Sweater</a>
+                                </h4>
+                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                <h5 class="sk-h-7 price-wrap">
+                                    <span class="current-price">
+                                        $58.00
+                                    </span>
+                                    <del class="old-price">
+                                        $78.00
+                                    </del>
+                                </h5>
+                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                    Add To Cart
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- single-product -->
+                        <div class="sk-shop-1-item" >
+                            <div class="title-x-link">
+                                <h4 class="title sk-h-7 grid-view">
+                                    <a href="#" aria-label="name">Urban Baby Stroller</a>
+                                </h4>
+
+                                <div class="item-link">
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-arrows-in-simple"></i>
+                                    </a>
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-eye"></i>
+                                    </a>
+                                    <a href="#" aria-label="name" class="link-elm">
+                                        <i class="ph ph-heart-straight"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item-img">
+                                <img src="assets/img/shop/p1-img-10.png" alt="">
+                            </div>
+
+                            <div class="price-x-label grid-view">
+                                <h5 class="sk-h-7 price-wrap">
+                                    <span class="current-price">
+                                        $199.00
+                                    </span>
+                                    <del class="old-price">
+                                        $249.00
+                                    </del>
+                                </h5>
+                                <p class="sk-p-7 item-label">New</p>
+                            </div>
+                            <a href="#" aria-label="name" class="cart-btn sk-p-7 grid-view">
+                                Add To Cart
+                                <i class="ph ph-shopping-cart"></i>
+                            </a>
+
+                            <div class="list-view">
+                                <p class="sk-p-7 item-label">New</p>
+                                <h4 class="title sk-h-7">
+                                    <a href="#" aria-label="name">Urban Baby Stroller</a>
+                                </h4>
+                                <p class="sk-p-7 disc">Designed for city life, this stroller offers smooth rides, safety features, compact folding, <br> and everyday comfort.</p>
+                                <h5 class="sk-h-7 price-wrap">
+                                    <span class="current-price">
+                                        $199.00
+                                    </span>
+                                    <del class="old-price">
+                                        $249.00
+                                    </del>
+                                </h5>
+                                <a href="#" aria-label="name" class="cart-btn-2 sk-p-7">
+                                    Add To Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- related-products-end -->
 
 
             <!-- cta-start -->

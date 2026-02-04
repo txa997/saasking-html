@@ -3111,25 +3111,17 @@ if ($('.sk_pd_preview').length) {
 	
 	
 	
-	let artdetails = new Swiper('.txa-art-d-main-img-active', {
+	let sk_pd_main = new Swiper('.sk_pd_main', {
 		loop: true,
 		spaceBetween: 0,
-		rtl: false,
 		slidesPerView: 1,
-		autoplay: {
-			delay: 4000,
-		},
-		navigation: {
-			nextEl: ".art_details_next",
-			prevEl: ".art_details_prev",
-		},
+
 		thumbs: {
-			swiper: artthumbs,
+			swiper: sk_pd_preview,
 		},
 	});
 	
 }
-
 
 
 // product-view-toggle
@@ -3194,6 +3186,38 @@ if($(".sk-sidebar-price-filter").length) {
 
 	updateSlider();
 }
+
+if($(".qty-stepper").length) {
+
+	document.querySelectorAll('.qty-stepper').forEach(stepper => {
+		const input = stepper.querySelector('.qty-input');
+		const btnPlus = stepper.querySelector('.plus');
+		const btnMinus = stepper.querySelector('.minus');
+	
+		const min = parseInt(stepper.dataset.min) || 1;
+		const max = parseInt(stepper.dataset.max) || 999;
+	
+		btnPlus.addEventListener('click', () => {
+			let val = parseInt(input.value) || min;
+			if (val < max) input.value = val + 1;
+			input.dispatchEvent(new Event('change'));
+		});
+	
+		btnMinus.addEventListener('click', () => {
+			let val = parseInt(input.value) || min;
+			if (val > min) input.value = val - 1;
+			input.dispatchEvent(new Event('change'));
+		});
+	
+		input.addEventListener('input', () => {
+			let val = parseInt(input.value);
+			if (val < min) input.value = min;
+			if (val > max) input.value = max;
+		});
+	});
+	
+}
+
 
 /* 
 	progress-animation
